@@ -19,9 +19,9 @@
 
 
 \begin{document}
-	\title{\includegraphics[width=16cm]{logo_uni.jpg}\\[2cm]\textbf{Esercizi di Macchine}}
+	\title{\textbf{Esercizi di Macchine}}
 	\author{di Salvatore Palumbo}
-	\date{Anno accademico 2023-2024}
+	\date{Anno accademico 2023-2024\\[10cm]\includegraphics[width=14cm]{logo_uni.jpg}}
 	\maketitle
 
 \tableofcontents
@@ -30,7 +30,28 @@
 \setcounter{page}{2}
 
 \chapter{Esercizio 1: Trasformazioni}
-\paragraph{Svolgimento:}
-
-
+\section{Valutazione dello scambio di Energia meccanica e termica negli esempi proposti}
+\paragraph{Compressione adiabatica isoentropica di 1 kg di aria da 1 bar e 288,15 K a 2,5 bar.\\}
+In questo esempio si sta considerando una compressione adiabatica ($\delta q\;=\;0$) e isoentropica, quindi reversibile. L'equivalenza tra reversibile e isoentropica ci viene data dal bilancio di II legge: $TdS\;=\;\cancel{\delta q}\;+\;\delta q_{IRR}$ ($q$ si semplifica, essendo la trasformazione adiabatica). \\
+Dalla termodinamica, sappiamo che ogni trasformazione reversibile può essere scritta attraverso un'unica trasformazione generica detta Politropica, definita a calore specifico costante:
+\begin{center}
+	$\delta q\;=\;c_{m}\;dT\;\implies\;pv^m\;=\;cost,\;\;\;m\;=\; \frac{(c_{m}-c_{p})}{(	c_{m}-c_{v})}$
+\end{center}
+Compressione adiabatica $\implies\;\delta q\;=\;0\;\implies\;c_{m}\;=\;0\;\implies\;m\;=\;\frac{c_{p}}{c_{v}}\;=:\;k$
+Quindi l'equazione che ottengo è: 
+\begin{equation}
+	pv^k\;=\;cost
+\end{equation}
+Se questo prodotto è costante in ogni punto della compressione posso scrivere che: $	pv^k\;=\;p_{1}v^k_{1}\;\implies$
+\begin{equation}
+	v\;=\;\Biggl(\dfrac{p_{1}v_{1}^{k}}{p}\Biggr)^\frac{1}{k}
+\end{equation}
+L'equazione dell'energia meccanica invece ci dice che per un sistema aperto:
+\begin{equation}
+	l_{12(SA)}\;=\;-\int_{1}^{2}vdp\;+\;\cancel{l_{attrito}}
+\end{equation}
+Sostituendo la (1.2) all'interno della (1.3), posso risolvere l'integrale ottenendo:
+\begin{equation}
+	l_{12(SA)}\;=\;\dfrac{k}{k-1}\;R\;T_{1}\;\Biggl(1-\beta^\frac{k-1}{k}\Biggr)
+\end{equation}
 \end{document}

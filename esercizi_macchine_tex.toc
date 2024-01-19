@@ -1,4 +1,5 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
 \contentsline {chapter}{\numberline {1}Esercizio 1: Trasformazioni}{3}{}%
-\contentsline {paragraph}{Svolgimento:}{3}{}%
+\contentsline {section}{\numberline {1.1}Valutazione dello scambio di Energia meccanica e termica negli esempi proposti}{3}{}%
+\contentsline {paragraph}{Compressione adiabatica isoentropica di 1 kg di aria da 1 bar e 288,15 K a 2,5 bar.\\}{3}{}%
