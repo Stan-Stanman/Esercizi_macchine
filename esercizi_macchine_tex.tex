@@ -34,13 +34,14 @@
 
 \pagenumbering{arabic}
 \setcounter{page}{2}
+
 \chapter{Esercizio 1: Trasformazioni}
 \section{Valutazione dello scambio di Energia meccanica e termica negli esempi proposti}
 \paragraph{Compressione adiabatica isoentropica di 1 kg di aria da 1 bar e 288,15 K a 2,5 bar.\\}
 In questo esempio si sta considerando una compressione adiabatica ($\delta q\;=\;0$) e isoentropica, quindi reversibile. L'equivalenza tra reversibile e isoentropica ci viene data dal bilancio di II legge: $TdS\;=\;\cancel{\delta q}\;+\;\delta q_{IRR}$ ($q$ si semplifica, essendo la trasformazione adiabatica). \\
-Dalla termodinamica, sappiamo che ogni trasformazione reversibile può essere scritta attraverso un'unica trasformazione generica detta Politropica, definita a calore specifico costante:
+Dalla termodinamica, sappiamo che ogni trasformazione reversibile può essere scritta attraverso un'unica trasformazione generica detta politropica, definita a calore specifico costante:
 \begin{center}
-	$\delta q\;=\;c_{m}\;dT\;\implies\;pv^m\;=\;cost,\;\;\;m\;:=\; \frac{(c_{m}-c_{p})}{(	c_{m}-c_{v})}$
+	$\delta q\;=\;c_{m}\;dT\;\implies\;pv^m\;=\;cost,\;\;\;m\;:=\; \dfrac{(c_{m}-c_{p})}{(	c_{m}-c_{v})}$
 \end{center}
 Compressione adiabatica $\implies\;\delta q\;=\;0\;\implies\;c_{m}\;=\;0\;\implies\;m\;=\;\frac{c_{p}}{c_{v}}\;=:\;k$
 Quindi l'equazione che ottengo è: 
@@ -61,7 +62,7 @@ Sostituendo la (1.2) all'interno della (1.3), posso risolvere l'integrale ottene
 \end{equation}
 Quindi il lavoro meccanico che devo fornire dall'esterno per ottenere la compressione di questo gas(1 kg di aria $\implies k=1,4$) a queste condizioni di temperatura iniziale ($T_{1} = 288,15\; K$) per ottenere un rapporto di compressione ($\beta = \dfrac{p_{2}}{p_{1}} = \dfrac{2,5 bar}{1 bar} = 2,5$) è pari a:
 \begin{center}
-	$L_{12(SA)}\;=\;m\;l_{12(SA)}\;=\;1\;\cancel{kg}\;\dfrac{1,4}{1,4-1}\;287\;\dfrac{J}{\cancel{kg}\cancel{K}}\;288,15\;\cancel{K}\;\Biggl(1-2,5^\frac{1,4-1}{1,4}\Biggr)\;\approx\;-\;86621\;J\;\approx\;-\;86,6\;kJ$
+	$L_{12(SA)}\;=\;M\;l_{12(SA)}\;=\;1\;\cancel{kg}\;\dfrac{1,4}{1,4-1}\;287\;\dfrac{J}{\cancel{kg}\cancel{K}}\;288,15\;\cancel{K}\;\Biggl(1-2,5^\frac{1,4-1}{1,4}\Biggr)\;\approx\;-\;86621\;J\;\approx\;\textbf{-\;86,6\;kJ}$
 \end{center}
 Il segno negativo è atteso in quanto, per la convenzione scelta, lavori con segno positivo sono lavori in uscita dal sistema, mentre lavori con segno negativo entrano nel sistema. Nel caso di una compressione noi dobbiamo caricare il fluido, di un carico che nel caso adiabatico reversibile è proprio tutto il lavoro che abbiamo dato dall'esterno ($H_{is}=l_{12(SA)}$).\\
 Come già detto essendo una compressione adiabatica reversibile non c'è nessuno scambio termico.
@@ -112,8 +113,97 @@ Quindi posso serenamente invertire e scrivere che:
 \begin{equation}
 	m\;=\;\dfrac{\eta_{pol}}{\eta_{pol}-\frac{k-1}{k}}
 \end{equation}
-Quindi il coefficiente m è pari a:
+Quindi in virtù dei dati del mio esempio posso calcolare il coefficiente m:
 \begin{center}
-	contenuto...
+	$m\;=\;\dfrac{0,755}{0,755-\frac{1,4-1}{1,4}}\;\approx\;\textbf{1,61}$
 \end{center}
+Ora che conosco quanto vale il coefficiente della politropica posso calcolare il lavoro completo che devo spendere dall'esterno per la compressione.
+\begin{center}
+	$L_{r}\;=\;M\;l_{r}\;=\;M\;\dfrac{k}{k-1}\;R\;T_{1}\;\Biggl(1-\beta^\frac{m-1}{m}\Biggr)\;=\;1\;\cancel{kg}\;\dfrac{1,4}{1,4-1}\;287\;\dfrac{J}{\cancel{kg}\cancel{K}}\;288,15\;\cancel{K}\;\Biggl(1-2,5^\frac{1,61-1}{1,61}\Biggr)\;\approx\;-\;120135\;J\approx\;\textbf{-\;120,1\;kJ}$
+\end{center}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{lavororeale.png}
+	\caption{L' area B1'2'C (in verde) rappresenta il lavoro reale}
+\end{figure}
+Il rendimento politropico, come detto, tiene conto sia al numeratore che al denominatore del surplus di lavoro da fornire a causa del controrecupero, che pur non essendo un fenomeno dissipativo resta comunque un fenomeno che peggiore le condizioni della compressione. Inoltre, il controrecupero esiste, dal momento in cui parte del lavoro che fornisco viene degradato in calore, quindi ha senso definire un rendimento che confronti il lavoro speso nel caso reale con quello speso nel caso isoentropico:
+\begin{equation}
+	\eta_{ad}\;:=\dfrac{H_{is}}{l_{r}}
+\end{equation}
+E quindi:\;$\eta_{ad}\;=\dfrac{-86,6\;\cancel{kJ}}{-120,1\;\cancel{kJ}}\;=\;\textbf{0,721}$
+\newpage
+
+\paragraph{Compressione politropica di 1 kg di aria da 1 bar e 288,15 K a 2,5 bar con la condizione termodinamica finale coincidente con quella dell'adiabatica reale.\\}
+In questo esempio invece si analizza una \uline{vera} trasformazione politropica reversibile, in cui una parte dell'energia viene data in forma di lavoro meccanico ($H_{pol}$), e un'altra parte invece viene data in forma di energia termica con un'adduzione di calore reversibile ($q_{12'}$).\\
+Come già visto nella (1.6), noto m, si può calcolare quanto vale il carico politropico e quindi il lavoro che devo fornire alla compressione per raggiungere il fissato $\beta$:
+\begin{center}
+	$L_{12'}\;=\;M\;H_{pol}\;=\;M\;\dfrac{m}{m-1}\;R\;T_{1}\;\Biggl(1-\beta^\frac{m-1}{m}\Biggr)=\;1\;\cancel{kg}\;\dfrac{1,61}{1,61-1}\;287\;\dfrac{J}{\cancel{kg}\cancel{K}}\;288,15\;\cancel{K}\;\Biggl(1-2,5^\frac{1,61-1}{1,61}\Biggr)\;\approx\;-\;90594\;J\;=\;\textbf{-\;90,6\;kJ}$
+\end{center}
+Per calcolare quanta energia termica viene addizionata si fa riferimento al bilancio di I legge per cui:
+\begin{equation}
+	q_{12'}\;=\;l_{12'}\;-\;(h_{1}-h_{2'})
+\end{equation}
+Visto che si è assunto che la condizione termodinamica finale coincide con quella dell'adiabatica reale, come già visto nella (1.8):
+\begin{center}
+	$h_{1}\;-\;h_{2'}\;=\;l_{r}\;=\;-\;120,1\;kJ/kg$
+\end{center}
+Quindi la quantità di calore addizionata è pari a:
+\begin{center}
+	$Q_{12'}\;=\;M\;q_{12'}\;=\;M\;[l_{12'}\;-\;(h_{1}-h_{2'})]\;=\;1\;kg\;[-\;90,6\;kJ/kg\;-\;(-\;120,1\;kJ/kg)]\;=\;\textbf{29,5\;kJ}$
+\end{center}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{lavoro_calore_politropico.png}
+	\caption{L' area B1'2'1C (in blu) rappresenta il lavoro politropico, mentre l'area B12'C (in arancione) il calore addotto}
+\end{figure}
+\newpage
+
+\paragraph{Compressione isoterma di 1 kg di aria da 1 bar e 288,15 K a 2,5 bar.\\}
+Da una rapida analisi del bilancio di I legge si evince che per ottenere una trasformazione isoterma è necessaria oltre a fornire lavoro meccanico anche sottrarre calore:
+\begin{equation}
+	q_{12''}\;-\;l_{12''}\;=\;\Delta h\;=\;c_{p}\;(T_{2''}\;-\;T_{1})\;=\;0\;\implies\;	q_{12''}\;=\;l_{12''}\;\neq\;0
+\end{equation}
+In virtù della relazione $\delta q\;=\;c_{m}\;dT$ se c'è uno scambio di calore ($\delta q$ finito) ma la temperatura resta costante ($dT\;=\;0$), vuol dire che $c_{m} \to \infty$.\\
+Siccome, $m\;:=\; \dfrac{(c_{m}-c_{p})}{(	c_{m}-c_{v})}\;\implies\;m\to1\;\implies\;pv\;=\;cost$\\
+Risultato che infatti conferma quello che dice la legge dei gas per cui:
+\begin{equation}
+	pv\;=\;RT_{1}\;=\;cost\;\implies\;v_{it}\;=\;\dfrac{RT_{1}}{p}
+\end{equation}
+Quindi, come già fatto precedentemente, posso scrivere:
+\begin{equation}
+	l_{12''}\;=\;-\int_{1}^{2''}v_{it}dp\;=\;\int_{1}^{2''}Tds\:-\;\cancel{dh}\;=\;q_{12''}
+\end{equation}
+Sostituendo la (1.14) nella (1.15) ottengo che:
+\begin{equation}
+	H_{it}\;:=\;l_{12''}\;=\;-\;RT_{1}ln(\beta)
+\end{equation}
+Quindi nel nostro caso:
+\begin{center}
+	$Q_{12''}\;=\;L_{12''}\;=\;M\;l_{12''}\;=\;-1\;\cancel{kg}\;287\;\dfrac{J}{\cancel{kg}\cancel{K}}\;288,15\;\cancel{K}\;ln(2,5)\;\approx\;-\;75776\;J\;\approx\;\textbf{-\;75,8\;kJ}$
+\end{center}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{caricoisotermo.png}
+	\caption{L' area B2''1A (in viola) rappresenta sia il lavoro che devo fornire sia il calore che devo sottrarre}
+\end{figure}
+Appare evidente che il lavoro che devo fornire seguendo una trasformazione isoterma è il più piccolo, quindi potrebbe avere senso confrontarlo con il lavoro necessario per una trasformazione adiabatica reale:
+\begin{center}
+	$\eta_{it}\;:=\;\dfrac{	H_{it}}{l_{r}}\;=\;\dfrac{-\;75,8\;kJ/kg}{-\;120,1\;kJ/kg}\;=\;\textbf{0,631}$
+\end{center}
+\newpage
+
+\paragraph{Compressione di 1 kg acqua da 1 bar e 288,15 K a 2,5 bar.\\}
+In questo esempio invece viene considerata la compressione dell'acqua che chiaramente a queste condizioni di temperatura ($15°C$)e pressione ($1\;bar\to2,5\;bar$) si trova nello stato di liquido. In questo stato il volume specifico del fluido resta costante.\\
+Applicando un primo bilancio su questa compressione che considero adiabatica e in prima battuta reversibile:
+\begin{equation}
+	l_{12(acqua)}\;=\;-\int_{1}^{2}vdp\;+\;\cancel{\Delta \dfrac{c^{2}}{2}}\;+\;\cancel{l_{attrito}}
+\end{equation}
+In genere in un buon sistema di diffusione $\Delta \dfrac{c^{2}}{2}\approx0$.\\
+Quindi il lavoro che necessito per questa compressione è pari a:
+\begin{center}
+		$L_{12(acqua)}\;=\;-Mv\int_{1}^{2}dp\;=\;-Mv\;(p_{2}-p_{1})\;=\;-1\;\cancel{kg}\;0,001\;\dfrac{m^{\cancel{3}}}{\cancel{kg}}\;150000\;\dfrac{N}{\cancel{m^{2}}}\;=\;\textbf{-\;150\;J}$
+\end{center}
+Chiaramente per analizzare un caso reale, dovrei avere un parametro che mi indichi la qualità della pompa che sta comprimendo l'acqua.
+
+\section{Valutazioni e confronti}
 \end{document}
