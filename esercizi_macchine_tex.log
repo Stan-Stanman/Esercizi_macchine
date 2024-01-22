@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  21 JAN 2024 01:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  22 JAN 2024 15:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1022,18 +1022,126 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[10] (./esercizi_macchine_tex.aux)
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 225--229
+
+ []
+
+File: lavoro_calore_politropico.png Graphic file (type png)
+<use lavoro_calore_politropico.png>
+Package pdftex.def Info: lavoro_calore_politropico.png  used on input line 235.
+
+(pdftex.def)             Requested size: 182.09486pt x 128.74725pt.
+
+Underfull \hbox (badness 3439) in paragraph at lines 238--244
+[][]\OT1/ptm/m/n/12 (+20) La tra-sfor-ma-zio-ne rea-le []e in-ve-ce quel-la pi[
+]u
+ []
+
+
+Underfull \hbox (badness 7012) in paragraph at lines 238--244
+\OT1/ptm/m/n/12 (+20) di-spen-dio-sa in quan-to sep-pu-re in en-tram-be il
+ []
+
+
+Underfull \hbox (badness 6316) in paragraph at lines 238--244
+\OT1/ptm/m/n/12 (+20) flui-do ri-ce-ve dal-l'e-ster-no la stes-sa quan-tit[]a d
+i
+ []
+
+
+Underfull \hbox (badness 2181) in paragraph at lines 238--244
+\OT1/ptm/m/n/12 (+20) ener-gia pa-ri al-l'a-rea B1'2'C, nel-la po-li-tro-pi-ca 
+il
+ []
+
+
+Underfull \hbox (badness 7151) in paragraph at lines 238--244
+\OT1/ptm/m/n/12 (+20) ca-lo-re vie-ne ag-giun-to se-pa-ra-ta-men-te in ma-nie-
+ []
+
+
+Underfull \hbox (badness 1910) in paragraph at lines 238--244
+\OT1/ptm/m/n/12 (+20) ra re-ver-si-bi-le, men-tre nel-la rea-le vie-ne da-ta tu
+t-
+ []
+
+
+Underfull \hbox (badness 4940) in paragraph at lines 238--244
+\OT1/ptm/m/n/12 (+20) ta in for-ma mec-ca-ni-ca ma una par-te pa-ri al-
+ []
+
+
+Underfull \hbox (badness 3954) in paragraph at lines 238--244
+\OT1/ptm/m/n/12 (+20) l'a-rea A12'C vie-ne de-gra-da-ta in ener-gia ter-mi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--244
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--244
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--244
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--244
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 286--290
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[12]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[13]
+Capitolo 2.
+[14
+
+] (./esercizi_macchine_tex.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 29701 strings out of 474165
- 713290 string characters out of 5749497
- 1940528 words of memory out of 5000000
- 51334 multiletter control sequences out of 15000+600000
- 610624 words of font info for 241 fonts, out of 8000000 for 9000
+ 29724 strings out of 474165
+ 713544 string characters out of 5749497
+ 1948528 words of memory out of 5000000
+ 51337 multiletter control sequences out of 15000+600000
+ 611458 words of font info for 255 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,15n,93p,1018b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/tex
@@ -1045,10 +1153,10 @@ ype1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2023/texmf-dist/fonts/type
 fb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/202
 3/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on esercizi_macchine_tex.pdf (10 pages, 407584 bytes).
+Output written on esercizi_macchine_tex.pdf (14 pages, 420190 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
+ 116 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  70699 words of extra memory for PDF output out of 74296 (max. 10000000)
 

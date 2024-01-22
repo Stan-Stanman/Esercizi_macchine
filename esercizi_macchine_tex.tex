@@ -205,5 +205,108 @@ Quindi il lavoro che necessito per questa compressione è pari a:
 \end{center}
 Chiaramente per analizzare un caso reale, dovrei avere un parametro che mi indichi la qualità della pompa che sta comprimendo l'acqua.
 
-\section{Valutazioni e confronti}
+\paragraph{Valutare l'energia meccanica posseduta sotto forma potenziale ad un'altezza di 150 m rispetto al suolo, da un uomo di peso medio (80 kg).\\}
+L'energia potenziale figlia del campo gravitazionale, che possiede un corpo di una certa massa posto a una certa altezza dal suolo è uguale a:
+\begin{equation}
+	U_{g}\;=\;m\;g\;H\
+\end{equation}
+Quindi nell'esempio proposto:
+\begin{center}
+	$U_{g}\;=\;80\;\cancel{kg}\;9,81\;\dfrac{N}{\cancel{kg}}\;150\;m\;=\;117720\;J\;\approx\;\textbf{117,7\;kJ}$
+\end{center}
+\newpage
+
+\section{Confronto dei livelli di energia meccanica scambiata fra gli esempi proposti}
+\paragraph{Confronto compressione adiabatica reversibile, adiabatica reale, politropica e isoterma.\\}
+Appare evidente che se confrontiamo i quattro moduli dei lavoro che abbiamo calcolato nei quattro esempi esaminati otteniamo che:
+\begin{center}
+	$|l_{r}|\;>\:|l_{pol}|\;>\;|l_{is}|\;>\;|l_{it}|$
+\end{center}
+La compressione isoterma è quella che richiede meno energia di tutti. Prima di tutto perchè è una trasfomazione reversibile, e poi perchè è la trasformazione che mette la compressione nelle condizioni migliori, in quanto il naturale aumento di temperatura dovuto alla compressione viene compensato da una sottrazione di calore verso l'esterno.\\
+Chiaramente ci si potrebbe chiedere perchè nella pratica non si segua questa trasformazione. La risposta è che è complicato progettare una macchina che sappia scambiare sia lavoro che calore \uline{contemporaneamente} e in maniera efficiente.\\
+\\
+La compressione politropica è più energivora dell'isoentropica (adiabatica reversibile), perchè pur non essendoci irreversibilità in nessuna delle due, nella politropica, a causa dell'adduzione di calore, c'è un aumento del volume specifico che si oppone alla compressione stessa. Infatti:
+\begin{center}
+	$|l_{pol}|\;=\;|l_{is}|\;+\;controrecupero$
+\end{center}
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+	\centering
+	\includegraphics[width=0.4\textwidth]{lavoro_calore_politropico.png}
+	\caption{Carico (in blue) e calore dissipato (in arancione)}
+\end{wrapfigure}
+La trasformazione reale è invece quella più dispendiosa in quanto seppure in entrambe il fluido riceve dall'esterno la stessa quantità di energia pari all'area B1'2'C, nella politropica il calore viene aggiunto  separatamente in maniera reversibile, mentre nella reale viene data tutta in forma meccanica ma una parte pari all'area A12'C viene degradata in energia termica.\\
+\\$|l_{r}|\;=\;|l_{pol}|\;+\;|l_{attrito}|$\\
+\\
+\\
+\\
+Tuttavia se osservo i valori dei lavori calcolati mi accorgo che $L_{pol}$ e $L_{is}$ non differiscono di tantissimo:
+\begin{center}
+	$controrecupero\;=\;|L_{pol}|\;-\;|L_{is}|\;=\;90,6\;-\;86,6\;=\;4\;kJ$
+\end{center}
+E il suo peso rispetto al lavoro speso nella trasformazione reale è:
+\begin{center}
+	$\dfrac{controrecupero}{L_{r}}\;=\;\dfrac{4\;\cancel{kJ}}{120,1\;\cancel{kJ}}\;\approx\;3,33\;\%$
+\end{center}
+Il motivo di questo risultato è che il peso percentuale giocato dal controrecupero si fa più importante al crescere del rapporto di compressione $\beta$.
+Infatti, se si valuta un esempio in cui a parità di condizioni iniziali si comprime fino a una pressione maggiore, otterremmo un rapporto percentuale maggiore.
+\newpage
+
+\paragraph{Compressione adiabatica reale di 1 kg di aria da 1 bar e 288,15 K a 10 bar con $\eta_{pol}$ pari a 0,755.\\}
+Visto che ne il fluido, ne la qualità della macchina sono cambiati, il coefficiente $m$ della politropica resta lo stesso:
+\begin{center}
+	$m\;=\;\dfrac{0,755}{0,755-\frac{1,4-1}{1,4}}\;\approx\;\textbf{1,61}$
+\end{center}
+E quindi posso procedere al calcolo del lavoro reale col nuovo $\beta$:
+\begin{center}
+	$L_{r}\;=\;1\;\cancel{kg}\;\dfrac{1,4}{1,4-1}\;287\;\dfrac{J}{\cancel{kg}\cancel{K}}\;288,15\;\cancel{K}\;\Biggl(1-10^\frac{1,61-1}{1,61}\Biggr)\;\approx\;-\;403102\;J\approx\;\textbf{-\;403,1\;kJ}$
+\end{center}
+Del lavoro politropico:
+\begin{center}
+	$L_{pol}\;=\;1\;\cancel{kg}\;\dfrac{1,61}{1,61-1}\;287\;\dfrac{J}{\cancel{kg}\cancel{K}}\;288,15\;\cancel{K}\;\Biggl(1-10^\frac{1,61-1}{1,61}\Biggr)\;\approx\;-\;303979\;J\;=\;\textbf{-\;304\;kJ}$
+\end{center}
+E del lavoro isoentropico:
+\begin{center}
+	$L_{is}\;=\;1\;\cancel{kg}\;\dfrac{1,4}{1,4-1}\;287\;\dfrac{J}{\cancel{kg}\cancel{K}}\;288,15\;\cancel{K}\;\Biggl(1-10^\frac{1,4-1}{1,4}\Biggr)\;\approx\;-\;269387\;J\;\approx\;\textbf{-\;269,4\;kJ}$
+\end{center}
+Quindi il nuovo controrecupero vale:
+\begin{center}
+	$controrecupero'\;=\;|L_{pol}|\;-\;|L_{is}|\;=\;304\;-\;269,4\;=\;34,6\;kJ$
+\end{center}
+E il suo peso rispetto al lavoro speso nella trasformazione reale è:
+\begin{center}
+	$\dfrac{controrecupero'}{L_{r}}\;=\;\dfrac{34,6\;\cancel{kJ}}{403,1\;\cancel{kJ}}\;\approx\;8,58\;\%\;>3,33\;\%$
+\end{center}
+
+\paragraph{Confronto con l'acqua e potenziale gravitazionale.\\}
+Se invece confronto il lavoro che, a parità di condizioni di temperatura e pressione, mi serve per comprimere 1 kg di aria con quello che mi serve per comprimere 1 kg di acqua osservo che ci sono almeno tre ordini di grandezza di differenza:
+\begin{center}
+	$\dfrac{L_{r}}{L_{acqua}}\;=\;\dfrac{120,1\;kJ}{0,15\;kJ}\;\approx\;0,8\cdot10^{3}$
+\end{center}
+Il motivo di questa grande disparità è legata allo stato in cui li stiamo comprimendo. L'acqua è in fase liquida mentre l'aria in fase gassosa, quindi il rapporto che c'è tra i volumi specifici (aria/acqua) nei vari punti della compressione è approssimativamente di $10^3$.\\
+\\
+Una curiosità interessante da osservare è che (trascurando le perdite di carico), approssimativamente, l'energia che serve per trasportare una persona media (80 kg) fino a una quota di 150 metri è anche l'energia che serve per sollevare circa 80 kg di acqua fino alla stessa quota.
+Per verificarlo, misuro la prevalenza che ho comprimendo 1 kg di acqua da 1 bar e 288,15 K a 2,5 bar:
+\begin{center}
+	$H_{manometrica}\;=\;\dfrac{(250000\;Pa\;-\;100000\;Pa)}{1000\;kg/m^{3}\;9,81\;N/kg}\;\approx\;15,3\;m$
+\end{center}
+Se per trasportare 1 kg di acqua fino a una quota di $15,3\;m$ servono circa $0,15\;kJ$, per trasportare $80\;kg$ di acqua fino a 150 metri serviranno circa: $80\;kg\cdot0,15\;kJ/kg\cdot\dfrac{150\;m}{15,3\;m}\;=\;117,7\;kJ\;\approx{U_{g}}$
+Questo accade perchè il volume di un corpo di una persona è fatto per la maggior parte da acqua, e infatti ha una densità di poco più piccola ($\rho_{c}\;=\;0,98g/cm^{3}$).
+\newpage
+
+\paragraph{Calcolare il valore del rendimento politropico di compressione, per un compressore assiale multistadio avente $\beta\;=\;30$ e rendimento adiabatico di compressione $\eta_{ad}\;=\;0,86$.\\}
+Conoscere il rapporto di compressione significa conosce anche quanto vale il coefficiente m della politropica associata:
+\begin{equation}
+	\eta_{ad}\;=\;\dfrac{1\;-\;\beta^{\dfrac{k-1}{k}}}{1\;-\;\beta^{\dfrac{m-1}{m}}}
+\end{equation}
+Quindi:
+\begin{center}
+	$1\;-\;\beta^{\dfrac{m-1}{m}}\;=\;\dfrac{1\;-\;30^{\dfrac{1,4-1}{1,4}}}{0,86}\;=\;-1,91\implies\;\dfrac{m-1}{m}\;=\;\log_{30}(1+1,91)\;=\;0,314\implies\;m\;=\;\dfrac{1}{1-0,314}\;=\;1,46$
+\end{center}
+Allora il rendimento politropico sarà:
+\begin{center}
+	$\eta_{pol}\;=\;\dfrac{1,4-1}{1,4}\cdot\dfrac{1,46}{1,46-1}\;=\;\textbf{0,91}$
+\end{center}
+
+\chapter{Esercizio 2: Impianto a Vapore da circa 18 MW}
 \end{document}

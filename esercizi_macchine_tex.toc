@@ -7,4 +7,10 @@
 \contentsline {paragraph}{Compressione politropica di 1 kg di aria da 1 bar e 288,15 K a 2,5 bar con la condizione termodinamica finale coincidente con quella dell'adiabatica reale.\\}{8}{}%
 \contentsline {paragraph}{Compressione isoterma di 1 kg di aria da 1 bar e 288,15 K a 2,5 bar.\\}{9}{}%
 \contentsline {paragraph}{Compressione di 1 kg acqua da 1 bar e 288,15 K a 2,5 bar.\\}{10}{}%
-\contentsline {section}{\numberline {1.2}Valutazioni e confronti}{10}{}%
+\contentsline {paragraph}{Valutare l'energia meccanica posseduta sotto forma potenziale ad un'altezza di 150 m rispetto al suolo, da un uomo di peso medio (80 kg).\\}{10}{}%
+\contentsline {section}{\numberline {1.2}Confronto dei livelli di energia meccanica scambiata fra gli esempi proposti}{11}{}%
+\contentsline {paragraph}{Confronto compressione adiabatica reversibile, adiabatica reale, politropica e isoterma.\\}{11}{}%
+\contentsline {paragraph}{Compressione adiabatica reale di 1 kg di aria da 1 bar e 288,15 K a 10 bar con $\eta _{pol}$ pari a 0,755.\\}{12}{}%
+\contentsline {paragraph}{Confronto con l'acqua e potenziale gravitazionale.\\}{12}{}%
+\contentsline {paragraph}{Calcolare il valore del rendimento politropico di compressione, per un compressore assiale multistadio avente $\beta \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em}30$ e rendimento adiabatico di compressione $\eta _{ad}\tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em}0,86$.\\}{13}{}%
+\contentsline {chapter}{\numberline {2}Esercizio 2: Impianto a Vapore da circa 18 MW}{14}{}%
