@@ -23,6 +23,7 @@
 \usepackage{epigraph}
 \usepackage{float}
 \usepackage{ulem}
+\usepackage{multirow}
 
 \begin{document}
 	\title{\textbf{Esercizi di Macchine}}
@@ -35,7 +36,9 @@
 \pagenumbering{arabic}
 \setcounter{page}{2}
 
-\chapter{Esercizio 1: Trasformazioni}
+\renewcommand{\chaptername}{Esercizio}
+
+\chapter{Trasformazioni}
 \section{Valutazione dello scambio di Energia meccanica e termica negli esempi proposti}
 \paragraph{Compressione adiabatica isoentropica di 1 kg di aria da 1 bar e 288,15 K a 2,5 bar.\\}
 In questo esempio si sta considerando una compressione adiabatica ($\delta q\;=\;0$) e isoentropica, quindi reversibile. L'equivalenza tra reversibile e isoentropica ci viene data dal bilancio di II legge: $TdS\;=\;\cancel{\delta q}\;+\;\delta q_{IRR}$ ($q$ si semplifica, essendo la trasformazione adiabatica). \\
@@ -308,5 +311,451 @@ Allora il rendimento politropico sarà:
 	$\eta_{pol}\;=\;\dfrac{1,4-1}{1,4}\cdot\dfrac{1,46}{1,46-1}\;=\;\textbf{0,91}$
 \end{center}
 
-\chapter{Esercizio 2: Impianto a Vapore da circa 18 MW}
+\chapter{Impianto a Vapore da circa 18 MW}
+
+\section{1° Schema d'impianto a vapore}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{impiantoTV1.png}
+	\caption{Schema di un impianto a vapore che segue ciclo a vapore surriscaldato senza spillamenti}
+\end{figure}
+\paragraph{Calcolo dei rendimenti.\\}
+Nello schema suggerito vengono riportati tutti i dati sperimentali del funzionamento di questo impianto, che ci permettono di misurarne le efficienze.\\ 
+A partire dal rendimento globale elettrico ($\eta_{ge}$), quel parametro che descrive nella maniera più generica il funzionamento dell'impianto, rapportando l'energia chimica a monte contenuta nel combustibile, con la potenza elettrica prodotta a valle dell'alternatore:
+\begin{equation}
+	\eta_{ge}\;=\;\dfrac{P_{e}}{\dot{m_{c}}H_{i}}\;=\;\dfrac{20,11\;\cancel{MW}}{72,41\;\cancel{MW}}\;\approx\;\textbf{0,278}
+\end{equation}
+Risalendo a monte, si può definire un rendimento globale ($\eta_{g}$), che invece descrive l'efficienza del motore dell'impianto rapportando la potenza all'asse con la spesa in combustibile:
+\begin{equation}
+	\eta_{g}\;=\;\dfrac{P_{a}}{\dot{m_{c}}H_{i}}
+\end{equation}
+La potenza utile all'asse può essere calcolata in due modi, o valutando la qualità della turbina fino a ricavare la potenza utile al primo organo in movimento e ipotizzando un rendimento meccanico, o partendo dalla potenza elettrica suggerita dai dati sperimentale ipotizzando un rendimento elettrico dell'alternatore. In questa trattazione viene scelta la seconda strada.\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{rendimento_elettrico.png}
+	\caption{Rendimenti medi di alternatori e di gruppi alternatore + riduttore meccanico, in funzione della loro potenza attiva}
+\end{figure}
+Per l'ipotesi sul rendimento elettrico si fa riferimento alla figura 2.2.\\
+Si entra nel grafico con una potenza di circa 18 MW e si cerca il rendimento sulla curva senza il riduttore, in quanto sullo schema d'impianto è stato riportato che l'asse motore gira già a 3000 giri al minuto (50 Hz), ovvero la frequenza giusta per ottenere una corrente alternata con una frequenza per l'appunto, di 50 Hz. \\
+Il grafico riporta un rendimento elettrico $\eta_{e}\;\approx\;0,975$. Quindi:
+\begin{equation}
+	\eta_{e}\;=\;\dfrac{P_{e}}{P_{a}}\;\implies\;{P_{a}}\;=\;\dfrac{P_{e}}{\eta_{e}}\;=\;\dfrac{20,11\;MW}{0,975}\;=\;20,63\;MW
+\end{equation}
+Calcolata la potenza utile all'asse è possibile procedere col calcolo del rendimento globale:
+\begin{center}
+	$\eta_{g}\;=\;\dfrac{20,63\;\cancel{MW}}{72,41\;\cancel{MW}}\;\approx\;\textbf{0,285}$
+\end{center}
+Tra la potenza utile all'asse ($P_{a}$) e l'energia chimica del combustibile ci passa, la potenza termica che effettivamente adduco al ciclo, il ciclo stesso col suo rendimento reale e il rendimento meccanico tra la potenza utile al primo organo in movimento ($P_{r}$) e la potenza meccanica utile all'asse.\\
+\\Quindi un primo rendimento da calcolare è il rendimento di combustione ($\eta_{b}$) che tiene conto di tutte le perdite legate allo scambio termico tra la fonte calda e il fluido:
+\begin{itemize}
+	\item Perdita per calore sensibile
+	\item Perdita per incombusti
+	\item Perdita nell'involucro esterno legate ai meccanismi di trasmissione del calore
+\end{itemize}
+\begin{equation}
+	\eta_{b}\;=\;\dfrac{\dot{Q_{a}}}{\dot{m_{c}}H_{i}}
+\end{equation}
+Si può ricavare il calore addotto ponendo un bilancio sul generatore di vapore, per cui:
+\begin{center}
+	$\dot{Q_{a}}\;=\;\dot{m_{gv}}\;(h_{3'}\;-\;h_{2})\;=\;71,6\;\cdot10^{3}\;\cancel{kg}/h\;\cdot\;(815,6\;kcal/\cancel{kg}\;-\;32,81\;kcal/\cancel{kg})\;=\;19,89\;\cancel{kg}/s\;\cdot\;(3412\;kJ/\cancel{kg}\;-\;137,3\;kJ/\cancel{kg})\;\approx\;65,13\;MW$
+\end{center}
+E quindi:
+\begin{center}
+	$\eta_{b}\;=\;\dfrac{65,13\;\cancel{MW}}{72,41\;\cancel{MW}}\;\approx\;\textbf{0,900}$
+\end{center}
+Tale potenza andrà ad alimentare l'intero ciclo che ha un suo rendimento reale. Tuttavia è interessante anche valutare la qualità dell'impianto realizzato confrontando il rendimento reale con l'efficienza del ciclo limite, ovvero quel ciclo in cui la macchina viene ipotizzata perfetta mentre il fluido, su cui purtroppo non si può agire tecnologicamente, viene considerato reale (a meno della viscosità).\\
+\uline{Esiste un grado di libertà} quando si definisce il ciclo limite corrispondente a un dato ciclo reale essendoci due pressioni massime, una in uscita alla pompa e una in ingresso alla turbina.\\
+In questa trattazione viene scelta come pressione massima quella in ingresso alla turbina, quindi i punti 1 e 3 del ciclo reale verranno a coincidere con quelli dello schema reversibile.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{ciclo_limite_reale.png}
+	\caption{Ciclo limite 12''34' in blu e ciclo reale 1234 in rosso}
+\end{figure}
+Di cui possiamo andare a compilare l'intera tabella dei parametri termodinamici, basandoci sui dati sperimentali per il ciclo reale e sui modelli di liquido incomprimibile e sulle tabelle dell'acqua in condizione di saturazione e di vapore surriscaldato.\\
+\begin{center}
+	\begin{tabular}{| l || l | l | l | l | l |}
+		\hline
+		\textbf{Stato} & \textbf{T [K]} & \textbf{P [atm]} & \textbf{h [kJ/kg]} & \textbf{s [kJ/kgK]} & \textbf{Titolo}\\ 
+		\hline
+		\textbf{1} & 303 & 0,043 & 126 & 0,437 & //\\ 
+		\hline
+		\textbf{2} & 304 & 86,0 & 137 & n.v. & //\\
+		\hline
+		\textbf{2''} & 303 & 61,0 & 132 & 0,437 & //\\
+		\hline
+		\textbf{3} & 758 & 61,0 & 3380 & 6,83 & //\\
+		\hline
+		\textbf{4} & 303 & 0,043 & 2313 & n.v. & n.v\\
+		\hline
+		\textbf{4''} & 303 & 0,043 & 2065 & 6,83 & 0,798\\
+		\hline
+	\end{tabular}
+\end{center}
+\begin{itemize}
+	\item[\textbf{Stato 1  }] Temperatura, pressione ed entalpia dallo schema. Entropia specifica dalla tabella di saturazione dell'acqua a 30°C.
+	\item[\textbf{Stato 2  }] Temperatura, pressione ed entalpia dallo schema.
+	\item[\textbf{Stato 2''}] Pressione dallo schema. L'entropia è la stessa dello stato 1, in quanto la trasformazione è reversibile. Per il resto bisogna utilizzare il modello di liquido incomprimibile, per cui:\\
+	$T_{2''}\;=\;T_{1},$\\
+	$\;h_{2''}\;=\;h_{l}(T)\;+\;v\;(P\;-\;P_{sat}(T))\;=\;126\;+\;10^{-3}\;(6100\;-\;4,3)\;=\;132\;kJ/kg$
+	\item[\textbf{Stato 3  }] Temperatura, pressione ed entalpia dallo schema. Entropia specifica dalla tabella dell'acqua nello stato di vapore surriscaldato:\\
+	$(61,0\;atm,\;485^{\circ} C)\to s_{3}=6,83\;kJ/kgK$
+	\item[\textbf{Stato 4  }] Pressione ed entalpia dallo schema. Poichè sono in condizioni di vapore saturo, la temperatura è quella di saturazione.
+	\item[\textbf{Stato 4''}] Pressione dallo schema. La temperatura è quella di saturazione, essendo un vapore saturo. L'entropia è la stessa dello stato 3, in quanto l'espansione è reversibile. Quindi:\\
+	$x_{4'}\;=\dfrac{(s_{4'}-s_{ls})}{(s_{vs}-s_{ls})}\;=\;\dfrac{6,83-0,437}{8,45-0,437}\;=\;0,798$\\
+	$\implies h_{4'}=h_{ls}\;+\;x_{4'}\;(h_{vs}-h_{ls})\;=\;126\;+\;0,798(2556-126)\;=\;2065\;kJ/kg$
+	
+\end{itemize}
+Ora che sono stati raccolti i parametri termodinamici caratteristici del ciclo reale e del ciclo limite si può procedere con il calcolo dei rendimenti.
+Il rendimento limite:
+\begin{equation}
+	\eta_{l}\;=\;\dfrac{l_{t}\;-\;l_{p}}{q_{a}}
+\end{equation}
+\begin{center}
+	$\to \eta_{l}\;=\;\dfrac{(h_{3}\;-\;h_{4''})\;-\;(h_{2''}\;-\;h_{1})}{(h_{3}\;-\;h_{2''})}\;=\;\dfrac{(3380\;-\;2065)\;-\;(132\;-\;126)}{(3380\;-\;132)}\;\approx\;\textbf{0,403}$
+\end{center}
+Ogni ciclo limite si può rendere equivalente a un ciclo di Carnot introducendo i concetti di temperatura media di adduzione del calore ($T_{ma}$) e temperatura media di sottrazione del calore ($T_{ms}$). I cui valori non sono altro che una applicazione del teorema della media integrale:
+\begin{equation}
+	T_{ma}\;=\;\dfrac{\int_{2''}^{3}Tds}{\Delta s}\;=\;\dfrac{q_{a}}{s_{3}\;-\;s_{2''}}\;=\;\dfrac{3380\;-\;132}{6,83\;-\;0,437}\;\approx\;\textbf{508\;K}
+\end{equation}
+\begin{equation}
+	T_{ms}\;=\;\dfrac{\int_{4''}^{1}Tds}{\Delta s}\;=\;\dfrac{q_{s}}{s_{4''}\;-\;s_{1}}\;=\;\dfrac{2065\;-\;126}{6,83\;-\;0,437}\;\approx\;\textbf{303\;K}
+\end{equation}
+Come giusto che sia, visto che in questo ciclo limite sottraggo il calore a temperatura costante.\\
+\\Per il rendimento reale invece:
+\begin{equation}
+	\eta_{r}\;=\;\dfrac{P_{t}\;-\;P_{p}}{\dot{Q_{a}}}
+\end{equation}
+Approssimando che la perdita di porta massica di $0,48\;t/s$ che si ha nella turbina non abbia espanso per nulla.
+\begin{center}
+	$\to P_{t}\;=\;\dot{m_{3}}\;(h_{3}-h_{4})\;=\;70,72\;\cdot10^{3}\;kg/h\;\cdot\;(3380\;kJ/kg\;-\;2313\;kJ/kg)\;=\;19,64\;\cancel{kg}/s\;\cdot\;(3380\;kJ/\cancel{kg}\;-\;2313\;kJ/\cancel{kg})\;\approx\;20,96\;MW$
+\end{center}
+\begin{center}
+	$\to P_{p}\;=\;\dot{m_{p}}\;(h_{2}-h_{1})\;=\;71,6\;\cdot10^{3}\;kg/h\;\cdot\;(137\;kJ/kg\;-\;126\;kJ/kg)\;=\;19,89\;\cancel{kg}/s\;\cdot\;(137\;kJ/\cancel{kg}\;-\;126\;kJ/\cancel{kg})\;\approx\;219\;kW$
+\end{center}
+E quindi:
+\begin{center}
+	$\eta_{r}\;=\;\dfrac{20,97\;-\;0,219}{65,13}\;\approx\;\textbf{0,319}$
+\end{center}
+Il rapporto tra l'efficienza del ciclo limite, che tiene conto di tutti i limiti termodinamici, e l'efficienza del ciclo reale che invece tiene conto anche della qualità delle macchine che eseguono il ciclo, ci indicherà la qualità del nostro impianto, e quanto si avvicina al caso limite:
+\begin{equation}
+	\eta_{int,impianto}\;=\;\dfrac{\eta_{r}}{\eta_{l}}\;=\;\dfrac{0,319}{0,403}\;\approx\;\textbf{0,792}
+\end{equation}
+Volendo si potrebbe anche indagare sulla bontà della sola espansione, valutando il rendimento adiabatico di espansione, di cui si è già parlato nell' Esercizio 1:
+\begin{equation}
+	\eta_{ad}\;=\;\dfrac{l_{r}}{l_{is}}\;=\;\dfrac{(h_{3}-h_{4})}{(h_{3}-h_{4''})}\;=\;\dfrac{(3380\;-\;2313)}{(3380\;-\;2065)}\;\approx\;\textbf{0,811}
+\end{equation}
+\\Si può osservare che la la potenza meccanica del ciclo reale ($P_{r}\;=\;P_{t}\;-\;P_{p}$), in realtà differisce dalla potenza utile all'asse calcolata nella (2.3). Il motivo è che tra la potenza del ciclo reale, ovvero la potenza al primo organo rotante in movimento, e la potenza utile all'asse c'è di mezzo il rendimento meccanico:
+\begin{equation}
+	\eta_{m}\;=\;\dfrac{P_{a}}{P_{r}}\;=\;\dfrac{20,63}{20,75}\;\approx\;\textbf{0,994}
+\end{equation}
+\newpage
+
+\section{2° Schema d'impianto a vapore}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{impiantoTV2.png}
+	\caption{Schema di un impianto a vapore che segue ciclo a vapore surriscaldato con uno spillamento}
+\end{figure}
+\paragraph{Calcolo dei rendimenti.\\}
+Analogamente a quanto fatto nel primo schema d'impianto:
+\begin{center}
+	$\eta_{ge}\;=\;\dfrac{P_{e}}{\dot{m_{c}}H_{i}}\;=\;\dfrac{19,69\;\cancel{MW}}{70,00\;\cancel{MW}}\;\approx\;\textbf{0,281}$
+\end{center}
+Per le stesse considerazioni fatte nel primo esempio, si ipotizza un rendimento elettrico $\eta_{e}\;\approx\;0,975$. Quindi:
+\begin{center}
+	$\eta_{e}\;=\;\dfrac{P_{e}}{P_{a}}\;\implies\;{P_{a}}\;=\;\dfrac{P_{e}}{\eta_{e}}\;=\;\dfrac{19,69\;MW}{0,975}\;=\;20,20\;MW$
+\end{center}
+Calcolata la potenza utile all'asse è possibile procedere col calcolo del rendimento globale, come indicato nella (2.2):
+\begin{center}
+	$\eta_{g}\;=\;\dfrac{20,20\;\cancel{MW}}{70,00\;\cancel{MW}}\;\approx\;\textbf{0,289}$
+\end{center}
+Per quanto riguarda il rendimento di combustione invece, va tenuto conto che essendo presente uno spillamento l'entalpia dell'acqua in ingresso all'economizzatore è maggiore rispetto al caso precedente.\\
+Quindi il calore che effettivamente adduco sarà pari a:
+\begin{center}
+	$\dot{Q_{a}}\;=\;\dot{m_{gv}}\;(h_{3'}\;-\;h_{2R})\;=\;71,6\;\cdot10^{3}\;\cancel{kg}/h\;\cdot\;(815,6\;kcal/\cancel{kg}\;-\;57,33\;kcal/\cancel{kg})\;=\;19,89\;\cancel{kg}/s\;\cdot\;(3412\;kJ/\cancel{kg}\;-\;239,9\;kJ/\cancel{kg})\;\approx\;63,09\;MW$
+\end{center}
+E quindi:
+\begin{center}
+	$\eta_{b}\;=\;\dfrac{63,09\;\cancel{MW}}{70,00\;\cancel{MW}}\;\approx\;\textbf{0,901}$
+\end{center}
+Anche in questo esempio, per tracciare il ciclo limite viene scelta come pressione massima quella in ingresso alla turbina, quindi i punti 1 e 3 del ciclo reale verranno a coincidere con quelli dello schema reversibile.
+\begin{figure}[H]
+	
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[width=0.9\linewidth]{ciclo_limite_reale.png} 
+		\caption{Ciclo limite}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[width=0.9\linewidth]{ciclo_limite_reale.png}
+		\caption{Ciclo reale}
+	\end{subfigure}
+	
+	\caption{Ciclo limite e reale, con rappresentazione dello spillamento}
+\end{figure}
+Di cui possiamo compilare la tabella dei parametri termodinamici:
+\begin{center}
+	\begin{tabular}{| l || l | l | l | l | l |}
+		\hline
+		\textbf{Stato} & \textbf{T [K]} & \textbf{P [atm]} & \textbf{h [kJ/kg]} & \textbf{s [kJ/kgK]} & \textbf{Titolo}\\ 
+		\hline
+		\textbf{1} & 303 & 0,043 & 126 & 0,437 & //\\ 
+		\hline
+		\textbf{2} & 304 & 86,0 & 137 & n.v. & //\\
+		\hline
+		\textbf{2''} & 303 & 61,0 & 132 & 0,437 & //\\
+		\hline
+		\textbf{3} & 758 & 61,0 & 3380 & 6,83 & //\\
+		\hline
+		\textbf{4} & 303 & 0,043 & 2313 & n.v. & n.v\\
+		\hline
+		\textbf{4''} & 303 & 22C & 2065 & 6,83 & 0,798\\
+		\hline
+	\end{tabular}
+\end{center}
+\begin{itemize}
+	\item[\textbf{Stato 1  }] Come nel primo esempio.
+	\item[\textbf{Stato 2  }] Temperatura, pressione ed entalpia dallo schema.
+	\item[\textbf{Stato 2''}] Pressione dallo schema. L'entropia è la stessa dello stato 1, in quanto la trasformazione è reversibile. Per il resto bisogna utilizzare il modello di liquido incomprimibile, per cui:\\
+	$T_{2''}\;=\;T_{1},$\\
+	$\;h_{2''}\;=\;h_{l}(T)\;+\;v\;(P\;-\;P_{sat}(T))\;=\;126\;+\;10^{-3}\;(6100\;-\;4,3)\;=\;132\;kJ/kg$
+	\item[\textbf{Stato 3  }] Temperatura, pressione ed entalpia dallo schema. Entropia specifica dalla tabella dell'acqua nello stato di vapore surriscaldato:\\
+	$(61,0\;atm,\;485^{\circ} C)\to s_{3}=6,83\;kJ/kgK$
+	\item[\textbf{Stato 4  }] Pressione ed entalpia dallo schema. Poichè sono in condizioni di vapore saturo, la temperatura è quella di saturazione.
+	\item[\textbf{Stato 4''}] Pressione dallo schema. La temperatura è quella di saturazione, essendo un vapore saturo. L'entropia è la stessa dello stato 3, in quanto l'espansione è reversibile. Quindi:\\
+	$x_{4'}\;=\dfrac{(s_{4'}-s_{ls})}{(s_{vs}-s_{ls})}\;=\;\dfrac{6,83-0,437}{8,45-0,437}\;=\;0,798$\\
+	$\implies h_{4'}=h_{ls}\;+\;x_{4'}\;(h_{vs}-h_{ls})\;=\;126\;+\;0,798(2556-126)\;=\;2065\;kJ/kg$
+	
+\end{itemize}
+\newpage
+
+\chapter{Impianto con Turbina a Gas}
+\section{Analisi termodinamica della turbina a gas LM6000 (General Electric)}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{LM6000.png}
+	\caption{Spaccato di turbina a gas di derivazione aeronautica LM6000 per applicazioni industriali (General Electric)}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{data_LM6000.png}
+	\caption{Scheda tecnica}
+\end{figure}
+
+\paragraph{Calcolare e disegnare i cicli ideale e reale, stimando i rendimenti politropici di compressione ed espansione, i rendimenti di combustione, limite (ideale), interno di impianto, reale, meccanico e le temperature medie di adduzione e sottrazione del calore.\\}
+Il primo passo che dobbiamo fare e analizzare i dati che abbiamo effettivamente a disposizione:
+\begin{center}
+	\begin{tabular}{| l || l | l | l | l | l | l |}
+		\hline
+		\textbf{Modello} & \textbf{P\ped{ua} [kW]} & \textbf{C\ped{s} [kJ/kWh]} & \textbf{$\beta$} & \textbf{$\dot{m}$\ped{a} [kg/s]} & \textbf{Velocità turbina [rpm]} & \textbf{T\ped{4} [K]}\\ 
+		\hline
+		\textbf{LM 6000} & 43100 & 8620 & 29,5 & 125,0 & 3600 & 723\\ 
+		\hline
+	\end{tabular}
+\end{center}
+La potenza espressa in cavalli e l'efficienza sono ridondanti, in quanto la potenza viene espressa anche in $kW$ e sul rendimento ci viene già dato il consumo specifico di calore:
+\begin{equation}
+	C_{s}\;=\;\dfrac{m_{c}H_{i}}{L_{ur}}\;=\;\dfrac{1}{\eta_{g}}
+\end{equation}
+Infatti:
+\begin{center}
+	$\to\eta_{g}\;=\;\dfrac{3600}{C_{s}[kJ/kWh]}\;=\;\dfrac{3600}{8620}\;\approx\;41,7\;\%$
+\end{center}
+Come era stato già indicato nella scheda tecnica.\\
+Con questi dati e qualche ipotesi possiamo andare a disegnare sul piano T-s il ciclo limite e reale.\\
+\uline{In questa trattazione si ipotizza che l'adduzione di calore, anche nel caso reale, sia internamente reversibile e che quindi la trasformazione corrispondente sia un isobara.} \\Si è abbastanza confidenti su questa ipotesi, in quanto a differenza dell'impianto a vapore, nell'impianto a gas la combustione è interna e il fluido motore non deve passare attraverso una lunga serie di fasci tubieri.
+\begin{figure}[H]
+	
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[width=0.9\linewidth]{ciclo_gas_limite.png} 
+		\caption{Ciclo limite}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[width=0.9\linewidth]{ciclo_gas_reale.png}
+		\caption{Ciclo reale}
+	\end{subfigure}
+	
+	\caption{Cicli Joule limite e reale di una turbina gas}
+\end{figure}
+I cui parametri termodinamici possono essere calcolati facendo qualche ipotesi.
+\begin{center}
+	\begin{tabular}{| l || l | l |}
+		\hline
+		\textbf{Stato} & \textbf{T [K]} & \textbf{P [atm]}\\ 
+		\hline
+		\textbf{1} & 298 & 1,00\\ 
+		\hline
+		\textbf{2} & 817 & 29,5\\
+		\hline
+		\textbf{2'} & 785 & 29,5\\
+		\hline
+		\textbf{3} & 1573 & 29,5\\
+		\hline
+		\textbf{4} & 723 & 1,00\\
+		\hline
+		\textbf{4'} & 598 & 1,00\\
+		\hline
+	\end{tabular}
+\end{center}
+Prima di iniziare i calcoli si definisce per alleggerire la notazione parametro $\lambda\;:=\dfrac{k-1}{k}$, che nel caso in cui si ha a che fare con aria è pari a $\lambda\;=\;0,286$
+\begin{itemize}
+	\item[\textbf{Stato 1  }] Un impianto a gas di derivazione aeronautica per applicazioni industriali ha sicuramente in ingresso aria alle condizioni ambiente, che in questo esempio \uline{si ipotizzano essere 25°C e 1,00 atm}. 
+	\item[\textbf{Stato 2'}] La pressione la ricaviamo dal rapporto di compressione che viene indicato nella scheda tecnica. Essendo la trasformazione 1-2' iso-entropica si può asserire che:\\
+	$T_{2'}\;=\;T_{1}\beta^{\lambda}\;=\;298\;K\;29,5^{0,286}\;\approx\;785\;K$
+	\item[\textbf{Stato 2 e 3  }] Entrambi i punti si trovano sulla stessa isobara del punto 2'. Per quanto riguarda le temperature bisogna fare delle assunzioni e delle ipotesi plausibili.\\
+	La scheda tecnica ci fornisce sia il rendimento globale ($\eta_{g}$) che la potenza utile all'asse ($P_{ua}$), quindi posso facilmente ricavare la portata di combustibile che viene iniettata nel combustore, \uline{se ipotizzo che l'impianto sia alimentato a metano (CH\ped{4}). Da ricerche sulla turbina in questione, si legge che tale impianto è abbastanza versatile sui combustibili utilizzabili}. Quindi:
+	\begin{center}
+		$\eta_{g}\;=\;\dfrac{P_{ua}}{\dot{m_{c}}H_{i}}\to\dot{m_{c}}\;=\;\dfrac{43100\;kW}{0,417\;50000\;kJ/kg}\;\approx\;2,07\;kg/s $
+	\end{center}
+	Quindi il rapporto aria/combustibile reale è pari a:
+	\begin{center}
+		$\alpha\;=\;\dfrac{\dot{m_{a}}}{\dot{m_{c}}}\;=\;\dfrac{125}{2,07}\;=\;60,4$
+	\end{center}
+	Visto che non ci sono ausiliari, \uline{posso suppore che ci sia un ottimo rendimento meccanico} $\eta_{m}\;=\;\textbf{0,99}$. Per cui la potenza utile reale (al primo organo in movimento) è pari a:
+	\begin{center}
+		$P_{ur}\;=\;\dfrac{43100\;kW}{0,99}\;\approx\;43535\;kW$
+	\end{center}
+	Da un bilancio sulla turbina e sul compressore ottengo l'espressione della potenza reale. Si tiene conto del fatto che il ciclo è aperto e che quindi nel compressore viene compressa solo aria, mentre nella turbina vengono elaborati gas combusti, ma \uline{si ipotizza che entrambi abbiano lo stesso calore specifico a pressione costante. Tale assunzione è credibile in quanto} $\alpha >> \alpha_{st}$.
+	\begin{equation}
+		P_{ur}\;=\;(\dot{m_{a}}+\dot{m_{c}})l_{rt}\;-\;\dot{m_{a}}l_{rc}\;=\;\dot{m_{a}}\;c_{p}\;\Biggr[\Biggr(\dfrac{\alpha +1}{\alpha}\Biggr)(T_{3}\;-\;T_{4})\;-\;(T_{2}\;-\;T_{1})\Biggr]
+	\end{equation}
+	Appare evidente che anche se conosciamo la potenza utile e il rendimento non riusciamo a determinare il ciclo in maniera univoca. Per questo motivo si decide di assegnare un valore alla $T_{3}$. Da quanto viene riferito dalla descrizione, la turbina è divisa in 2 stadi di alta pressione e 5 stadi di bassa. Questa configurazione fa pensare  che i primi due stadi siano raffreddati (cooled) con qualche tecnica, e che quindi in ingresso alla turbina ci sia una temperatura ben più alta di quella a cui fonde il metallo di cui è costituita. Considerando i limiti di queste tecniche, \uline{si ipotizza che la T\ped{3} = 1300°C = 1573 K}\\
+	Quindi in virtù della (3.2):\\
+	$T_{2}\;=\;817\;K$
+	\item[\textbf{Stato 4  }] La pressione è quella del punto 1 in quanto lo scarico avviene in ambiente. La temperatura è indicata nella scheda tecnica. 
+	\item[\textbf{Stato 4'}] La pressione è la stessa del punto 4. Essendo la trasformazione 3-4' iso-entropica si può asserire che la temperatura vale:\\
+	$T_{4'}\;=\;\dfrac{T_{3}}{\beta^{\lambda}}\;=\;\dfrac{1573\;K}{29,5^{0,286}}\;\approx\;598\;K$
+\end{itemize}
+Ora da  un bilancio sul combustore potrei ottenere quanto vale il rendimento di combustione. Ma per farlo dovrei ipotizzare che il combustibile entra nelle stesse condizioni dell'aria, ovvero assumere che $h_{c}\;=\;h_{2}$. Questa ipotesi non è molto realistica in quanto aria e combustibile entrano in camera di combustione a temperature diverse e a pressioni leggermente diverse per fare in modo che il combustibile riesca ad entrare nel combustore.\\
+Quindi, anzichè calcolarlo, \uline{si ipotizza che il rendimento di combustione} ($\eta_{b}\;=\;\textbf{0,98}$). Ipotesi credibile, trattandosi di una combustione interna in cui non possono esserci perdite al camino e in cui si sta lavorando con tanto eccesso d'aria, che riduce nettamente le perdite per incombusti.\\
+Dal momento che ho il rendimento globale e sono stati ipotizzati quello meccanico e di combustione posso calcolare quanto vale il rendimento reale del ciclo:
+\begin{equation}
+	\eta_{r}\;=\;\dfrac{\eta_{g}}{\eta_{b}\;\eta_{m}}\;=\;\dfrac{0,417}{0,98\;0,99}\;\approx\;\textbf{0,430}
+\end{equation}
+Avendo calcolato i parametri del ciclo limite (ideale), si può procedere al calcolo del rendimento, che in virtù delle considerazioni già fatte nell'esercizio 1:
+\begin{equation}
+	\eta_{id}\;=\;\dfrac{l_{u}}{q_{a}}\;=\;1\:-\;\dfrac{1}{\beta^{\lambda}}\;=\;1\;-\;\dfrac{1}{29,5^{0,286}}\;\approx\;\textbf{0,620}
+\end{equation}
+E quindi il rendimento di impianto:
+\begin{equation}
+	\eta_{int,impianto}\;=\;\dfrac{\eta_{r}}{\eta_{l}}\;=\;\dfrac{0,430}{0,620}\;\approx\;\textbf{0,694}
+\end{equation}
+Ogni ciclo limite si può rendere equivalente a un ciclo di Carnot introducendo i concetti di temperatura media di adduzione del calore ($T_{ma}$) e temperatura media di sottrazione del calore ($T_{ms}$). Come visto nella (2.6) e nella (2.7):
+\begin{equation}
+	T_{ma}\;=\;\dfrac{\int_{2'}^{3}Tds}{\Delta s}\;=\;\dfrac{c_{p}\;(T_{3}-T_{2'})}{c_{p}\;ln(\frac{T_{3}}{T_{2'}})}\;=\;\dfrac{1573\;-\;785}{ln(\frac{1573}{785})}\;\approx\;\textbf{1134\;K}
+\end{equation}
+\begin{equation}
+	T_{ms}\;=\;\dfrac{\int_{4'}^{1}Tds}{\Delta s}\;=\;\dfrac{c_{p}\;(T_{4'}-T_{1})}{c_{p}\;ln(\frac{T_{4'}}{T_{1}})}\;=\;\dfrac{598\;-\;298}{ln(\frac{598}{298})}\;\approx\;\textbf{431\;K}
+\end{equation}
+Dal momento che si conosce tutto sulla qualità della macchina, è possibile calcolare quanto valgano i rendimenti politropici del compressore e della turbina.\\
+\begin{equation}
+	\dfrac{T_{4}}{T_{3}}\;=\;\dfrac{1}{\beta^{\lambda\eta_{pt}}}\;\to\;\eta_{pt}\;=\;\dfrac{log_{\beta}(\frac{T_{3}}{T_{4}})}{\lambda}\;\approx\;\textbf{0,803}
+\end{equation}
+\begin{equation}
+	\dfrac{T_{2}}{T_{1}}\;=\;\beta^{\frac{\lambda}{\eta_{pc}}}\;\to\;\eta_{pc}\;=\;\dfrac{\lambda}{log_{\beta}(\frac{T_{2}}{T_{1}})}\;\approx\;\textbf{0,960}
+\end{equation}
+\newpage
+\paragraph{Valutare il rapporto di compressione scelto (29,5) rispetto a quello di lavoro massimo e di rendimento massimo teorici.\\}
+Si è osservato che un ciclo di joule di base ha 2 gradi di libertà, uno legato al rapporto $\beta$ di compressione e uno legato al rapporto $\theta$ tra temperatura massima e minima.\\
+Se analizzo il problema a $\theta$ fissato, posso valutare quale è il rapporto di compressione che ottimizza il lavoro utile o il rendimento.\\
+Ovviamente l'analisi può essere fatta sia sul ciclo ideale che reale. In questa occasione viene fatta per quello ideale.\\
+Come si può osservare nella 3.4, il rendimento ideale cresce al crescere del rapporto di compressione. Quindi il rendimento:
+\begin{center}
+	$\eta_{id(max)}\;=\;\dfrac{1}{\beta_{max}^{\lambda}}$
+\end{center}
+Il rapporto massimo di compressione (fissato $\theta$), si ottiene quando $T_{2}\;=\;T_{3}$. Quindi:
+\begin{equation}
+	\beta_{max}\;=\;\theta^{\frac{1}{\lambda}}\;\approx\;\textbf{336}
+\end{equation}
+Questo valore è molto distante dal rapporto proposto in questo esempio (29,5). Le ragioni di questa grande distanza è legata al fatto che questo valore è in realtà soltanto teorico perchè l'andamento del rendimento reale non è crescente come quello ideale ma presenta un massimo. Il motivo di questo andamento è legato al fatto che il peso dell'inefficienza del compressore e della turbina cresce al crescere del rapporto di compressione. Cosa che chiaramente non accade nel caso ideale.\\
+Invece per ottenere il valore di $\beta$ per cui il lavoro utile del ciclo ideale venga massimizzato devo imporre la condizione per cui:
+\begin{equation}
+	\dfrac{dl_{u}}{d\beta}\;=\;0\;\to\;\beta_{l_{u,max}}\;=\;\theta^{\frac{1}{2\lambda}}\;\approx\;\textbf{18,3}
+\end{equation}
+Valore che invece è già più prossimo al valore che viene fornito nell'esempio in quanto essendo tale impianto di derivazione aeronautica è probabile che sia stato ottimizzato alla potenza.
+\newpage
+\paragraph{Valutare un ipotetico impianto con un' interrefrigerazione ($\beta_{1}\;=\;2,42,\;\beta_{2}\;=\;12$) ed un riscaldamento ripetuto ($\beta_{3}\;=\;2,42,\;\beta_{4}\;=\;12$) conservando gli stessi rendimenti politropici di compressione ed espansione, di combustione e meccanico valutati con il ciclo semplice di Joule. Calcolare e disegnare i cicli ideale e reale per questo impianto, il rendimento limite (ideale), reale e interno di impianto e le temperature medie di adduzione e sottrazione del calore.\\}
+\begin{figure}[H]
+	
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[width=0.9\linewidth]{ciclo_gas_limite_ir.png} 
+		\caption{Ciclo limite}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[width=0.9\linewidth]{ciclo_gas_reale_ir.png}
+		\caption{Ciclo reale}
+	\end{subfigure}
+	
+	\caption{Cicli Joule limite e reale di una turbina gas con interrefrigerazione e riscaldamento ripetuto}
+\end{figure}
+I cui parametri termodinamici possono essere calcolati:
+\begin{center}
+	\begin{tabular}{| l || l | l |}
+		\hline
+		\textbf{Stato} & \textbf{T [K]} & \textbf{P [atm]}\\ 
+		\hline
+		\textbf{1} & 298 & 1,00\\ 
+		\hline
+		\textbf{2} & 388 & 2,42\\
+		\hline
+		\textbf{2'} & 384 & 2,42\\
+		\hline
+		\textbf{3} & 298 & 2,42\\
+		\hline
+		\textbf{4} & 625 & 29,04\\
+		\hline
+		\textbf{4'} & 607 & 29,04\\
+		\hline
+		\textbf{6} & 1573 & 29.04\\
+		\hline
+		\textbf{7} & 598 & 12,0\\
+		\hline
+		\textbf{7'} & 598 & 12,0\\
+		\hline
+		\textbf{8} & 598 & 12,0\\
+		\hline
+		\textbf{9} & 598 & 1,00\\
+		\hline
+		\textbf{9'} & 598 & 1,00\\
+		\hline
+	\end{tabular}
+\end{center}
+\begin{itemize}
+	\item[\textbf{Stato 2'}] La pressione la ricaviamo dal primo rapporto di compressione che viene indicato. Essendo la trasformazione 1-2' iso-entropica si può asserire che:\\
+	$T_{2'}\;=\;T_{1}\beta_{1}^{\lambda}\;=\;298\;K\;2,42^{0,286}\;\approx\;384\;K$
+	\item[\textbf{Stato 2  }] La pressione è quella del punto 2'. La temperatura dipende dalla qualità del primo compressore, che si ipotizza essere la stessa del compressore dell'esempio precedente ($\eta_{pc}\;=\;0,960$). Per cui:\\
+	$T_{2}\;=\;T_{1}\;\beta_{1}^{\frac{\lambda}{\eta_{pc}}}\;\approx\;388\;K$
+	\item[\textbf{Stato 3  }] Per ipotesi sullo schema dell'interrefrigerazione questo punto si trova alla stessa temperatura del punto 1 e alla pressione del punto 2'.
+	\item[\textbf{Stato 4'}] La pressione la ricaviamo dal secondo rapporto di compressione che viene indicato. Essendo la trasformazione 3-4' iso-entropica si può asserire che:\\
+	$T_{4'}\;=\;T_{3}\beta_{2}^{\lambda}\;=\;\approx\;607\;K$
+	\item[\textbf{Stato 4  }] La pressione è quella del punto 4'. La temperatura analogamente al punto 2' dipende dalla qualità del secondo compressore, che si ipotizza essere la stessa del compressore dell'esempio precedente ($\eta_{pc}\;=\;0,960$). Per cui:\\
+	$T_{4}\;=\;T_{3}\;\beta_{2}^{\frac{\lambda}{\eta_{pc}}}\;\approx\;625\;K$
+	\item[\textbf{Stato 7'}]
+\end{itemize}
+Ora da  un bilancio sul combustore potrei ottenere quanto vale il rendimento di combustione. Ma per farlo dovrei ipotizzare che il combustibile entra nelle stesse condizioni dell'aria, ovvero assumere che $h_{c}\;=\;h_{2}$. Questa ipotesi non è molto realistica in quanto aria e combustibile entrano in camera di combustione a temperature diverse e a pressioni leggermente diverse per fare in modo che il combustibile riesca ad entrare nel combustore.\\
+Quindi, anzichè calcolarlo, \uline{si ipotizza che il rendimento di combustione} ($\eta_{b}\;=\;\textbf{0,98}$). Ipotesi credibile, trattandosi di una combustione interna in cui non possono esserci perdite al camino e in cui si sta lavorando con tanto eccesso d'aria, che riduce nettamente le perdite per incombusti.\\
+Dal momento che ho il rendimento globale e sono stati ipotizzati quello meccanico e di combustione posso calcolare quanto vale il rendimento reale del ciclo:
+\begin{equation}
+	\eta_{r}\;=\;\dfrac{\eta_{g}}{\eta_{b}\;\eta_{m}}\;=\;\dfrac{0,417}{0,98\;0,99}\;\approx\;\textbf{0,430}
+\end{equation}
+Avendo calcolato i parametri del ciclo limite (ideale), si può procedere al calcolo del rendimento, che in virtù delle considerazioni già fatte nell'esercizio 1:
+\begin{equation}
+	\eta_{id}\;=\;\dfrac{l_{u}}{q_{a}}\;=\;1\:-\;\dfrac{1}{\beta^{\lambda}}\;=\;1\;-\;\dfrac{1}{29,5^{0,286}}\;\approx\;\textbf{0,620}
+\end{equation}
+E quindi il rendimento di impianto:
+\begin{equation}
+	\eta_{int,impianto}\;=\;\dfrac{\eta_{r}}{\eta_{l}}\;=\;\dfrac{0,430}{0,620}\;\approx\;\textbf{0,694}
+\end{equation}
+Ogni ciclo limite si può rendere equivalente a un ciclo di Carnot introducendo i concetti di temperatura media di adduzione del calore ($T_{ma}$) e temperatura media di sottrazione del calore ($T_{ms}$). Come visto nella (2.6) e nella (2.7):
+\begin{equation}
+	T_{ma}\;=\;\dfrac{\int_{2'}^{3}Tds}{\Delta s}\;=\;\dfrac{c_{p}\;(T_{3}-T_{2'})}{c_{p}\;ln(\frac{T_{3}}{T_{2'}})}\;=\;\dfrac{1573\;-\;785}{ln(\frac{1573}{785})}\;\approx\;\textbf{1134\;K}
+\end{equation}
 \end{document}
+	Nel bilancio del combustore invece, \uline{si ipotizza che il combustibile entri nelle condizione dell'aria, ovvero assumiamo che:} $h_{c}\;=\;h_{2}$. Questa ipotesi non è molto realistica in quanto aria e combustibile entrano in camera di combustione a temperature diverse e a pressioni leggermente diverse per fare in modo che il combustibile riesca ad entrare nel combustore. Inoltre si \uline{si assume che il rendimento di combustione} ($\eta_{b}\;=\;0,98$), trattandosi di una combustione interna in cui non possono esserci perdite al camino. Ad ogni modo, con queste ipotesi ottengo:
+\begin{equation}
+	\dot{m_{a}}\;h_{2}\;+\;\dot{m_{c}}\;h_{c}\;+\;\dot{m_{c}}\;H_{i}\eta_{b}\;=\;(\dot{m_{a}}\;+\;\dot{m_{c}})\;h_{3}\to (\alpha\;+1)c_{p}(T_{3}\;-\,T_{2})\;=\;H_{i}\eta_{b}
+\end{equation}
+La (3.2) e la (3.3) insieme formano un sistema di 2 equazioni in 2 incognite ($T_{3}$ e $T_{2}$). Le cui soluzioni sono:\\
+$T_{2}\;=$\\
+$T_{3}\;=$

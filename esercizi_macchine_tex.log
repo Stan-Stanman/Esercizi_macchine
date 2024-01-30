@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  22 JAN 2024 15:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  30 JAN 2024 03:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -725,34 +725,41 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 Package: ulem 2019/11/18
 \ULdepth=\dimen295
 )
+(c:/texlive/2023/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip69
+\multirow@cntb=\count322
+\multirow@dima=\skip70
+\bigstrutjot=\dimen296
+)
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
-7.
+8.
 
 (c:/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count322
+\l__color_backend_stack_int=\count323
 \l__pdf_internal_box=\box73
 )
 (./esercizi_macchine_tex.aux)
 \openout1 = `esercizi_macchine_tex.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -788,19 +795,19 @@ LaTeX Font Info:    ... okay on input line 27.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 27.
-Package microtype Info: Applying patch `item' on input line 27.
-Package microtype Info: Applying patch `toc' on input line 27.
-Package microtype Info: Applying patch `eqnum' on input line 27.
-Package microtype Info: Applying patch `footnote' on input line 27.
-Package microtype Info: Applying patch `verbatim' on input line 27.
+LaTeX Info: Redefining \microtypecontext on input line 28.
+Package microtype Info: Applying patch `item' on input line 28.
+Package microtype Info: Applying patch `toc' on input line 28.
+Package microtype Info: Applying patch `eqnum' on input line 28.
+Package microtype Info: Applying patch `footnote' on input line 28.
+Package microtype Info: Applying patch `verbatim' on input line 28.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 27.
+LaTeX Info: Redefining \showhyphens on input line 28.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -809,16 +816,16 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count323
-\scratchdimen=\dimen296
+\scratchcounter=\count324
+\scratchdimen=\dimen297
 \scratchbox=\box74
-\nofMPsegments=\count324
-\nofMParguments=\count325
+\nofMPsegments=\count325
+\nofMParguments=\count326
 \everyMPshowfont=\toks52
-\MPscratchCnt=\count326
-\MPscratchDim=\dimen297
-\MPnumerator=\count327
-\makeMPintoPDFobject=\count328
+\MPscratchCnt=\count327
+\MPscratchDim=\dimen298
+\MPnumerator=\count328
+\makeMPintoPDFobject=\count329
 \everyMPtoPDFconversion=\toks53
 ) (c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -829,8 +836,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \it@ocap on input line 27.
-LaTeX Info: Redefining \it@ccap on input line 27.
+LaTeX Info: Redefining \it@ocap on input line 28.
+LaTeX Info: Redefining \it@ccap on input line 28.
 
 
 File italian.ldf warning: 
@@ -838,7 +845,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting
-italian.ldf    on input line 27.
+italian.ldf    on input line 28.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
@@ -847,10 +854,10 @@ Package caption Info: End \AtBeginDocument code.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 27.
+ on input line 28.
 
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 31.
+ 32.
 (c:/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
@@ -859,19 +866,19 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 31.
+ 32.
 
 (c:/texlive/2023/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 31.
+ 32.
 
 (c:/texlive/2023/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 31.
+ 32.
 
 (c:/texlive/2023/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
@@ -883,15 +890,15 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
 <logo_uni.jpg, id=4, 575.751pt x 121.05225pt>
 File: logo_uni.jpg Graphic file (type jpg)
 <use logo_uni.jpg>
-Package pdftex.def Info: logo_uni.jpg  used on input line 31.
+Package pdftex.def Info: logo_uni.jpg  used on input line 32.
 (pdftex.def)             Requested size: 398.33858pt x 83.75517pt.
  [1
 
@@ -904,18 +911,23 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
-)
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
+7.
+
+(c:/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+))
 \tf@toc=\write4
 \openout4 = `esercizi_macchine_tex.toc'.
 
  [2
 
 ]
-Capitolo 1.
+Esercizio 1.
 <adrev.png, id=15, 845.40843pt x 597.73312pt>
 File: adrev.png Graphic file (type png)
 <use adrev.png>
-Package pdftex.def Info: adrev.png  used on input line 71.
+Package pdftex.def Info: adrev.png  used on input line 74.
 (pdftex.def)             Requested size: 409.71692pt x 289.68132pt.
 [3
 
@@ -932,7 +944,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <caricopoliprotico.png, id=31, 845.40843pt x 597.73312pt>
 File: caricopoliprotico.png Graphic file (type png)
 <use caricopoliprotico.png>
-Package pdftex.def Info: caricopoliprotico.png  used on input line 97.
+Package pdftex.def Info: caricopoliprotico.png  used on input line 100.
 (pdftex.def)             Requested size: 409.71692pt x 289.68132pt.
 
 
@@ -947,7 +959,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <lavororeale.png, id=36, 845.40843pt x 597.73312pt>
 File: lavororeale.png Graphic file (type png)
 <use lavororeale.png>
-Package pdftex.def Info: lavororeale.png  used on input line 126.
+Package pdftex.def Info: lavororeale.png  used on input line 129.
 (pdftex.def)             Requested size: 409.71692pt x 289.68132pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -974,7 +986,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <lavoro_calore_politropico.png, id=45, 845.40843pt x 597.73312pt>
 File: lavoro_calore_politropico.png Graphic file (type png)
 <use lavoro_calore_politropico.png>
-Package pdftex.def Info: lavoro_calore_politropico.png  used on input line 156.
+Package pdftex.def Info: lavoro_calore_politropico.png  used on input line 159.
 
 (pdftex.def)             Requested size: 409.71692pt x 289.68132pt.
 
@@ -990,7 +1002,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <caricoisotermo.png, id=50, 845.40843pt x 597.73312pt>
 File: caricoisotermo.png Graphic file (type png)
 <use caricoisotermo.png>
-Package pdftex.def Info: caricoisotermo.png  used on input line 186.
+Package pdftex.def Info: caricoisotermo.png  used on input line 189.
 (pdftex.def)             Requested size: 318.66948pt x 225.3077pt.
 
 
@@ -1003,15 +1015,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [9 <./caricoisotermo.png>]
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 196.
+LaTeX Warning: Command \textdegree invalid in math mode on input line 199.
 
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-96.
-(c:/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 196.
+LaTeX Warning: Command \textdegree invalid in math mode on input line 199.
 
 Missing character: There is no ° in font zptmcm7t!
 
@@ -1023,76 +1030,76 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 225--229
+Underfull \hbox (badness 10000) in paragraph at lines 228--232
 
  []
 
 File: lavoro_calore_politropico.png Graphic file (type png)
 <use lavoro_calore_politropico.png>
-Package pdftex.def Info: lavoro_calore_politropico.png  used on input line 235.
+Package pdftex.def Info: lavoro_calore_politropico.png  used on input line 238.
 
 (pdftex.def)             Requested size: 182.09486pt x 128.74725pt.
 
-Underfull \hbox (badness 3439) in paragraph at lines 238--244
+Underfull \hbox (badness 3439) in paragraph at lines 241--247
 [][]\OT1/ptm/m/n/12 (+20) La tra-sfor-ma-zio-ne rea-le []e in-ve-ce quel-la pi[
 ]u
  []
 
 
-Underfull \hbox (badness 7012) in paragraph at lines 238--244
+Underfull \hbox (badness 7012) in paragraph at lines 241--247
 \OT1/ptm/m/n/12 (+20) di-spen-dio-sa in quan-to sep-pu-re in en-tram-be il
  []
 
 
-Underfull \hbox (badness 6316) in paragraph at lines 238--244
+Underfull \hbox (badness 6316) in paragraph at lines 241--247
 \OT1/ptm/m/n/12 (+20) flui-do ri-ce-ve dal-l'e-ster-no la stes-sa quan-tit[]a d
 i
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 238--244
+Underfull \hbox (badness 2181) in paragraph at lines 241--247
 \OT1/ptm/m/n/12 (+20) ener-gia pa-ri al-l'a-rea B1'2'C, nel-la po-li-tro-pi-ca 
 il
  []
 
 
-Underfull \hbox (badness 7151) in paragraph at lines 238--244
+Underfull \hbox (badness 7151) in paragraph at lines 241--247
 \OT1/ptm/m/n/12 (+20) ca-lo-re vie-ne ag-giun-to se-pa-ra-ta-men-te in ma-nie-
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 238--244
+Underfull \hbox (badness 1910) in paragraph at lines 241--247
 \OT1/ptm/m/n/12 (+20) ra re-ver-si-bi-le, men-tre nel-la rea-le vie-ne da-ta tu
 t-
  []
 
 
-Underfull \hbox (badness 4940) in paragraph at lines 238--244
+Underfull \hbox (badness 4940) in paragraph at lines 241--247
 \OT1/ptm/m/n/12 (+20) ta in for-ma mec-ca-ni-ca ma una par-te pa-ri al-
  []
 
 
-Underfull \hbox (badness 3954) in paragraph at lines 238--244
+Underfull \hbox (badness 3954) in paragraph at lines 241--247
 \OT1/ptm/m/n/12 (+20) l'a-rea A12'C vie-ne de-gra-da-ta in ener-gia ter-mi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--244
+Underfull \hbox (badness 10000) in paragraph at lines 241--247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--244
+Underfull \hbox (badness 10000) in paragraph at lines 241--247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--244
+Underfull \hbox (badness 10000) in paragraph at lines 241--247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--244
+Underfull \hbox (badness 10000) in paragraph at lines 241--247
 
  []
 
@@ -1105,7 +1112,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 286--290
+Underfull \hbox (badness 10000) in paragraph at lines 289--293
 
  []
 
@@ -1127,21 +1134,243 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [13]
-Capitolo 2.
+Esercizio 2.
+<impiantoTV1.png, id=69, 584.1825pt x 430.0065pt>
+File: impiantoTV1.png Graphic file (type png)
+<use impiantoTV1.png>
+Package pdftex.def Info: impiantoTV1.png  used on input line 319.
+(pdftex.def)             Requested size: 455.24411pt x 335.10846pt.
 [14
 
-] (./esercizi_macchine_tex.aux)
+ <./impiantoTV1.PNG>]
+<rendimento_elettrico.png, id=74, 434.8245pt x 264.38776pt>
+File: rendimento_elettrico.png Graphic file (type png)
+<use rendimento_elettrico.png>
+Package pdftex.def Info: rendimento_elettrico.png  used on input line 335.
+(pdftex.def)             Requested size: 318.66948pt x 193.76392pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--337
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 348--351
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[15 <./rendimento_elettrico.PNG>]
+<ciclo_limite_reale.png, id=79, 845.40843pt x 597.73312pt>
+File: ciclo_limite_reale.png Graphic file (type png)
+<use ciclo_limite_reale.png>
+Package pdftex.def Info: ciclo_limite_reale.png  used on input line 371.
+(pdftex.def)             Requested size: 409.71692pt x 289.68132pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[16 <./ciclo_limite_reale.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 422--425
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[17]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[18]
+<impiantoTV2.png, id=90, 585.387pt x 431.211pt>
+File: impiantoTV2.png Graphic file (type png)
+<use impiantoTV2.png>
+Package pdftex.def Info: impiantoTV2.png  used on input line 456.
+(pdftex.def)             Requested size: 455.24411pt x 335.34969pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[19 <./impiantoTV2.PNG>]
+File: ciclo_limite_reale.png Graphic file (type png)
+<use ciclo_limite_reale.png>
+Package pdftex.def Info: ciclo_limite_reale.png  used on input line 485.
+(pdftex.def)             Requested size: 204.85846pt x 144.83609pt.
+File: ciclo_limite_reale.png Graphic file (type png)
+<use ciclo_limite_reale.png>
+Package pdftex.def Info: ciclo_limite_reale.png  used on input line 489.
+(pdftex.def)             Requested size: 204.85846pt x 144.83609pt.
+
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 484--492
+[][] [] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[20]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[21]
+Esercizio 3.
+<LM6000.png, id=102, 848.16875pt x 493.845pt>
+File: LM6000.png Graphic file (type png)
+<use LM6000.png>
+Package pdftex.def Info: LM6000.png  used on input line 536.
+(pdftex.def)             Requested size: 455.24411pt x 265.06726pt.
+<data_LM6000.png, id=103, 888.921pt x 171.039pt>
+File: data_LM6000.png Graphic file (type png)
+<use data_LM6000.png>
+Package pdftex.def Info: data_LM6000.png  used on input line 542.
+(pdftex.def)             Requested size: 455.24411pt x 87.5941pt.
+[22
+
+ <./LM6000.png> <./data_LM6000.PNG>]
+Overfull \hbox (4.09pt too wide) in paragraph at lines 549--556
+ [] 
+ []
+
+<ciclo_gas_limite.png, id=109, 845.40843pt x 597.73312pt>
+File: ciclo_gas_limite.png Graphic file (type png)
+<use ciclo_gas_limite.png>
+Package pdftex.def Info: ciclo_gas_limite.png  used on input line 571.
+(pdftex.def)             Requested size: 204.85846pt x 144.83609pt.
+<ciclo_gas_reale.png, id=110, 845.40843pt x 597.73312pt>
+File: ciclo_gas_reale.png Graphic file (type png)
+<use ciclo_gas_reale.png>
+Package pdftex.def Info: ciclo_gas_reale.png  used on input line 575.
+(pdftex.def)             Requested size: 204.85846pt x 144.83609pt.
+
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 570--578
+[][] [] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[23 <./ciclo_gas_limite.png> <./ciclo_gas_reale.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 650--652
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[25]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[26]
+<ciclo_gas_limite_ir.png, id=126, 845.40843pt x 597.73312pt>
+File: ciclo_gas_limite_ir.png Graphic file (type png)
+<use ciclo_gas_limite_ir.png>
+Package pdftex.def Info: ciclo_gas_limite_ir.png  used on input line 682.
+(pdftex.def)             Requested size: 204.85846pt x 144.83609pt.
+<ciclo_gas_reale_ir.png, id=127, 845.40843pt x 597.73312pt>
+File: ciclo_gas_reale_ir.png Graphic file (type png)
+<use ciclo_gas_reale_ir.png>
+Package pdftex.def Info: ciclo_gas_reale_ir.png  used on input line 686.
+(pdftex.def)             Requested size: 204.85846pt x 144.83609pt.
+
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 681--689
+[][] [] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[27 <./ciclo_gas_limite_ir.png> <./ciclo_gas_reale_ir.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[28] (./esercizi_macchine_tex.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 29724 strings out of 474165
- 713544 string characters out of 5749497
- 1948528 words of memory out of 5000000
- 51337 multiletter control sequences out of 15000+600000
- 611458 words of font info for 255 fonts, out of 8000000 for 9000
+ 29966 strings out of 474165
+ 717642 string characters out of 5749497
+ 1952528 words of memory out of 5000000
+ 51488 multiletter control sequences out of 15000+600000
+ 619052 words of font info for 312 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,15n,93p,1018b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/tex
@@ -1153,10 +1382,10 @@ ype1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2023/texmf-dist/fonts/type
 fb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/202
 3/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on esercizi_macchine_tex.pdf (14 pages, 420190 bytes).
+Output written on esercizi_macchine_tex.pdf (28 pages, 2076802 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 180 PDF objects out of 1000 (max. 8388607)
+ 98 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 70699 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 85085 words of extra memory for PDF output out of 89155 (max. 10000000)
 
