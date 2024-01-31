@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  30 JAN 2024 03:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  31 JAN 2024 01:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1330,15 +1330,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <ciclo_gas_limite_ir.png, id=126, 845.40843pt x 597.73312pt>
 File: ciclo_gas_limite_ir.png Graphic file (type png)
 <use ciclo_gas_limite_ir.png>
-Package pdftex.def Info: ciclo_gas_limite_ir.png  used on input line 682.
+Package pdftex.def Info: ciclo_gas_limite_ir.png  used on input line 683.
 (pdftex.def)             Requested size: 204.85846pt x 144.83609pt.
 <ciclo_gas_reale_ir.png, id=127, 845.40843pt x 597.73312pt>
 File: ciclo_gas_reale_ir.png Graphic file (type png)
 <use ciclo_gas_reale_ir.png>
-Package pdftex.def Info: ciclo_gas_reale_ir.png  used on input line 686.
+Package pdftex.def Info: ciclo_gas_reale_ir.png  used on input line 687.
 (pdftex.def)             Requested size: 204.85846pt x 144.83609pt.
 
-Overfull \hbox (2.28003pt too wide) in paragraph at lines 681--689
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 682--690
 [][] [] 
  []
 
@@ -1359,18 +1359,117 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[28] (./esercizi_macchine_tex.aux)
+[28]
+<impianto_gas_ir.png, id=136, 845.40843pt x 597.73312pt>
+File: impianto_gas_ir.png Graphic file (type png)
+<use impianto_gas_ir.png>
+Package pdftex.def Info: impianto_gas_ir.png  used on input line 765.
+(pdftex.def)             Requested size: 318.66948pt x 225.3077pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[29 <./impianto_gas_ir.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[30]
+<sgt_800.png, id=144, 1927.2pt x 1084.05pt>
+File: sgt_800.png Graphic file (type png)
+<use sgt_800.png>
+Package pdftex.def Info: sgt_800.png  used on input line 792.
+(pdftex.def)             Requested size: 455.24411pt x 256.07509pt.
+<scheda_tecnica_sgt.png, id=145, 478.1865pt x 294.50024pt>
+File: scheda_tecnica_sgt.png Graphic file (type png)
+<use scheda_tecnica_sgt.png>
+Package pdftex.def Info: scheda_tecnica_sgt.png  used on input line 798.
+(pdftex.def)             Requested size: 455.24411pt x 280.38478pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[31 <./sgt_800.png> <./scheda_tecnica_sgt.PNG>]
+<ciclo_gas_limite_sgt.png, id=151, 845.40843pt x 597.73312pt>
+File: ciclo_gas_limite_sgt.png Graphic file (type png)
+<use ciclo_gas_limite_sgt.png>
+Package pdftex.def Info: ciclo_gas_limite_sgt.png  used on input line 826.
+(pdftex.def)             Requested size: 204.85846pt x 144.83609pt.
+<ciclo_gas_reale_sgt.png, id=152, 845.40843pt x 597.73312pt>
+File: ciclo_gas_reale_sgt.png Graphic file (type png)
+<use ciclo_gas_reale_sgt.png>
+Package pdftex.def Info: ciclo_gas_reale_sgt.png  used on input line 830.
+(pdftex.def)             Requested size: 204.85846pt x 144.83609pt.
+
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 825--833
+[][] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 822--835
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[32 <./ciclo_gas_limite_sgt.png> <./ciclo_gas_reale_sgt.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 902--903
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[34]
+Esercizio 4.
+[35
+
+] (./esercizi_macchine_tex.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 29966 strings out of 474165
- 717642 string characters out of 5749497
- 1952528 words of memory out of 5000000
- 51488 multiletter control sequences out of 15000+600000
- 619052 words of font info for 312 fonts, out of 8000000 for 9000
+ 30020 strings out of 474165
+ 718737 string characters out of 5749497
+ 1951528 words of memory out of 5000000
+ 51523 multiletter control sequences out of 15000+600000
+ 619779 words of font info for 325 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,15n,93p,1018b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/tex
@@ -1382,10 +1481,10 @@ ype1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2023/texmf-dist/fonts/type
 fb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/202
 3/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on esercizi_macchine_tex.pdf (28 pages, 2076802 bytes).
+Output written on esercizi_macchine_tex.pdf (35 pages, 4042799 bytes).
 PDF statistics:
- 180 PDF objects out of 1000 (max. 8388607)
- 98 compressed objects within 1 object stream
+ 212 PDF objects out of 1000 (max. 8388607)
+ 113 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 85085 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 85110 words of extra memory for PDF output out of 89155 (max. 10000000)
 

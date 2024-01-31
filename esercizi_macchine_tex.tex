@@ -612,7 +612,7 @@ Prima di iniziare i calcoli si definisce per alleggerire la notazione parametro 
 	\begin{center}
 		$\alpha\;=\;\dfrac{\dot{m_{a}}}{\dot{m_{c}}}\;=\;\dfrac{125}{2,07}\;=\;60,4$
 	\end{center}
-	Visto che non ci sono ausiliari, \uline{posso suppore che ci sia un ottimo rendimento meccanico} $\eta_{m}\;=\;\textbf{0,99}$. Per cui la potenza utile reale (al primo organo in movimento) è pari a:
+	Visto che non ci sono ausiliari e la velocità della turbina non va ridotta, \uline{posso supporre che ci sia un ottimo rendimento meccanico} $\eta_{m}\;=\;\textbf{0,99}$. Per cui la potenza utile reale (al primo organo in movimento) è pari a:
 	\begin{center}
 		$P_{ur}\;=\;\dfrac{43100\;kW}{0,99}\;\approx\;43535\;kW$
 	\end{center}
@@ -676,6 +676,7 @@ Invece per ottenere il valore di $\beta$ per cui il lavoro utile del ciclo ideal
 Valore che invece è già più prossimo al valore che viene fornito nell'esempio in quanto essendo tale impianto di derivazione aeronautica è probabile che sia stato ottimizzato alla potenza.
 \newpage
 \paragraph{Valutare un ipotetico impianto con un' interrefrigerazione ($\beta_{1}\;=\;2,42,\;\beta_{2}\;=\;12$) ed un riscaldamento ripetuto ($\beta_{3}\;=\;2,42,\;\beta_{4}\;=\;12$) conservando gli stessi rendimenti politropici di compressione ed espansione, di combustione e meccanico valutati con il ciclo semplice di Joule. Calcolare e disegnare i cicli ideale e reale per questo impianto, il rendimento limite (ideale), reale e interno di impianto e le temperature medie di adduzione e sottrazione del calore.\\}
+Ipotizzando che l'interrefrigerazione mi consente di arrivare alla temperatura $T_{3}\;=\;T_{1}$ e che invece il riscaldamento ripetuto mi consente di avere $T_{6}\;=\;T_{8}$:
 \begin{figure}[H]
 	
 	\begin{subfigure}{0.5\textwidth}
@@ -709,15 +710,15 @@ I cui parametri termodinamici possono essere calcolati:
 		\hline
 		\textbf{6} & 1573 & 29.04\\
 		\hline
-		\textbf{7} & 598 & 12,0\\
+		\textbf{7} & 1284 & 12,0\\
 		\hline
-		\textbf{7'} & 598 & 12,0\\
+		\textbf{7'} & 1222 & 12,0\\
 		\hline
-		\textbf{8} & 598 & 12,0\\
+		\textbf{8} & 1573 & 12,0\\
 		\hline
-		\textbf{9} & 598 & 1,00\\
+		\textbf{9} & 889 & 1,00\\
 		\hline
-		\textbf{9'} & 598 & 1,00\\
+		\textbf{9'} & 773 & 1,00\\
 		\hline
 	\end{tabular}
 \end{center}
@@ -731,31 +732,182 @@ I cui parametri termodinamici possono essere calcolati:
 	$T_{4'}\;=\;T_{3}\beta_{2}^{\lambda}\;=\;\approx\;607\;K$
 	\item[\textbf{Stato 4  }] La pressione è quella del punto 4'. La temperatura analogamente al punto 2' dipende dalla qualità del secondo compressore, che si ipotizza essere la stessa del compressore dell'esempio precedente ($\eta_{pc}\;=\;0,960$). Per cui:\\
 	$T_{4}\;=\;T_{3}\;\beta_{2}^{\frac{\lambda}{\eta_{pc}}}\;\approx\;625\;K$
-	\item[\textbf{Stato 7'}]
+	\item[\textbf{Stato 7'}] La pressione si ricava dal terzo rapporto in questo caso di "espansione" che viene riportato. Essendo la trasformazione 6-7' iso-entropica si può asserire che la temperatura vale:\\
+	$T_{7'}\;=\;\dfrac{T_{6}}{\beta_{3}^{\lambda}}\;=\;\dfrac{1573\;K}{2,42^{0,286}}\;\approx\;1222\;K$
+	\item[\textbf{Stato 7  }] La pressione è quella del punto 7'. La temperatura dipende dalla qualità della prima turbina, che si ipotizza essere la stessa della turbina dell'esempio precedente ($\eta_{pt}\;=\;0,803$). Per cui:\\
+	$T_{7}\;=\;\dfrac{T_{6}}{\beta_{3}^{\lambda\eta_{pt}}}\;\approx\;1284\;K$
+	\item[\textbf{Stato 8  }] Per ipotesi sullo schema del riscaldamento ripetuto questo punto si trova alla stessa temperatura del punto 6 e alla pressione del punto 7'.
+	\item[\textbf{Stato 9'}] La pressione si ricava dal quarto rapporto in questo caso di "espansione" che viene riportato. Essendo la trasformazione 8-9' iso-entropica si può asserire che la temperatura vale:\\
+	$T_{9'}\;=\;\dfrac{T_{8}}{\beta_{4}^{\lambda}}\;=\;\dfrac{1573\;K}{12^{0,286}}\;\approx\;773\;K$
+	\item[\textbf{Stato 9  }] La pressione è quella del punto 9'. La temperatura dipende dalla qualità della seconda turbina, che si ipotizza essere la stessa della turbina dell'esempio precedente ($\eta_{pt}\;=\;0,803$). Per cui:\\
+	$T_{9}\;=\;\dfrac{T_{8}}{\beta_{4}^{\lambda\eta_{pt}}}\;\approx\;889\;K$
 \end{itemize}
-Ora da  un bilancio sul combustore potrei ottenere quanto vale il rendimento di combustione. Ma per farlo dovrei ipotizzare che il combustibile entra nelle stesse condizioni dell'aria, ovvero assumere che $h_{c}\;=\;h_{2}$. Questa ipotesi non è molto realistica in quanto aria e combustibile entrano in camera di combustione a temperature diverse e a pressioni leggermente diverse per fare in modo che il combustibile riesca ad entrare nel combustore.\\
-Quindi, anzichè calcolarlo, \uline{si ipotizza che il rendimento di combustione} ($\eta_{b}\;=\;\textbf{0,98}$). Ipotesi credibile, trattandosi di una combustione interna in cui non possono esserci perdite al camino e in cui si sta lavorando con tanto eccesso d'aria, che riduce nettamente le perdite per incombusti.\\
-Dal momento che ho il rendimento globale e sono stati ipotizzati quello meccanico e di combustione posso calcolare quanto vale il rendimento reale del ciclo:
-\begin{equation}
-	\eta_{r}\;=\;\dfrac{\eta_{g}}{\eta_{b}\;\eta_{m}}\;=\;\dfrac{0,417}{0,98\;0,99}\;\approx\;\textbf{0,430}
-\end{equation}
 Avendo calcolato i parametri del ciclo limite (ideale), si può procedere al calcolo del rendimento, che in virtù delle considerazioni già fatte nell'esercizio 1:
+\begin{center}
+	$\eta_{id}\;=\;\dfrac{l_{u}}{q_{a}}\;=\;\dfrac{l_{t1}\;+\;l_{t2}\;-\;l_{c1}\;-\;l_{c2}}{q_{a}}\;=\;\dfrac{\cancel{c_{p}}\;[(T_{6}\;-\;T_{7'})\;+\;(T_{8}\;-\;T_{9'})\;-\;(T_{2'}\;-\;T_{1})\;-\;(T_{4'}\;-\;T_{3})]}{\cancel{c_{p}}\;[(T_{6}\;-\;T_{4'})\;+\;(T_{8}\;-\;T_{7'})]}\;\approx\;\textbf{0,574}$
+\end{center}
+Ogni ciclo limite si può rendere equivalente a un ciclo di Carnot introducendo i concetti di temperatura media di adduzione del calore ($T_{ma}$) e temperatura media di sottrazione del calore ($T_{ms}$). In questo caso però le fasi di riscaldamento e raffreddamento sono divise, quindi si avranno 2 temperature di adduzione e 2 temperature di sottrazione. Facendo riferimento alle equazioni (3.6) e (3.7):
 \begin{equation}
-	\eta_{id}\;=\;\dfrac{l_{u}}{q_{a}}\;=\;1\:-\;\dfrac{1}{\beta^{\lambda}}\;=\;1\;-\;\dfrac{1}{29,5^{0,286}}\;\approx\;\textbf{0,620}
+	T_{ma1}\;=\;\dfrac{\int_{4'}^{6}Tds}{\Delta s}\;=\;\dfrac{c_{p}\;(T_{6}-T_{4'})}{c_{p}\;ln(\frac{T_{6}}{T_{4'}})}\;=\;\dfrac{1573\;-\;607}{ln(\frac{1573}{607})}\;\approx\;\textbf{1014\;K}
 \end{equation}
+\begin{equation}
+	T_{ma2}\;=\;\dfrac{\int_{7'}^{8}Tds}{\Delta s}\;=\;\dfrac{c_{p}\;(T_{8}-T_{7'})}{c_{p}\;ln(\frac{T_{8}}{T_{7'}})}\;=\;\dfrac{1573\;-\;1222}{ln(\frac{1573}{1222})}\;\approx\;\textbf{1390\;K}
+\end{equation}
+\begin{equation}
+	T_{ms1}\;=\;\dfrac{\int_{9'}^{1}Tds}{\Delta s}\;=\;\dfrac{c_{p}\;(T_{9'}-T_{1})}{c_{p}\;ln(\frac{T_{9'}}{T_{1}})}\;=\;\dfrac{773\;-\;298}{ln(\frac{773}{298})}\;\approx\;\textbf{498\;K}
+\end{equation}
+\begin{equation}
+	T_{ms2}\;=\;\dfrac{\int_{2'}^{3}Tds}{\Delta s}\;=\;\dfrac{c_{p}\;(T_{2'}-T_{3})}{c_{p}\;ln(\frac{T_{2'}}{T_{3}})}\;=\;\dfrac{384\;-\;298}{ln(\frac{384}{298})}\;\approx\;\textbf{339\;K}
+\end{equation}
+Per il ciclo reale invece devo tener conto del fatto che le portate elaborate nella turbina e nel compressore sono diverse.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{impianto_gas_ir.png}
+	\caption{Schema dell'impianto}
+\end{figure}
+ Ipotizzando questo schema d'impianto osservo che sia l'interrefrigerazione che il riscaldamento ripetuto avvengono all'interno di scambiatori, quindi la portata del fluido motore non risente di queste modifiche d'impianto.\\
+ Tuttavia si sta ipotizzando che gli scambiatori siano perfetti. Quindi si stanno trascurando le cadute di pressione, e stiamo supponendo di avere superfici di scambio infinite che ci consentono di trascurare il $\Delta T_{terminale}$.\\
+ Rispetto all'esempio precedente non abbiamo informazioni sulla qualità dell'impianto, ne sulla potenza effettivamente prodotta. Dunque, per conoscere la portata di combustibile necessaria, ipotizzando che la portata di aria sia la stessa dell'esercizio precedente, devo valutare un bilancio sul combustore. Come già detto in precedenza questo mi obbliga a dover assumere che $h_{c}\;=\;h_{4}$, oltre alle ipotesi già fatte nell'esempio precedente sul rendimento di combustione e il tipo di combustibile. Se si da per vera questa ipotesi:
+ \begin{equation}
+ 	\dot{m_{a}}\;h_{4}\;+\;\dot{m_{c}}\;h_{c}\;+\;\dot{m_{c}}\;H_{i}\eta_{b}\;=\;(\dot{m_{a}}\;+\;\dot{m_{c}})\;h_{6}\to (\alpha\;+1)c_{p}(T_{6}\;-\,T_{4})\;=\;H_{i}\eta_{b}
+ \end{equation}
+ Quindi:
+ \begin{center}
+ 	$\alpha\;=\;\dfrac{H_{i}\eta_{b}}{c_{p}(T_{6}\;-\,T_{4})}\;-\;1\;\approx\;50,2 \implies \dot{m_{c}}\;=\;\dfrac{\dot{m_{a}}}{\alpha}\;=\;\dfrac{125\;kg/s}{50,2}\;\approx\;2,49\;kg/s$
+ \end{center}
+ Quindi il rendimento reale è pari a:
+ \begin{center}
+ 	$\eta_{r}\;=\;\dfrac{P_{u}}{\dot{Q_{a}}}\;=\;\dfrac{\dot{m_{g}}\;(l_{t1}\;+\;l_{t2})\;-\;\dot{m_{a}}(\;l_{c1}\;+\;l_{c2})}{\dot{m_{g}}\;q_{a}}\;=\;\dfrac{\cancel{c_{p}}\;[\;\dot{m_{g}}\;(T_{6}\;-\;T_{7}\;+\;T_{8}\;-\;T_{9})\;-\;\dot{m_{a}}\;(T_{2}\;-\;\;T_{1}\;+\;T_{4}\;-\;T_{3})]}{\cancel{c_{p}}\;\dot{m_{g}}\;[(T_{6}\;-\;T_{4})\;+\;(T_{8}\;-\;T_{7})]}\;\approx\;\textbf{0,456}$
+ \end{center}
+ Di conseguenza il rendimento interno di impianto:
+\begin{center}
+	$\eta_{int,impianto}\;=\;\dfrac{\eta_{r}}{\eta_{l}}\;=\;\dfrac{0,456}{0,574}\;\approx\;\textbf{0,794}$
+\end{center}
+\newpage
+
+\section{Analisi termodinamica della turbina a gas SGT-800 (Siemens Energy)}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{sgt_800.png}
+	\caption{Turbina a gas per uso industriale SGT-800 da 62 MW (Siemens Energy)}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{scheda_tecnica_sgt.png}
+	\caption{Scheda tecnica}
+\end{figure}
+
+\paragraph{Calcolare e disegnare i cicli ideale e reale, stimando i rendimenti politropici di compressione ed espansione, i rendimenti di combustione, limite (ideale), interno di impianto, reale, meccanico e le temperature medie di adduzione e sottrazione del calore.\\}
+Il primo passo che dobbiamo fare e analizzare i dati che abbiamo effettivamente a disposizione:
+\begin{center}
+	\begin{tabular}{| l || l | l | l | l | l | l |}
+		\hline
+		\textbf{Modello} & \textbf{P\ped{e} [kW]} & \textbf{C\ped{s} [kJ/kWh]} & \textbf{$\beta$} & \textbf{$\dot{m}$\ped{a} [kg/s]} & \textbf{Velocità turbina [rpm]} & \textbf{T\ped{4} [K]}\\ 
+		\hline
+		\textbf{SGT-800} & 62500 & 8759 & 21,1 & 125,0 & 6600 & 869\\ 
+		\hline
+	\end{tabular}
+\end{center}
+Come visto nell'esempio precedente il dato sul consumo specifico e il rendimento globale elettrico sono ridondanti:
+\begin{center}
+	$\to\eta_{ge}\;=\;\dfrac{3600}{C_{s}[kJ/kWh]}\;=\;\dfrac{3600}{8759}\;\approx\;41,1\;\%$
+\end{center}
+Come era stato già indicato nella scheda tecnica.\\
+Facendo riferimento alla figura 2.2 analizzata nell'esercizio 2, si può ipotizzare per questa taglia un rendimento elettrico $\eta_{e}\;=\;0,965$. Quindi:
+\begin{center}
+	$P_{ua}\;=\;\dfrac{P_{e}}{\eta_{e}}\;=\;64,77\;MW$
+\end{center}
+Con questi dati e le stesse ipotesi fatte nell'esempio precedente si può procedere a disegnare sul piano T-s il ciclo limite e reale.\\
+\begin{figure}[H]
+	
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[width=0.9\linewidth]{ciclo_gas_limite_sgt.png} 
+		\caption{Ciclo limite}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[width=0.9\linewidth]{ciclo_gas_reale_sgt.png}
+		\caption{Ciclo reale}
+	\end{subfigure}
+	
+	\caption{Cicli Joule limite e reale di una turbina gas}
+\end{figure}
+I cui parametri termodinamici possono essere calcolati facendo qualche ipotesi.
+\begin{center}
+	\begin{tabular}{| l || l | l |}
+		\hline
+		\textbf{Stato} & \textbf{T [K]} & \textbf{P [atm]}\\ 
+		\hline
+		\textbf{1} & 288 & 1,00\\ 
+		\hline
+		\textbf{2} & 713 & 21,1\\
+		\hline
+		\textbf{2'} & 689 & 21,1\\
+		\hline
+		\textbf{3} & 1773 & 21,1\\
+		\hline
+		\textbf{4} & 869 & 1,00\\
+		\hline
+		\textbf{4'} & 741 & 1,00\\
+		\hline
+	\end{tabular}
+\end{center}
+\begin{itemize}
+	\item[\textbf{Stato 1  }] Un impianto a gas pensato per la produzione di energia elettrica ha sicuramente in ingresso aria alle condizioni ambiente. Nella scheda tecnica è riportato che questi parametri sono stati misurati a partire dalle condizioni ambiente ISO ovvero che T\ped{1} = 15°C e P\ped{1} = 1,00 atm. 
+	\item[\textbf{Stato 2'}] La pressione la ricaviamo dal rapporto di compressione che viene indicato nella scheda tecnica. Essendo la trasformazione 1-2' iso-entropica si può asserire che:\\
+	$T_{2'}\;=\;T_{1}\beta^{\lambda}\;=\;288\;K\;21,1^{0,286}\;\approx\;689\;K$
+	\item[\textbf{Stato 2 e 3  }] Entrambi i punti si trovano sulla stessa isobara del punto 2'. Analogamente a quanto fatto nell'esercizio precedente, si osserva che la scheda tecnica fornisce sia il rendimento globale elettrico ($\eta_{ge}$) che la potenza elettrica ($P_{e}$), quindi posso facilmente ricavare la portata di combustibile che viene iniettata nel combustore, \uline{se ipotizzo che l'impianto sia alimentato a metano (CH\ped{4})}. Quindi:
+	\begin{center}
+		$\eta_{ge}\;=\;\dfrac{P_{e}}{\dot{m_{c}}H_{i}}\to\dot{m_{c}}\;=\;\dfrac{62500\;kW}{0,411\;50000\;kJ/kg}\;\approx\;3,04\;kg/s $
+	\end{center}
+	A differenza dell'esercizio precedente ci viene fornita la portata massica dei gas di scarico ($\dot{m_{g}}\;=\;135,5\;kg/s$), quindi vuol dire che la portata massica di aria in ingresso ($\dot{m_{a}}\;=\;\dot{m_{g}}\;-\;\dot{m_{c}}\;=\;135,5\;-\,3,04\;\approx\;132,5\;kg/s$)
+	Quindi il rapporto aria/combustibile reale è pari a:
+	\begin{center}
+		$\alpha\;=\;\dfrac{\dot{m_{a}}}{\dot{m_{c}}}\;=\;\dfrac{132,5}{3,04}\;=\;43,6$
+	\end{center}
+	Diversamente dall'esempio precedente, in questo caso la turbina ha una frequenza maggiore di quella che serve per produrre la corrente alternata (50/60 Hz). Quindi è molto probabile che sull'asse motore sia montato un riduttore che però chiaramente comporterà un peggioramento del rendimento meccanico che ipotizzo pari a $\eta_{m}\;=\;\textbf{0,95}$. Per cui la potenza utile reale (al primo organo in movimento) è pari a:
+	\begin{center}
+		$P_{ur}\;=\;\dfrac{64770\;kW}{0,95}\;\approx\;68179\;kW$
+	\end{center}
+	Analogamente all'esercizio precedente si ipotizza che T\ped{3} = 1300°C = 1573 K e che sia l'aria pulita che i gas combusti abbiano lo stesso calore specifico a pressione costante. Fatte queste ipotesi posso ricavare la T\ped{2} dall'espressione della potenza reale:
+	\begin{center}
+		$P_{ur}\;=\;(\dot{m_{a}}+\dot{m_{c}})l_{rt}\;-\;\dot{m_{a}}l_{rc}\;=\;\dot{m_{a}}\;c_{p}\;\Biggr[\Biggr(\dfrac{\alpha +1}{\alpha}\Biggr)(T_{3}\;-\;T_{4})\;-\;(T_{2}\;-\;T_{1})\Biggr]$
+	\end{center}
+	Tuttavia se svolgo i calcoli in questo modo risulta che la temperatura T\ped{2} è minore della corrispondente temperatura isoentropica. Questo perchè la valutazione che è stata fatta sulla temperatura massima non è accurata. Infatti questo tipo di turbina è in grado di arrivare anche a temperature maggiori di 1300 °C. Infatti se ipotizziamo che T\ped{1} = 1500°C = 1773 K, otteniamo che:
+	$T_{2}\;=\;713\;K$
+	\item[\textbf{Stato 4  }] La pressione è quella del punto 1 in quanto lo scarico avviene in ambiente. La temperatura è indicata nella scheda tecnica. 
+	\item[\textbf{Stato 4'}] La pressione è la stessa del punto 4. Essendo la trasformazione 3-4' iso-entropica si può asserire che la temperatura vale:\\
+	$T_{4'}\;=\;\dfrac{T_{3}}{\beta^{\lambda}}\;=\;\dfrac{1773\;K}{21,1^{0,286}}\;\approx\;741\;K$
+\end{itemize}
+Analogamente a prima, si ipotizza che il rendimento di combustione ($\eta_{b}\;=\;\textbf{0,98}$). Dal momento che ho il rendimento globale elettrico e sono stati ipotizzati quello meccanico ed elettrico posso calcolare quanto vale il rendimento reale del ciclo:
+\begin{center}
+	$\eta_{r}\;=\;\dfrac{\eta_{ge}}{\eta_{e}\;\eta_{b}\;\eta_{m}}\;=\;\dfrac{0,411}{0,965\cdot0,98\cdot0,95}\;\approx\;\textbf{0,458}$
+\end{center}
+Avendo calcolato i parametri del ciclo limite (ideale), si può procedere al calcolo del rendimento, che in virtù delle considerazioni già fatte nell'esercizio 1:
+\begin{center}
+	$\eta_{id}\;=\;\dfrac{l_{u}}{q_{a}}\;=\;1\:-\;\dfrac{1}{\beta^{\lambda}}\;=\;1\;-\;\dfrac{1}{21,1^{0,286}}\;\approx\;\textbf{0,582}$
+\end{center}
 E quindi il rendimento di impianto:
-\begin{equation}
-	\eta_{int,impianto}\;=\;\dfrac{\eta_{r}}{\eta_{l}}\;=\;\dfrac{0,430}{0,620}\;\approx\;\textbf{0,694}
-\end{equation}
+\begin{center}
+	$\eta_{int,impianto}\;=\;\dfrac{\eta_{r}}{\eta_{l}}\;=\;\dfrac{0,458}{0,582}\;\approx\;\textbf{0,787}$
+\end{center}
 Ogni ciclo limite si può rendere equivalente a un ciclo di Carnot introducendo i concetti di temperatura media di adduzione del calore ($T_{ma}$) e temperatura media di sottrazione del calore ($T_{ms}$). Come visto nella (2.6) e nella (2.7):
+\begin{center}
+	$T_{ma}\;=\;\dfrac{\int_{2'}^{3}Tds}{\Delta s}\;=\;\dfrac{c_{p}\;(T_{3}-T_{2'})}{c_{p}\;ln(\frac{T_{3}}{T_{2'}})}\;=\;\dfrac{1773\;-\;689}{ln(\frac{1773}{689})}\;\approx\;\textbf{1147\;K}$
+\end{center}
+\begin{center}
+	$T_{ms}\;=\;\dfrac{\int_{4'}^{1}Tds}{\Delta s}\;=\;\dfrac{c_{p}\;(T_{4'}-T_{1})}{c_{p}\;ln(\frac{T_{4'}}{T_{1}})}\;=\;\dfrac{741\;-\;288}{ln(\frac{741}{288})}\;\approx\;\textbf{479\;K}$
+\end{center}
+Dal momento che si conosce tutto sulla qualità della macchina, è possibile calcolare quanto valgano i rendimenti politropici del compressore e della turbina.\\
 \begin{equation}
-	T_{ma}\;=\;\dfrac{\int_{2'}^{3}Tds}{\Delta s}\;=\;\dfrac{c_{p}\;(T_{3}-T_{2'})}{c_{p}\;ln(\frac{T_{3}}{T_{2'}})}\;=\;\dfrac{1573\;-\;785}{ln(\frac{1573}{785})}\;\approx\;\textbf{1134\;K}
+	\dfrac{T_{4}}{T_{3}}\;=\;\dfrac{1}{\beta^{\lambda\eta_{pt}}}\;\to\;\eta_{pt}\;=\;\dfrac{log_{\beta}(\frac{T_{3}}{T_{4}})}{\lambda}\;\approx\;\textbf{0,818}
 \end{equation}
+\begin{equation}
+	\dfrac{T_{2}}{T_{1}}\;=\;\beta^{\frac{\lambda}{\eta_{pc}}}\;\to\;\eta_{pc}\;=\;\dfrac{\lambda}{log_{\beta}(\frac{T_{2}}{T_{1}})}\;\approx\;\textbf{0,962}
+\end{equation}
+\newpage
+
+\chapter{Stadio di turbina a vapore}
+\paragraph{sdasda.\\}
 \end{document}
-	Nel bilancio del combustore invece, \uline{si ipotizza che il combustibile entri nelle condizione dell'aria, ovvero assumiamo che:} $h_{c}\;=\;h_{2}$. Questa ipotesi non è molto realistica in quanto aria e combustibile entrano in camera di combustione a temperature diverse e a pressioni leggermente diverse per fare in modo che il combustibile riesca ad entrare nel combustore. Inoltre si \uline{si assume che il rendimento di combustione} ($\eta_{b}\;=\;0,98$), trattandosi di una combustione interna in cui non possono esserci perdite al camino. Ad ogni modo, con queste ipotesi ottengo:
-\begin{equation}
-	\dot{m_{a}}\;h_{2}\;+\;\dot{m_{c}}\;h_{c}\;+\;\dot{m_{c}}\;H_{i}\eta_{b}\;=\;(\dot{m_{a}}\;+\;\dot{m_{c}})\;h_{3}\to (\alpha\;+1)c_{p}(T_{3}\;-\,T_{2})\;=\;H_{i}\eta_{b}
-\end{equation}
-La (3.2) e la (3.3) insieme formano un sistema di 2 equazioni in 2 incognite ($T_{3}$ e $T_{2}$). Le cui soluzioni sono:\\
-$T_{2}\;=$\\
-$T_{3}\;=$
