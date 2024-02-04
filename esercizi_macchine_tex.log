@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  31 JAN 2024 01:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  5 FEB 2024 00:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1223,13 +1223,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [19 <./impiantoTV2.PNG>]
-File: ciclo_limite_reale.png Graphic file (type png)
-<use ciclo_limite_reale.png>
-Package pdftex.def Info: ciclo_limite_reale.png  used on input line 485.
+<ciclo_limite_1spillamento.png, id=96, 845.40843pt x 597.73312pt>
+File: ciclo_limite_1spillamento.png Graphic file (type png)
+<use ciclo_limite_1spillamento.png>
+Package pdftex.def Info: ciclo_limite_1spillamento.png  used on input line 485.
+
 (pdftex.def)             Requested size: 204.85846pt x 144.83609pt.
-File: ciclo_limite_reale.png Graphic file (type png)
-<use ciclo_limite_reale.png>
-Package pdftex.def Info: ciclo_limite_reale.png  used on input line 489.
+<ciclo_reale_1spillamento.png, id=97, 845.40843pt x 597.73312pt>
+File: ciclo_reale_1spillamento.png Graphic file (type png)
+<use ciclo_reale_1spillamento.png>
+Package pdftex.def Info: ciclo_reale_1spillamento.png  used on input line 489.
 (pdftex.def)             Requested size: 204.85846pt x 144.83609pt.
 
 Overfull \hbox (2.28003pt too wide) in paragraph at lines 484--492
@@ -1244,7 +1247,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[20]
+[20 <./ciclo_limite_1spillamento.png> <./ciclo_reale_1spillamento.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 557--559
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1254,36 +1261,45 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [21]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[22]
 Esercizio 3.
-<LM6000.png, id=102, 848.16875pt x 493.845pt>
+<LM6000.png, id=109, 848.16875pt x 493.845pt>
 File: LM6000.png Graphic file (type png)
 <use LM6000.png>
-Package pdftex.def Info: LM6000.png  used on input line 536.
+Package pdftex.def Info: LM6000.png  used on input line 590.
 (pdftex.def)             Requested size: 455.24411pt x 265.06726pt.
-<data_LM6000.png, id=103, 888.921pt x 171.039pt>
+<data_LM6000.png, id=110, 888.921pt x 171.039pt>
 File: data_LM6000.png Graphic file (type png)
 <use data_LM6000.png>
-Package pdftex.def Info: data_LM6000.png  used on input line 542.
+Package pdftex.def Info: data_LM6000.png  used on input line 596.
 (pdftex.def)             Requested size: 455.24411pt x 87.5941pt.
-[22
+[23
 
  <./LM6000.png> <./data_LM6000.PNG>]
-Overfull \hbox (4.09pt too wide) in paragraph at lines 549--556
+Overfull \hbox (4.09pt too wide) in paragraph at lines 603--610
  [] 
  []
 
-<ciclo_gas_limite.png, id=109, 845.40843pt x 597.73312pt>
+<ciclo_gas_limite.png, id=116, 845.40843pt x 597.73312pt>
 File: ciclo_gas_limite.png Graphic file (type png)
 <use ciclo_gas_limite.png>
-Package pdftex.def Info: ciclo_gas_limite.png  used on input line 571.
+Package pdftex.def Info: ciclo_gas_limite.png  used on input line 625.
 (pdftex.def)             Requested size: 204.85846pt x 144.83609pt.
-<ciclo_gas_reale.png, id=110, 845.40843pt x 597.73312pt>
+<ciclo_gas_reale.png, id=117, 845.40843pt x 597.73312pt>
 File: ciclo_gas_reale.png Graphic file (type png)
 <use ciclo_gas_reale.png>
-Package pdftex.def Info: ciclo_gas_reale.png  used on input line 575.
+Package pdftex.def Info: ciclo_gas_reale.png  used on input line 629.
 (pdftex.def)             Requested size: 204.85846pt x 144.83609pt.
 
-Overfull \hbox (2.28003pt too wide) in paragraph at lines 570--578
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 624--632
 [][] [] 
  []
 
@@ -1295,20 +1311,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[23 <./ciclo_gas_limite.png> <./ciclo_gas_reale.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 650--652
-
- []
-
+[24 <./ciclo_gas_limite.png> <./ciclo_gas_reale.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1318,6 +1321,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [25]
+Underfull \hbox (badness 10000) in paragraph at lines 704--706
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1327,18 +1334,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [26]
-<ciclo_gas_limite_ir.png, id=126, 845.40843pt x 597.73312pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[27]
+<ciclo_gas_limite_ir.png, id=133, 845.40843pt x 597.73312pt>
 File: ciclo_gas_limite_ir.png Graphic file (type png)
 <use ciclo_gas_limite_ir.png>
-Package pdftex.def Info: ciclo_gas_limite_ir.png  used on input line 683.
+Package pdftex.def Info: ciclo_gas_limite_ir.png  used on input line 737.
 (pdftex.def)             Requested size: 204.85846pt x 144.83609pt.
-<ciclo_gas_reale_ir.png, id=127, 845.40843pt x 597.73312pt>
+<ciclo_gas_reale_ir.png, id=134, 845.40843pt x 597.73312pt>
 File: ciclo_gas_reale_ir.png Graphic file (type png)
 <use ciclo_gas_reale_ir.png>
-Package pdftex.def Info: ciclo_gas_reale_ir.png  used on input line 687.
+Package pdftex.def Info: ciclo_gas_reale_ir.png  used on input line 741.
 (pdftex.def)             Requested size: 204.85846pt x 144.83609pt.
 
-Overfull \hbox (2.28003pt too wide) in paragraph at lines 682--690
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 736--744
 [][] [] 
  []
 
@@ -1350,7 +1366,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[27 <./ciclo_gas_limite_ir.png> <./ciclo_gas_reale_ir.png>]
+[28 <./ciclo_gas_limite_ir.png> <./ciclo_gas_reale_ir.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1359,11 +1375,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[28]
-<impianto_gas_ir.png, id=136, 845.40843pt x 597.73312pt>
+[29]
+<impianto_gas_ir.png, id=143, 845.40843pt x 597.73312pt>
 File: impianto_gas_ir.png Graphic file (type png)
 <use impianto_gas_ir.png>
-Package pdftex.def Info: impianto_gas_ir.png  used on input line 765.
+Package pdftex.def Info: impianto_gas_ir.png  used on input line 819.
 (pdftex.def)             Requested size: 318.66948pt x 225.3077pt.
 
 
@@ -1374,7 +1390,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[29 <./impianto_gas_ir.png>]
+[30 <./impianto_gas_ir.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1383,16 +1399,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[30]
-<sgt_800.png, id=144, 1927.2pt x 1084.05pt>
+[31]
+<sgt_800.png, id=152, 1927.2pt x 1084.05pt>
 File: sgt_800.png Graphic file (type png)
 <use sgt_800.png>
-Package pdftex.def Info: sgt_800.png  used on input line 792.
+Package pdftex.def Info: sgt_800.png  used on input line 846.
 (pdftex.def)             Requested size: 455.24411pt x 256.07509pt.
-<scheda_tecnica_sgt.png, id=145, 478.1865pt x 294.50024pt>
+<scheda_tecnica_sgt.png, id=153, 478.1865pt x 294.50024pt>
 File: scheda_tecnica_sgt.png Graphic file (type png)
 <use scheda_tecnica_sgt.png>
-Package pdftex.def Info: scheda_tecnica_sgt.png  used on input line 798.
+Package pdftex.def Info: scheda_tecnica_sgt.png  used on input line 852.
 (pdftex.def)             Requested size: 455.24411pt x 280.38478pt.
 
 
@@ -1403,24 +1419,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[31 <./sgt_800.png> <./scheda_tecnica_sgt.PNG>]
-<ciclo_gas_limite_sgt.png, id=151, 845.40843pt x 597.73312pt>
+[32 <./sgt_800.png> <./scheda_tecnica_sgt.PNG>]
+<ciclo_gas_limite_sgt.png, id=158, 845.40843pt x 597.73312pt>
 File: ciclo_gas_limite_sgt.png Graphic file (type png)
 <use ciclo_gas_limite_sgt.png>
-Package pdftex.def Info: ciclo_gas_limite_sgt.png  used on input line 826.
+Package pdftex.def Info: ciclo_gas_limite_sgt.png  used on input line 880.
 (pdftex.def)             Requested size: 204.85846pt x 144.83609pt.
-<ciclo_gas_reale_sgt.png, id=152, 845.40843pt x 597.73312pt>
+<ciclo_gas_reale_sgt.png, id=159, 845.40843pt x 597.73312pt>
 File: ciclo_gas_reale_sgt.png Graphic file (type png)
 <use ciclo_gas_reale_sgt.png>
-Package pdftex.def Info: ciclo_gas_reale_sgt.png  used on input line 830.
+Package pdftex.def Info: ciclo_gas_reale_sgt.png  used on input line 884.
 (pdftex.def)             Requested size: 204.85846pt x 144.83609pt.
 
-Overfull \hbox (2.28003pt too wide) in paragraph at lines 825--833
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 879--887
 [][] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 822--835
+Underfull \hbox (badness 10000) in paragraph at lines 876--889
 
  []
 
@@ -1432,20 +1448,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[32 <./ciclo_gas_limite_sgt.png> <./ciclo_gas_reale_sgt.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[33]
-Underfull \hbox (badness 10000) in paragraph at lines 902--903
-
- []
-
+[33 <./ciclo_gas_limite_sgt.png> <./ciclo_gas_reale_sgt.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1455,8 +1458,175 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [34]
+Underfull \hbox (badness 10000) in paragraph at lines 956--957
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[35]
 Esercizio 4.
-[35
+<stadio_hs.png, id=171, 845.40843pt x 597.73312pt>
+File: stadio_hs.png Graphic file (type png)
+<use stadio_hs.png>
+Package pdftex.def Info: stadio_hs.png  used on input line 969.
+(pdftex.def)             Requested size: 455.24411pt x 321.86813pt.
+[36
+
+ <./stadio_hs.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[37]
+<triangolo_velocità.png, id=180, 845.40843pt x 597.73312pt>
+File: triangolo_velocità.png Graphic file (type png)
+<use triangolo_velocità.png>
+Package pdftex.def Info: triangolo_velocità.png  used on input line 1085.
+(pdftex.def)             Requested size: 455.24411pt x 321.86813pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[38]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[39 <./triangolo_velocità.png>]
+Esercizio 5.
+<impianto_combinato_1livello.png, id=188, 845.40843pt x 597.73312pt>
+File: impianto_combinato_1livello.png Graphic file (type png)
+<use impianto_combinato_1livello.png>
+Package pdftex.def Info: impianto_combinato_1livello.png  used on input line 10
+95.
+(pdftex.def)             Requested size: 455.24411pt x 321.86813pt.
+<data_MS6001.png, id=189, 374.5995pt x 104.7915pt>
+File: data_MS6001.png Graphic file (type png)
+<use data_MS6001.png>
+Package pdftex.def Info: data_MS6001.png  used on input line 1103.
+(pdftex.def)             Requested size: 455.24411pt x 127.35135pt.
+[40
+
+ <./impianto_combinato_1livello.png>]
+<profilo_temperature.png, id=194, 845.40843pt x 597.73312pt>
+File: profilo_temperature.png Graphic file (type png)
+<use profilo_temperature.png>
+Package pdftex.def Info: profilo_temperature.png  used on input line 1146.
+(pdftex.def)             Requested size: 455.24411pt x 321.86813pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[41 <./data_MS6001.PNG>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[42 <./profilo_temperature.png>]
+<impianto_combinato_2livelli.png, id=203, 845.40843pt x 597.73312pt>
+File: impianto_combinato_2livelli.png Graphic file (type png)
+<use impianto_combinato_2livelli.png>
+Package pdftex.def Info: impianto_combinato_2livelli.png  used on input line 12
+12.
+(pdftex.def)             Requested size: 455.24411pt x 321.86813pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[43]
+Underfull \vbox (badness 1502) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[44 <./impianto_combinato_2livelli.png>]
+<profilo_temperature_2livelli.png, id=212, 845.40843pt x 597.73312pt>
+File: profilo_temperature_2livelli.png Graphic file (type png)
+<use profilo_temperature_2livelli.png>
+Package pdftex.def Info: profilo_temperature_2livelli.png  used on input line 1
+244.
+(pdftex.def)             Requested size: 455.24411pt x 321.86813pt.
+
+Overfull \hbox (20.91216pt too wide) detected at line 1258
+[][] \OML/ztmcm/m/it/12 c[] \OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 T[]  \OMS/ztm
+cm/m/n/12 ^^@  \OML/ztmcm/m/it/12 T[]\OT1/ztmcm/m/n/12 )  +  (1 \OMS/ztmcm/m/n/
+12 ^^@ \OML/ztmcm/m/it/12 X[]\OT1/ztmcm/m/n/12 ) [] (\OML/ztmcm/m/it/12 h[]  \O
+MS/ztmcm/m/n/12 ^^@  \OML/ztmcm/m/it/12 h[]\OT1/ztmcm/m/n/12 )  =  (1 \OMS/ztmc
+m/m/n/12 ^^@ \OML/ztmcm/m/it/12 X[]\OT1/ztmcm/m/n/12 ) [] \OML/ztmcm/m/it/12 h[
+]  \OT1/ztmcm/m/n/12 +  \OML/ztmcm/m/it/12 X[] [] h[]  \OMS/ztmcm/m/n/12 ^^@  [
+] \OML/ztmcm/m/it/12 h[]
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[45 <./profilo_temperature_2livelli.png>]
+Overfull \hbox (26.19041pt too wide) detected at line 1266
+[][] \OML/ztmcm/m/it/12 c[] \OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 T[]  \OMS/ztm
+cm/m/n/12 ^^@  \OML/ztmcm/m/it/12 T[]\OT1/ztmcm/m/n/12 )  +  (1 \OMS/ztmcm/m/n/
+12 ^^@ \OML/ztmcm/m/it/12 X[]\OT1/ztmcm/m/n/12 ) [] (\OML/ztmcm/m/it/12 h[]  \O
+MS/ztmcm/m/n/12 ^^@  \OML/ztmcm/m/it/12 h[]\OT1/ztmcm/m/n/12 )  =  (1 \OMS/ztmc
+m/m/n/12 ^^@ \OML/ztmcm/m/it/12 X[]\OT1/ztmcm/m/n/12 ) [] \OML/ztmcm/m/it/12 h[
+]  \OT1/ztmcm/m/n/12 +  \OML/ztmcm/m/it/12 X[] [] h[]  \OMS/ztmcm/m/n/12 ^^@  [
+] \OML/ztmcm/m/it/12 h[]
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[46]
+Esercizio 6.
+[47
 
 ] (./esercizi_macchine_tex.aux)
  ***********
@@ -1465,11 +1635,11 @@ L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 30020 strings out of 474165
- 718737 string characters out of 5749497
+ 30144 strings out of 474165
+ 721472 string characters out of 5749497
  1951528 words of memory out of 5000000
- 51523 multiletter control sequences out of 15000+600000
- 619779 words of font info for 325 fonts, out of 8000000 for 9000
+ 51606 multiletter control sequences out of 15000+600000
+ 624467 words of font info for 359 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,15n,93p,1018b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/tex
@@ -1481,10 +1651,10 @@ ype1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2023/texmf-dist/fonts/type
 fb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/202
 3/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on esercizi_macchine_tex.pdf (35 pages, 4042799 bytes).
+Output written on esercizi_macchine_tex.pdf (47 pages, 4856131 bytes).
 PDF statistics:
- 212 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
+ 270 PDF objects out of 1000 (max. 8388607)
+ 141 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 85110 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 89763 words of extra memory for PDF output out of 106986 (max. 10000000)
 

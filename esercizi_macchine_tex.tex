@@ -28,7 +28,7 @@
 \begin{document}
 	\title{\textbf{Esercizi di Macchine}}
 	\author{di Salvatore Palumbo}
-	\date{Anno accademico 2023-2024\\[10cm]\includegraphics[width=14cm]{logo_uni.jpg}}
+	\date{Matricola: N47007322\\Anno accademico 2023-2024\\[10cm]\includegraphics[width=14cm]{logo_uni.jpg}}
 	\maketitle
 
 \tableofcontents
@@ -401,8 +401,8 @@ Di cui possiamo andare a compilare l'intera tabella dei parametri termodinamici,
 	$(61,0\;atm,\;485^{\circ} C)\to s_{3}=6,83\;kJ/kgK$
 	\item[\textbf{Stato 4  }] Pressione ed entalpia dallo schema. Poichè sono in condizioni di vapore saturo, la temperatura è quella di saturazione.
 	\item[\textbf{Stato 4''}] Pressione dallo schema. La temperatura è quella di saturazione, essendo un vapore saturo. L'entropia è la stessa dello stato 3, in quanto l'espansione è reversibile. Quindi:\\
-	$x_{4'}\;=\dfrac{(s_{4'}-s_{ls})}{(s_{vs}-s_{ls})}\;=\;\dfrac{6,83-0,437}{8,45-0,437}\;=\;0,798$\\
-	$\implies h_{4'}=h_{ls}\;+\;x_{4'}\;(h_{vs}-h_{ls})\;=\;126\;+\;0,798(2556-126)\;=\;2065\;kJ/kg$
+	$x_{4''}\;=\dfrac{(s_{4''}-s_{ls})}{(s_{vs}-s_{ls})}\;=\;\dfrac{6,83-0,437}{8,45-0,437}\;=\;0,798$\\
+	$\implies h_{4''}=h_{ls}\;+\;x_{4'}\;(h_{vs}-h_{ls})\;=\;126\;+\;0,798(2556-126)\;=\;2065\;kJ/kg$
 	
 \end{itemize}
 Ora che sono stati raccolti i parametri termodinamici caratteristici del ciclo reale e del ciclo limite si può procedere con il calcolo dei rendimenti.
@@ -482,11 +482,11 @@ Anche in questo esempio, per tracciare il ciclo limite viene scelta come pressio
 \begin{figure}[H]
 	
 	\begin{subfigure}{0.5\textwidth}
-		\includegraphics[width=0.9\linewidth]{ciclo_limite_reale.png} 
+		\includegraphics[width=0.9\linewidth]{ciclo_limite_1spillamento.png} 
 		\caption{Ciclo limite}
 	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
-		\includegraphics[width=0.9\linewidth]{ciclo_limite_reale.png}
+		\includegraphics[width=0.9\linewidth]{ciclo_reale_1spillamento.png}
 		\caption{Ciclo reale}
 	\end{subfigure}
 	
@@ -500,32 +500,86 @@ Di cui possiamo compilare la tabella dei parametri termodinamici:
 		\hline
 		\textbf{1} & 303 & 0,043 & 126 & 0,437 & //\\ 
 		\hline
-		\textbf{2} & 304 & 86,0 & 137 & n.v. & //\\
+		\textbf{2} & n.v. & 5,5 & n.v. & n.v. & //\\
 		\hline
-		\textbf{2''} & 303 & 61,0 & 132 & 0,437 & //\\
+		\textbf{2''} & 303 & 2,7 & 126 & 0,437 & //\\
+		\hline
+		\textbf{C} & 327 & 2,7 & 227 & 0,76 & //\\
+		\hline
+		\textbf{2R} & 329 & 86,0 & 240 & n.v. & //\\
+		\hline
+		\textbf{2R''} & 327 & 61,0 & 236 & 0,76 & //\\
 		\hline
 		\textbf{3} & 758 & 61,0 & 3380 & 6,83 & //\\
 		\hline
+		\textbf{R} & 504 & 5,5 & 2917 & n.v. & //\\
+		\hline
+		\textbf{R''} & 758 & 2,7 & 2640 & 6,83 & 0,963\\
+		\hline
 		\textbf{4} & 303 & 0,043 & 2313 & n.v. & n.v\\
 		\hline
-		\textbf{4''} & 303 & 22C & 2065 & 6,83 & 0,798\\
+		\textbf{4''} & 303 & 0,043 & 2065 & 6,83 & 0,798\\
 		\hline
 	\end{tabular}
 \end{center}
 \begin{itemize}
 	\item[\textbf{Stato 1  }] Come nel primo esempio.
-	\item[\textbf{Stato 2  }] Temperatura, pressione ed entalpia dallo schema.
+	\item[\textbf{Stato 2  }] Temperatura, pressione ed entalpia dallo schema, ma non sono stati forniti.
 	\item[\textbf{Stato 2''}] Pressione dallo schema. L'entropia è la stessa dello stato 1, in quanto la trasformazione è reversibile. Per il resto bisogna utilizzare il modello di liquido incomprimibile, per cui:\\
 	$T_{2''}\;=\;T_{1},$\\
-	$\;h_{2''}\;=\;h_{l}(T)\;+\;v\;(P\;-\;P_{sat}(T))\;=\;126\;+\;10^{-3}\;(6100\;-\;4,3)\;=\;132\;kJ/kg$
-	\item[\textbf{Stato 3  }] Temperatura, pressione ed entalpia dallo schema. Entropia specifica dalla tabella dell'acqua nello stato di vapore surriscaldato:\\
-	$(61,0\;atm,\;485^{\circ} C)\to s_{3}=6,83\;kJ/kgK$
-	\item[\textbf{Stato 4  }] Pressione ed entalpia dallo schema. Poichè sono in condizioni di vapore saturo, la temperatura è quella di saturazione.
-	\item[\textbf{Stato 4''}] Pressione dallo schema. La temperatura è quella di saturazione, essendo un vapore saturo. L'entropia è la stessa dello stato 3, in quanto l'espansione è reversibile. Quindi:\\
-	$x_{4'}\;=\dfrac{(s_{4'}-s_{ls})}{(s_{vs}-s_{ls})}\;=\;\dfrac{6,83-0,437}{8,45-0,437}\;=\;0,798$\\
-	$\implies h_{4'}=h_{ls}\;+\;x_{4'}\;(h_{vs}-h_{ls})\;=\;126\;+\;0,798(2556-126)\;=\;2065\;kJ/kg$
-	
+	$\;h_{2''}\;=\;h_{l}(T)\;+\;v\;(P\;-\;P_{sat}(T))\;=\;126\;+\;10^{-3}\;(270\;-\;4,3)\;\approx\;126\;kJ/kg$
+	\item[\textbf{Stato C  }] Temperatura, pressione ed entalpia dallo schema. L'entropia è un dato che ricavo guardando la tabella di saturazione alla temperatura corrispondente.
+	\item[\textbf{Stato 2R}] Temperatura, pressione ed entalpia dallo schema.
+	\item[\textbf{Stato 2R''}] Pressione dallo schema. L'entropia è la stessa dello stato 1, in quanto la trasformazione è reversibile. Per il resto bisogna utilizzare il modello di liquido incomprimibile, per cui:\\
+	$T_{2R''}\;=\;T_{C},$\\
+	$\;h_{2R''}\;=\;h_{C}(T)\;+\;v\;(P\;-\;P_{sat}(T))\;=\;230\;+\;10^{-3}\;(6100\;-\;0,158)\;\approx\;126\;kJ/kg$
+	\item[\textbf{Stato 3  }] Come nel primo esempio.
+	\item[\textbf{Stato R  }] Ricavo i dati dello spillamento dallo schema.
+	\item[\textbf{Stato R''}] Pressione dallo schema. La temperatura è quella di saturazione, essendo un vapore saturo. L'entropia è la stessa dello stato 3, in quanto l'espansione è reversibile. Quindi:\\
+	$x_{R''}\;=\dfrac{(s_{R''}-s_{ls})}{(s_{vs}-s_{ls})}\;=\;\dfrac{6,83-1,64}{7,03-1,64}\;=\;0,963$\\
+	$\implies h_{R''}=h_{ls}\;+\;x_{R''}\;(h_{vs}-h_{ls})\;=\;545\;+\;0,963(2720-545)\;=\;2640\;kJ/kg$
+	\item[\textbf{Stato 4  }] Come nel primo esempio.
+	\item[\textbf{Stato 4''}] Come nel primo esempio.
 \end{itemize}
+Ora che sono stati raccolti i parametri termodinamici caratteristici del ciclo reale e del ciclo limite si può procedere con il calcolo dei rendimenti.
+Il rendimento limite:
+\begin{center}
+	$\eta_{l}\;=\;\dfrac{\dot{m_{3}}(h_{3}\;-\;h_{R''})\;+\;\dot{m_{co}}(h_{R''}\;-\;h_{4''})\;-\;\dot{m_{co}}(h_{2''}\;-\;h_{1})\;-\;\dot{m_{3}}(h_{2R''}\;-\;h_{C})}{\dot{m_{3}}(h_{3}\;-\;h_{2R''})}\;=\;\dfrac{19,64\;(3380\;-\;2640)\;+\;18,92\;(2640\;-\;2065)\;-\;19,64\;(236\;-\;227)}{19,64\;(3380\;-\;236)}\;\approx\;\dfrac{25,42\;-\;0,18}{61,75}\;\approx\;\textbf{0,409}$
+\end{center}
+Ogni ciclo limite si può rendere equivalente a un ciclo di Carnot introducendo i concetti di temperatura media di adduzione del calore ($T_{ma}$) e temperatura media di sottrazione del calore ($T_{ms}$).
+\begin{center}
+	$T_{ma}\;=\;\dfrac{\int_{2R''}^{3}Tds}{\Delta s}\;=\;\dfrac{q_{a}}{s_{3}\;-\;s_{2''}}\;=\;\dfrac{3380\;-\;236}{6,83\;-\;0,76}\;\approx\;\textbf{518\;K}$
+\end{center}
+Sulla sottrazione non si è intervenuto, quindi è rimasta invariata.
+\begin{center}
+	$T_{ms}\;=\;\textbf{303\;K}$
+\end{center}
+Da notare che il rendimento limite è aumentato come ci si aspettava e infatti anche la temperatura media di adduzione è cresciuta.\\
+\\Per il rendimento reale invece:
+\begin{center}
+	$P_{t}\;=\;\dot{m_{3}}(h_{3}\;-\;h_{R})\;+\;\dot{m_{co}}(h_{R}\;-\;h_{4})\;=\;19,64\;\cdot\;(3380\;-\;2917)\;+\;18,92\;\cdot\;(2917\;-\;2313)\;\approx\;20,52\;MW$
+\end{center}
+La potenza della pompa di estrazione è sicuramente trascurabile, rispetto a quella di alimento:
+\begin{center}
+	$P_{p}\;=\;\dot{m_{gv}}\;(h_{2R}-h_{C})\;=\;19,89\;\cdot\;(240\;-\;227)\;\approx\;259\;kW$
+\end{center}
+E quindi:
+\begin{center}
+	$\eta_{r}\;=\;\dfrac{20,52\;-\;0,259}{63,09}\;\approx\;\textbf{0,321}$
+\end{center}
+Anche il rendimento reale è aumentato, ma di pochissimo.\\
+Il rendimento interno di impianto invece:
+\begin{center}
+	$\eta_{int,impianto}\;=\;\dfrac{\eta_{r}}{\eta_{l}}\;=\;\dfrac{0,321}{0,409}\;\approx\;\textbf{0,785}$
+\end{center}
+Volendo si potrebbe anche indagare sulla bontà della sola espansione, valutando il rendimento adiabatico di espansione, di cui si è già parlato nell' Esercizio 1:
+\begin{center}
+	$\eta_{ad}\;=\;\dfrac{P_{t}}{P_{is}}\;=\;\dfrac{\dot{m_{3}}(h_{3}\;-\;h_{R})\;+\;\dot{m_{co}}(h_{R}\;-\;h_{4})}{\dot{m_{3}}(h_{3}\;-\;h_{R''})\;+\;\dot{m_{co}}(h_{R''}\;-\;h_{4''})}\;=\;\dfrac{20,52}{25.42}\;\approx\;\textbf{0,807}$
+\end{center}
+E infine il rendimento meccanico:
+\begin{center}
+	$\eta_{m}\;=\;\dfrac{P_{a}}{P_{r}}\;=\;\dfrac{20,20}{20,26}\;\approx\;\textbf{0,997}$
+\end{center}
 \newpage
 
 \chapter{Impianto con Turbina a Gas}
@@ -804,9 +858,9 @@ Il primo passo che dobbiamo fare e analizzare i dati che abbiamo effettivamente 
 \begin{center}
 	\begin{tabular}{| l || l | l | l | l | l | l |}
 		\hline
-		\textbf{Modello} & \textbf{P\ped{e} [kW]} & \textbf{C\ped{s} [kJ/kWh]} & \textbf{$\beta$} & \textbf{$\dot{m}$\ped{a} [kg/s]} & \textbf{Velocità turbina [rpm]} & \textbf{T\ped{4} [K]}\\ 
+		\textbf{Modello} & \textbf{P\ped{e} [kW]} & \textbf{C\ped{s} [kJ/kWh]} & \textbf{$\beta$} & \textbf{$\dot{m}$\ped{g} [kg/s]} & \textbf{Velocità turbina [rpm]} & \textbf{T\ped{4} [K]}\\ 
 		\hline
-		\textbf{SGT-800} & 62500 & 8759 & 21,1 & 125,0 & 6600 & 869\\ 
+		\textbf{SGT-800} & 62500 & 8759 & 21,1 & 135,5 & 6600 & 869\\ 
 		\hline
 	\end{tabular}
 \end{center}
@@ -909,5 +963,336 @@ Dal momento che si conosce tutto sulla qualità della macchina, è possibile cal
 \newpage
 
 \chapter{Stadio di turbina a vapore}
-\paragraph{sdasda.\\}
+\paragraph{Determinare i triangoli di velocità, la potenza interna, il rendimento interno e il grado di reazione dello stadio.\\}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{stadio_hs.png}
+	\caption{Rappresentazione sul piano h-s dell'espansione ideale e reale che avviene in questo stadio della turbina}
+\end{figure}
+Essendo una turbina assiale la velocità periferica (tangenziale) in ingresso e in uscita dal rotore è la stessa. Quindi: $u_{1}\;=\;u_{2}\;=\;u$. Nei diversi punti della sezione di ingresso o sezione di uscita si assume che la velocità periferica non subisca grosse variazioni. Ipotesi plausibile in quanto l'altezza delle pallette $b\;=\;0,035\;m$ è molto minore del raggio medio $r_{m}\;=\;0,8\;m$
+Inoltre l'esercizio afferma che la girante ruota con un numero di giri $n\;=\;3000\;rpm$. Quindi:
+\begin{center}
+	$u\;=\;\dfrac{2\;\pi\;r_{m}\;n}{60}\;\approx\;\textbf{251,2\;m/s}$
+\end{center}
+Ovviamente per costruire il triangolo di velocità in ingresso al rotore (punto 1/1'), devo conoscere quanto vale la velocità $c_{1}$ in ingresso e la sua inclinazione rispetto alla $u$.
+Per fare ciò si può sfruttare il bilancio di energia sul rotore.\\
+Dalle condizioni di ingresso dello statore fornite dall'esercizio si possono ricavare con le tabelle dell'acqua nello stato di vapore surriscaldato, i valore dell'entalpia e dell'entropia:
+\begin{center}
+	$Stato\:0\;(p_{0}\;=\;15\;bar,\;t_{0}\;=\;350^{\circ}C)\;\to\;h_{0}\;=\;3147\;kJ/kg,\;s_{o}\;=\;7,103\;kJ/kgK$
+\end{center}
+Poichè so che la trasformazione 0-1s è isoentropica, posso calcolare quanto vale l'entalpia nel punto 1s:
+\begin{center}
+	$Stato\:1s\;(p_{1s}\;=\;10\;bar,\;s_{1s}\;=\;7,103\;kJ/kgK\;\to\;t_{1s}\;=\;275^{\circ}C,\;h_{1s}\;=\;3035\;kJ/kg$
+\end{center}
+Dal bilancio sul rotore tra 0-1s, ottengo:
+\begin{equation}
+	h_{0}\;+\;\cancel{\dfrac{c_{0}^{2}}{2}}\:=\;h_{1s}\;+\;\dfrac{c_{1s}^{2}}{2}\to\;c_{1s}\;=\;\sqrt{2\;(h_{0}\;-\;h_{1s})}\;=\;\sqrt{2\;(3147\;-\;3035)\cdot10^{3}\;j/kg}\;=\;473,3\;m/s
+\end{equation}
+Visto che l'esercizio fornisce il coefficiente riduttivo statorico ($\varphi$) sulle perdite distribuite dovute all'attrito che si hanno nello statore:
+\begin{equation}
+	\varphi\;:=\;\dfrac{c_{1}}{c_{1s}}\;=\;0,92\to\;c_{1}\;=\;\textbf{435,4\;m/s}
+\end{equation}
+Applicando di nuovo il bilancio sullo statore, ma adesso tra 0-1, ottengo:
+\begin{equation}
+	h_{0}\;+\;\cancel{\dfrac{c_{0}^{2}}{2}}\:=\;h_{1}\;+\;\dfrac{c_{1}^{2}}{2}\to\;h_{1}\;=\;3052\;kJ/kg
+\end{equation}
+Ricordando che sull'intero stadio supponiamo che ci sia la conservazione della portata, se so che riceve $\dot{m}\;=\;80\;kg/s$ di vapore, sono sicuro che all'ingresso del rotore ho la stessa portata, \uline{a meno di perdite legate al trafilaggio} che chiaramente andrebbero a ridurre la portata che effettivamente entra nel rotore. Perdite che sono trascurate in questo esercizio.\\
+Inoltre poichè la portata incide assialmente, so che dipende solo dalla componente assiale della velocità:
+\begin{equation}
+	\dot{m}\;=\;\dfrac{1}{v_{1}}\;2\pi\;r_{m}\;b\;c_{1x}
+\end{equation}
+Dove come sezione abbiamo considerato l'intera corona circolare di altezza $b$.
+\begin{center}
+	$Stato\:1\;(p_{1}\;=\;10\;bar,\;h_{1}\;=\;3052\;kJ/kg)\;\to\;v_{1}\;=\;0,258\;m^{3}/kg,\;\;s_{1}\;=\;7,123\;kJ/kgK$
+\end{center}
+E quindi:
+\begin{center}
+	$c_{1x}\;=\;\dfrac{\dot{m}\;v_{1}}{2\pi\;r_{m}\;b}\;=\;\textbf{117,4\;m/s},\;\;\alpha_{1}\;=\;arcsin(c_{1x}/c_{1})\;=\;\textbf{15,6$^{\circ}$}$
+\end{center}
+E quindi:
+\begin{center}
+	$c_{1u}\;=\;c_{1}\;cos(\alpha_{1})\;=\;\textbf{419,4\;m/s}$
+\end{center}
+Dalle relazioni cinematiche sui moti relativi, sappiamo che:
+\begin{equation}
+	\vec{c_{1}}\;=\;\vec{u}\;+\;\vec{w_{1}}\;\implies\;\begin{cases}
+											   	           w_{1u}\;=\;c_{1u}\;-\;u\;=\;\textbf{168,2\;m/s}\\
+											               	w_{1x}\;=\;c_{1x}\;=\;\textbf{117,4\;m/s}
+	                                                   \end{cases}
+\end{equation}
+Quindi:
+\begin{center}
+	$w_{1}\;=\;\sqrt{w_{1x}^{2}\;+\;w_{1u}^{2}}\;=\;\textbf{205,1\;m/s},\;\;\beta_{1}\;=\;arcsin(w_{1x}/w_{1})\;=\;\textbf{34,9$^{\circ}$}$
+\end{center}
+\newpage
+
+Ottenuti tutti i parametri del triangolo in ingresso, si può passare al triangolo in uscita. 
+In questo esercizio si sta trascurando una delle 3 perdite caratteristiche dello stadio di una turbina che è la perdita all' anulus dovuta al lasco che c'è tra statore e rotore che riduce la velocità nel sistema relativo.\\
+Se considero la conservazione della portata all'interno del rotore si scopre che:
+\begin{center}
+	$\dfrac{1}{v_{1}}\;\cancel{2\pi\;r_{m}\;b}\;c_{1x}\;=\;\dfrac{1}{v_{2}}\;\cancel{2\pi\;r_{m}\;b}\;c_{2x}$
+\end{center}
+Per conoscere informazioni sullo stato 2, devo passare necessariamente per lo stato 2s.
+\begin{center}
+	$Stato\:2s\;(p_{2s}\;=\;7\;bar,\;s_{2s}\;=\;s_{1}\;=\;7,123\;kJ/kgK)\;\to\;h_{2s}\;=\;2962\;kJ/kg$
+\end{center}
+Dal bilancio di energia nel sistema di riferimento mobile a cavallo del rotore nella trasformazione 1-2s, ottengo:
+\begin{equation}
+	h_{2s}\;-\;h_{1}\;+\;\dfrac{w_{2s}^{2}\;-\;w_{1}^{2}}{2}\;=\;0\to\;w_{2s}\;=\;\sqrt{2\;(\frac{w_{1}^2}{2}\;+\;h_{1}\;-\;h_{2s})}\;=\;477,7\;m/s
+\end{equation}
+Visto che l'esercizio fornisce il coefficiente riduttivo rotorico ($\psi$) sulle perdite distribuite dovute all'attrito e le perdite di incidenza che si hanno nel rotore:
+\begin{equation}
+	\psi\;:=\;\dfrac{w_{2}}{w_{2s}}\;=\;0,88\to\;w_{2}\;=\;\textbf{420,4\;m/s}
+\end{equation}
+E quindi dallo stesso bilancio sul rotore ma tra 1-2, ottengo:
+\begin{center}
+	$h_{2}\;=\;h_{1}\;+\;\dfrac{w_{1}^{2}\;-\;w_{2}^{2}}{2}\;=\;2988\;kJ/kg$
+\end{center}
+In questo modo posso conoscere i parametri dello stato 2:
+\begin{center}
+	$Stato\:2\;(p_{2}\;=\;7\;bar,\;h_{2}\;=\;2988\;kJ/kg)\;\to\;v_{2}\;=\;0,348\;m^{3}/kg$
+\end{center}
+E quindi:
+\begin{center}
+	$c_{2x}\;=\;\dfrac{v_{2}}{v_{1}}\;c_{1x}\;=\;\textbf{158,4\;m/s}$
+\end{center}
+Dalla prima relazione cinematica (4.5) concludere che:
+\begin{center}
+	$w_{2x}=c_{2x}=\textbf{158,4\;m/s}\to\;\beta_{2}\;=\;arcsin(w_{2x}/w_{2})\;=\;\textbf{22,1$^{\circ}$},\;\;w_{2u}=-w_{2}cos(\beta_{2})\;=\;-\;\textbf{389,5\;m/s}$
+\end{center}
+Mentre dalla seconda:
+\begin{center}
+	$c_{2u}=w_{2u}+u=\textbf{-\;138,3\;m/s},\to\;c_{2}\;=\;\sqrt{c_{2x}^{2}\;+\;c_{2u}^{2}}\;=\;\textbf{210,3\;m/s},\;\alpha_{2}\;=\;arcsin(c_{2x}/c_{2})\;=\;\textbf{48,9$^{\circ}$}$
+\end{center}
+Dopo aver risolto l'esercizio da un punto di vista cinematico, con la relazione di Eulero è possibile calcolare quanto vale il lavoro specifico di questo stadio:
+\begin{equation}
+	l\;=\;u\;(c_{1u}\;-\;c_{2u})\;=\;251,2\;m/s\;[419,4\;-\;(-\;138,3\;m/s)]\;\approx\;140\cdot10^{3}\;J/kg
+\end{equation}
+E quindi la potenza interna è pari a:
+\begin{equation}
+	P_{i}\;=\;\dot{m}\;l\;=\;\textbf{11,2\;MW}
+\end{equation}
+E posso facilmente definire anche un rendimento interno:
+\begin{equation}
+	\eta_{i}\;=\;\dfrac{l_{i}}{h_{0}\;-\;h_{2s}\;-\;\frac{c_{2}^{2}}{2}}\;=\;\textbf{0,859}
+\end{equation}
+E il grado di reazione:
+\begin{equation}
+	R^{*}\;=\;\dfrac{h_{is}\;-\;h_{2s}}{\Delta h^{*}}\;=\;\dfrac{h_{is}\;-\;h_{2s}}{h_{is}\;-\;h_{2s}\;+\;\frac{c_{is}^{2}}{2}}\;=\;\textbf{0,395}
+\end{equation}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{triangolo_velocità.png}
+	\caption{Rappresentazione dei triangoli di velocità in entrata e in uscita dal rotore}
+\end{figure}
+\newpage
+
+\chapter{Repowering di un impianto a vapore}
+\section{Impianto ad un salto di pressione}
+\paragraph{Calcolare il rendimento globale dell'impianto combinato ottenuto facendo il Repowering (tecnica heat recovery repowering), dell'impianto a vapore da circa 18 MW con la turbina a gas General Electric MS6001.\\}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{impianto_combinato_1livello.png}
+	\caption{Schema di un impianto combinato con caldaia a recupero ad un livello di pressione}
+\end{figure}
+Fare Repowering significa innestare su un impianto a vapore già in uso, un impianto con turbina a gas con ciclo sovrapposto. Ottenendo quindi un impianto combinato.\\
+Nella fattispecie in questo esempio viene utilizzata una tecnica che consiste nel sostituire il classico generatore di vapore con un \uline{HRSG (Heat Recovery Steam Generator)}, ovvero una caldaia a recupero (di un livello di pressione). Soluzione che si può adottare in quanto l'impianto a vapore ha una pressione massima di circa 70 bar, non ha risurriscaldamento e produce una potenza minore della metà prodotta dall'impianto a gas.\\ Tale tipo di impianto combinato si dice "unfired", in quanto non ci sono altre combustioni al di fuori della camera di combustione della turbina a gas.\\
+L'analisi di questo impianto non può che partire dalla turbina a gas, che tra i due cicli già esistenti è quello che non viene influenzato dal repowering.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{data_MS6001.png}
+	\caption{Scheda tecnica della turbina a gas MS6001 (General Electric)}
+\end{figure}
+Il primo passo è analizzare i dati che abbiamo effettivamente a disposizione:
+\begin{center}
+	\begin{tabular}{| l || l | l | l | l | l | l |}
+		\hline
+		\textbf{Modello} & \textbf{P\ped{ug} [kW]} & \textbf{$\eta$\ped g} & \textbf{$\beta$} & \textbf{$\dot{m}$\ped{a} [kg/s]} & \textbf{Velocità turbina [rpm]} & \textbf{T\ped{4} [K]}\\ 
+		\hline
+		\textbf{MS 6001} & 41010 & 0,334 & 11,8 & 136,9 & 5100 & 810\\ 
+		\hline
+	\end{tabular}
+\end{center}
+Ipotizzando anche in questo esempio che l'adduzione di calore sia internamente reversibile:
+\begin{center}
+	$Stato\;4\;\to\;T_{4}\;=\;869\;K,\;\;p_{4}\;=\;1\;atm\cdot11,8\;=\;11,8\;atm$
+\end{center}
+\uline{Se ipotizzo che l'impianto sia alimentato a metano (CH\ped{4})}:
+\begin{center}
+	$\eta_{g}\;=\;\dfrac{P_{ug}}{\dot{m_{c}}H_{i}}\to\dot{m_{c}}\;=\;\dfrac{41010\;kW}{0,334\;50000\;kJ/kg}\;\approx\;2,46\;kg/s\;\to\;\dot{m_{g}}=\dot{m_{a}}+\dot{m_{c}}\;\approx\;139,4\;kg/s$
+\end{center}	
+L'impianto a vapore su cui stiamo facendo repowering è quello che è stato analizzato nell'esercizio 2, di cui però vengono presentati 3 diversi schemi.\\
+Lo schema reale di quell'impianto è sicuramente il terzo, in cui ci sono almeno 4 spillamenti. Tuttavia in un impianto combinato non ci sono vantaggi nell'applicare la rigenerazione in quanto il calore viene già addotto ad una temperatura vicina a quella del vapore.\\
+Quindi si ipotizza che siamo riusciti a chiudere gli spillamenti e ad eliminare tutti i rigeneratori, tranne il degasatore, che non può essere escluso in quanto il condensatore continua a lavorare comunque in condizioni depresse che potrebbero richiamare aria dall'esterno in quei punti in cui nelle tubature si è avuta qualche corrosione.\\
+Se assumo che la caduta di pressione si distribuisce in maniera uniforme sui tre elementi che costituiscono il generatore di vapore che stiamo sostituendo, i punti interessati a questo cambiamento che si fa sull'alimentazione sono:
+\begin{center}
+	\begin{tabular}{| l || l | l | l | l | l |}
+		\hline
+		\textbf{Stato} & \textbf{T [K]} & \textbf{P [atm]} & \textbf{h [kJ/kg]} & \textbf{s [kJ/kgK]} & \textbf{Titolo}\\ 
+		\hline
+		\textbf{2R} & 329 & 86,0 & 240 & n.v. & //\\
+		\hline
+		\textbf{LS} & 567 & 79,0 & 1312 & n.v. & 0,00\\
+		\hline
+		\textbf{VS} & 561 & 72,0 & 2770 & n.v & 1,00\\
+		\hline
+		\textbf{3'} & 773 & 65,0 & 3412 & n.v. & //\\
+		\hline
+	\end{tabular}
+\end{center} 
+Fare repowering significa che io non posso andare a toccare questi valori, così come non posso andare a toccara la portata di vapore.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{profilo_temperature.png}
+	\caption{Profilo generico del profilo delle temperature all'interno di un HRSG}
+\end{figure}
+Avendo fissato tutti questi paletti, la temperatura dei gas al camino ($T_{STK}$) e il pinch point ($\Delta T_{PP}$), sono univocamente determinati e va verificato se sono ammissibili.\\
+Supponendo che $c_{pm}=1,1\;kJ/kgK$ e ricordando che $\dot{m_{gv}}=19,89\;kg/s$, dal bilancio sull' HRSG:
+\begin{equation}
+	\dot{m_{g}}\;c_{pm}\;(T_{4}\;-\;T_{STK})\;=\;\dot{m_{gv}}\;(h_{3'}\;-\;h_{2R})
+\end{equation}
+E quindi:
+\begin{center}
+	$T_{STK}\;=\;T_{4}\;-\;\dfrac{\dot{m_{gv}}\;(h_{3'}\;-\;h_{2R})}{\dot{m_{g}}\;c_{pm}}\;=\;399\;K\;=\;126^{\circ}C\;\in [120^{\circ}C\div160^{\circ}C]$
+\end{center}
+Intervallo che garantisce la sicurezza di avere gas abbastanza caldi da potersi disperdere nell'aria e da non far condensare $H_{2}SO_{4}$.\\
+Il punto in cui ho la minima $\Delta T$, tra i gas di scarico e il vapore, è il punto PP (Pinch Point), che per come è l'andamento dei profili di temperatura di gas di scarico e del vapore, cade nel punto in cui l'acqua ha raggiunto le condizioni di liquido saturo (LS).\\
+Se considero un bilancio sempre sullo scambiatore tra l'ingresso e il punto LS, ottengo che:
+\begin{equation}
+	\dot{m_{g}}\;c_{pm}\;(T_{4}\;-\;T_{gPP})\;=\;\dot{m_{gv}}\;(h_{3'}\;-\;h_{LS})
+\end{equation}  
+E quindi:
+\begin{center}
+	$T_{gPP}\;=\;T_{4}\;-\;\dfrac{\dot{m_{gv}}\;(h_{3'}\;-\;h_{LS})}{\dot{m_{g}}\;c_{pm}}\;=\;538\;K\to\;\Delta T_{PP}\;=\;T_{gPP}\;-\;T_{LS}\:=\;-\;29^{\circ}C$
+\end{center}
+Appare evidente che in queste condizioni l'impianto combinato non può mai funzionare. Devo intervenire regolando la potenza di una delle due turbine.\\
+Sulla turbina a gas non posso intervenire in quanto sono già nelle condizioni nominali e non posso andare oltre.\\
+Invece posso intervenire regolando la turbina a vapore. Come ben noto, per regolare un impianto a vapore ci sono diverse tecniche e logiche di adeguamento.\\
+Nel nostro caso l'obiettivo non è ridurre la potenza, ma far diminuire la portata di vapore che viene prodotta nello scambiatore, così da far aumentare la temperatura di Pitch Point.\\ 
+La tecnica di regolazione che mi permette di agire sulla portata lasciando intatto i parametri termodinamici del ciclo è la parzializzazione.\\
+Per conoscere di quanto si deve ridurre la portata di vapore, si procede in maniera inversa a quanto fatto precedentemente, fissando il $\Delta T_{PP}\;=\;6^{\circ}C\to T_{gPP}\;=\;573\;K$.\\
+Quindi in virtù della 5.2:
+\begin{center}
+	$\dot{m_{v}}\;=\;\dfrac{\dot{m_{g}}\;c_{pm}\;(T_{4}\;-\;T_{gPP})}{h_{3'}\;-\;h_{LS}}\;=\;17,3\;kg/s$
+\end{center}
+Verifico che la $T_{STK}$ rientri nel limite consentito:
+\begin{center}
+	$T_{STK}\;=\;T_{4}\;-\;\dfrac{\dot{m_{v}}\;(h_{3'}\;-\;h_{2R})}{\dot{m_{g}}\;c_{pm}}\;=\;452\;K\;=\;\textbf{179$^{\circ}$C}\;\cancel{\in} [120^{\circ}C\div160^{\circ}C]$
+\end{center}
+Purtroppo non posso fare meglio di così con questo schema d'impianto. Devo per forza perdere una cospicua quantità di energia nei fumi di scarico.\\
+Quindi con una portata di vapore ridotta, l'impianto produrrà una potenza minore. Tenendo conto che le perdite e lo spillamento rimangono gli stessi in termini percentuali:
+\begin{center}
+	$P_{TV}\;=\;\dot{m_{3}}(h_{3}\;-\;h_{R})\;+\;\dot{m_{co}}(h_{R}\;-\;h_{4})\;=\;17,1\;\cdot\;(3380\;-\;2917)\;+\;16,5\;\cdot\;(2917\;-\;2313)\;\approx\;17,88\;MW$
+\end{center}
+\begin{center}
+	$P_{PV}\;=\;\dot{m_{v}}\;(h_{2R}-h_{C})\;=\;17,3\;\cdot\;(240\;-\;227)\;\approx\;225\;kW$
+\end{center}
+L'impianto a gas invece non è stato toccato e continuerà a produrre la potenza riportata nella scheda tecnica. Quindi il rendimento globale del ciclo combinato:
+\begin{equation}
+	\eta_{gc}\;=\;\dfrac{P_{ug}\;+\;P_{uV}}{\dot{m_{c}}H_{i}}\;=\;\dfrac{41,01\;+\;(17,88\;-\;0,225)}{2,46\cdot50}\;=\;\textbf{0,477}
+\end{equation}
+In termini di I legge, la quantità di calore che abbiamo recuperato non è massima, in quanto tale limite è imposto dall'ambiente. Tuttavia, per i motivi precedentemente elencati la temperatura al camino (T\ped{STK}) deve superare almeno i 120°C. Quindi definisco un parametro:
+\begin{equation}
+	\epsilon_{q}\;:=\;\dfrac{\dot{Q_{v}}}{\dot{Q_{g,max}}}
+\end{equation}
+Finora abbiamo dato per assunto che nello scambiatore non ci fossero perdite nell' involucro. Chiaramente questa è un'ipotesi. Se continua a valere e si suppon che T\ped{0}=288 K:
+\begin{center}
+	$\epsilon_{q}\;:=\;\dfrac{T_{4}\;-\;T_{STK}}{T_{4}\;-\;T_{0}}\;=\;\textbf{0,686}$
+\end{center}
+Alla quantità massima di calore che posso addurre è associata attraverso il rendimento di carnot ($\eta_{c}$), l'exergia dei gas di scarico, ovvero la quantità massima di lavoro ottenibile da quel fluido. Tuttavia, abbiamo visto bene che al ciclo a gas abbiamo sottoposto un ciclo a vapore reale e non un ciclo ideale. Quindi è interessante confrontare il rendimento di carnot con il rendimento globale dell'impianto a vapore, mediante un parametro:
+\begin{equation}
+	\epsilon_{\eta}\;:=\;\dfrac{\eta_{IV}}{\eta_{c}}\;=\;\dfrac{P_{uV}}{\dot{m_{v}}\;(h_{3'}\;-\;h_{2R})}\cdot\dfrac{1}{1\;-\;\frac{T_{0}}{T_{ma}}}\;=\;\textbf{0,749}
+\end{equation} 
+
+
+\section{Impianto a due salti di pressione}
+\paragraph{Calcolare il rendimento globale dell'impianto combinato a due salti di pressione ottenuto facendo il Repowering dell'impianto a vapore da circa 18 MW con la turbina a gas General Electric MS6001.\\}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{impianto_combinato_2livelli.png}
+	\caption{Schema di un impianto combinato con caldaia a recupero a due livelli di pressione}
+\end{figure}
+Dal lato della turbina a gas su questa nuova configurazione dell'impianto con cambia nulla.\\
+L'impianto a vapore invece non è più lo stesso analizzato nella sezione precedente. Infatti in questo casi si fa riferimento al primo dei 3 diversi schemi presentati nell'esercizio 2, ovvero quello senza spillamenti. Possiamo sceglierlo, in quanto rispetto a prima all'interno della caldaia c'è un corpo cilindrico (per evitare il film boiling) su cui è possibile effettuare anche il degasaggio, evitando quindi di dover spillare portata dalla turbina. Inoltre a quell'impianto va sostituita la pompa di alimento con due pompe, una di bassa e una di alta pressione.\\
+Come nel precedente schema, in prima battuta si assume di far circolare la portata di vapore nominale $\dot{m_{gv}}\;=\;19,89\;kg/s$.\\
+In questo schema d'impianto si hanno 2 PINCH POINT. Si inizia l'analisi a partire dal secondo Pinch point quello che cade nel punto in cui l'acqua al secondo livello di pressione ha raggiunto le condizioni di liquido saturo (LS'').\\
+Si assume che la caduta di pressione si distribuisce in maniera uniforme sui 3 scambiatori di alta pressione che costituiscono la caldaia, mentre si suppone che siano reversibili nei primi 2 scambiatori.\\
+Si fissa il primo livello di pressione ($p_{L'}\;=\;6\;atm$).
+\begin{center}
+	\begin{tabular}{| l || l | l | l | l | l |}
+		\hline
+		\textbf{Stato} & \textbf{T [K]} & \textbf{P [atm]} & \textbf{h [kJ/kg]} & \textbf{s [kJ/kgK]} & \textbf{Titolo}\\ 
+		\hline
+		\textbf{L'} & 304 & 6,00 & 127 & n.v & //\\
+		\hline
+		\textbf{LS'} & 432 & 6,00 & 671 & n.v & //\\
+		\hline
+		\textbf{VSS'} & 432 & 6,00 & 2757 & n.v & //\\
+		\hline
+		\textbf{L''} & 432 & 86,0 & 679 & n.v & //\\
+		\hline
+		\textbf{LS''} & 567 & 79,0 & 1312 & n.v. & 0,00\\
+		\hline
+		\textbf{VSS''} & 561 & 72,0 & 2770 & n.v. & 1,00\\
+		\hline
+		\textbf{VSH''} & 773 & 65,0 & 3412 & n.v & //\\
+		\hline
+	\end{tabular}
+\end{center} 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{profilo_temperature_2livelli.png}
+	\caption{Profilo generico del profilo delle temperature all'interno di una caldaia a 2 livelli di pressione}
+\end{figure}
+Se fisso un $\Delta T_{PP''}\;=\;10^{\circ}C\to\;T_{gPP''}\;=\;577\;K$ e considero un bilancio sullo scambiatore tra l'ingresso dei gas di scarico e il punto LS'', ottengo che:
+\begin{equation}
+	\dot{m_{g}}\;c_{pm}\;(T_{4}\;-\;T_{gPP''})\;=\;(1-X_{VS})\;\dot{m_{gv}}\;(h_{VSH''}\;-\;h_{LS''})
+\end{equation}  
+Da cui posso ricavare il titolo a cui è arrivato il fluido durante l'evaporazione al primo livello di pressione:
+\begin{center}
+	$X_{VS}\;=\;1\;-\;\dfrac{\dot{m_{g}}\;c_{pm}\;(T_{4}\;-\;T_{gPP''})}{\dot{m_{gv}}\;(h_{VSH''}\;-\;h_{LS''})}\;=\;0,145$
+\end{center}
+Posso calcolare quanto vale la temperatura al camino $T_{STK}$ e verificare se è ammissibile. Considero sempre un bilancio sullo scambiatore ma tra l'ingresso dei gas di scarico e il camino, ottengo che:
+\begin{equation}
+	\dot{m_{g}}\;c_{pm}\;(T_{4}\;-\;T_{STK})\;+\;(1-X_{VS})\;\dot{m_{gv}}\;(h_{L''}\;-\;h_{LS'})\;=\;(1-X_{VS})\;\dot{m_{gv}}\;h_{VSH''}\;+\;X_{VS}\;\dot{m_{gv}}\;h_{VSS'}\;-\;\dot{m_{gv}}\;h_{L'}
+\end{equation}
+E quindi:
+\begin{center}
+	$T_{STK}\;=\;T_{4}\;-\;\dfrac{(1-X_{VS})\;\dot{m_{gv}}\;h_{VSH''}\;+\;X_{VS}\;\dot{m_{gv}}\;h_{VSS'}\;-\;\dot{m_{gv}}\;h_{L'}\;-\;(1-X_{VS})\;\dot{m_{gv}}\;(h_{L''}\;-\;h_{LS'})}{\dot{m_{g}}\;c_{pm}}\;=\;397\;K\;=\;\textbf{124$^{\circ}$C}\;\in [120^{\circ}C\div160^{\circ}C]$
+\end{center}
+Ovviamente si deve verificare che il primo pinch point abbia il giusto $\Delta T_{gPP'}$. Per farlo imposto ancora un bilancio sulla caldaia ma tra l'ingresso dei gas di scarico e il punto LS' e ottengo che:
+\begin{equation}
+	\dot{m_{g}}\;c_{pm}\;(T_{4}\;-\;T_{gPP'})\;+\;(1-X_{VS})\;\dot{m_{gv}}\;(h_{L''}\;-\;h_{LS'})\;=\;(1-X_{VS})\;\dot{m_{gv}}\;h_{VSH''}\;+\;X_{VS}\;\dot{m_{gv}}\;h_{VSS'}\;-\;\dot{m_{gv}}\;h_{LS'}
+\end{equation}
+E quindi:
+\begin{center}
+	$T_{gPP'}\;=\;T_{4}\;-\;\dfrac{(1-X_{VS})\;\dot{m_{gv}}\;h_{VSH''}\;+\;X_{VS}\;\dot{m_{gv}}\;h_{VSS'}\;-\;\dot{m_{gv}}\;h_{LS'}\;-\;(1-X_{VS})\;\dot{m_{gv}}\;(h_{L''}\;-\;h_{LS'})}{\dot{m_{g}}\;c_{pm}}\;=\;468\;K\;=\;195^{\circ}C$
+\end{center}
+Per cui:
+\begin{center}
+	$\Delta T_{PP'}\;=\;T_{gPP'}\;-\;T_{LS'}\;=\;36^{\circ}C$
+\end{center}
+Non è il meglio che posso fare, ma va sicuramente bene.\\
+Adesso si può procedere al calcolo delle potenze e del rendimento. Per quanto riguarda l'impianto a vapore:
+\begin{center}
+	$P_{TV}\;=\;(1\;-\;X_{VS})\;\dot{m_{gv}}(h_{3}\;-\;h_{4})\;+\;X_{VS}\;\dot{m_{gv}}(h_{VSS'}\;-\;h_{4})\;=\;(1-0,145)\;19,89\;\cdot\;(3380\;-\;2313)\;+\;0,145\;19,89\;\cdot\;(2770\;-\;2313)\;\approx\;19,46\;MW$
+\end{center}
+\begin{center}
+	$P_{PV}\;=\;(1\;-\;X_{VS})\;\dot{m_{gv}}\;(h_{L''}-h_{LS'})\;+\;\dot{m_{gv}}\;(h_{L'}-h_{1})\;=\;\;\approx\;156\;kW$
+\end{center}
+L'impianto a gas invece non è stato toccato e continuerà a produrre la potenza riportata nella scheda tecnica. Quindi il rendimento globale del ciclo combinato:
+\begin{equation}
+	\eta_{gc}\;=\;\dfrac{P_{ug}\;+\;P_{uV}}{\dot{m_{c}}H_{i}}\;=\;\dfrac{41,01\;+\;(19,46\;-\;0,156)}{2,46\cdot50}\;=\;\textbf{0,490}
+\end{equation}
+Finora abbiamo dato per assunto che nello scambiatore non ci fossero perdite nell' involucro. Chiaramente questa è un'ipotesi. Se continua a valere e si suppone che T\ped{0}=288 K:
+\begin{center}
+	$\epsilon_{q}\;:=\;\dfrac{T_{4}\;-\;T_{STK}}{T_{4}\;-\;T_{0}}\;=\;\textbf{0,791}$
+\end{center}
+E il parametro sul rendimento:
+\begin{equation}
+	\epsilon_{\eta}\;:=\;\dfrac{\eta_{IV}}{\eta_{c}}\;=\;\dfrac{P_{uV}}{\dot{m_{g}}\;c_{pm}\;(T_{4}\;-\;T_{STK})}\cdot\dfrac{1}{1\;-\;\frac{T_{0}}{T_{ma}}}\;=\;\textbf{0,709}
+\end{equation}
+\newpage
+
+\chapter{Motore alternativo a combustione interna} 
 \end{document}

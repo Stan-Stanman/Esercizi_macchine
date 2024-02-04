@@ -18,12 +18,18 @@
 \contentsline {paragraph}{Calcolo dei rendimenti.\\}{14}{}%
 \contentsline {section}{\numberline {2.2}2° Schema d'impianto a vapore}{19}{}%
 \contentsline {paragraph}{Calcolo dei rendimenti.\\}{19}{}%
-\contentsline {chapter}{\numberline {3}Impianto con Turbina a Gas}{22}{}%
-\contentsline {section}{\numberline {3.1}Analisi termodinamica della turbina a gas LM6000 (General Electric)}{22}{}%
-\contentsline {paragraph}{Calcolare e disegnare i cicli ideale e reale, stimando i rendimenti politropici di compressione ed espansione, i rendimenti di combustione, limite (ideale), interno di impianto, reale, meccanico e le temperature medie di adduzione e sottrazione del calore.\\}{23}{}%
-\contentsline {paragraph}{Valutare il rapporto di compressione scelto (29,5) rispetto a quello di lavoro massimo e di rendimento massimo teorici.\\}{26}{}%
-\contentsline {paragraph}{Valutare un ipotetico impianto con un' interrefrigerazione ($\beta _{1}\tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em}2,42,\tmspace +\thickmuskip {.2777em}\beta _{2}\tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em}12$) ed un riscaldamento ripetuto ($\beta _{3}\tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em}2,42,\tmspace +\thickmuskip {.2777em}\beta _{4}\tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em}12$) conservando gli stessi rendimenti politropici di compressione ed espansione, di combustione e meccanico valutati con il ciclo semplice di Joule. Calcolare e disegnare i cicli ideale e reale per questo impianto, il rendimento limite (ideale), reale e interno di impianto e le temperature medie di adduzione e sottrazione del calore.\\}{27}{}%
-\contentsline {section}{\numberline {3.2}Analisi termodinamica della turbina a gas SGT-800 (Siemens Energy)}{31}{}%
-\contentsline {paragraph}{Calcolare e disegnare i cicli ideale e reale, stimando i rendimenti politropici di compressione ed espansione, i rendimenti di combustione, limite (ideale), interno di impianto, reale, meccanico e le temperature medie di adduzione e sottrazione del calore.\\}{32}{}%
-\contentsline {chapter}{\numberline {4}Stadio di turbina a vapore}{35}{}%
-\contentsline {paragraph}{sdasda.\\}{35}{}%
+\contentsline {chapter}{\numberline {3}Impianto con Turbina a Gas}{23}{}%
+\contentsline {section}{\numberline {3.1}Analisi termodinamica della turbina a gas LM6000 (General Electric)}{23}{}%
+\contentsline {paragraph}{Calcolare e disegnare i cicli ideale e reale, stimando i rendimenti politropici di compressione ed espansione, i rendimenti di combustione, limite (ideale), interno di impianto, reale, meccanico e le temperature medie di adduzione e sottrazione del calore.\\}{24}{}%
+\contentsline {paragraph}{Valutare il rapporto di compressione scelto (29,5) rispetto a quello di lavoro massimo e di rendimento massimo teorici.\\}{27}{}%
+\contentsline {paragraph}{Valutare un ipotetico impianto con un' interrefrigerazione ($\beta _{1}\tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em}2,42,\tmspace +\thickmuskip {.2777em}\beta _{2}\tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em}12$) ed un riscaldamento ripetuto ($\beta _{3}\tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em}2,42,\tmspace +\thickmuskip {.2777em}\beta _{4}\tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em}12$) conservando gli stessi rendimenti politropici di compressione ed espansione, di combustione e meccanico valutati con il ciclo semplice di Joule. Calcolare e disegnare i cicli ideale e reale per questo impianto, il rendimento limite (ideale), reale e interno di impianto e le temperature medie di adduzione e sottrazione del calore.\\}{28}{}%
+\contentsline {section}{\numberline {3.2}Analisi termodinamica della turbina a gas SGT-800 (Siemens Energy)}{32}{}%
+\contentsline {paragraph}{Calcolare e disegnare i cicli ideale e reale, stimando i rendimenti politropici di compressione ed espansione, i rendimenti di combustione, limite (ideale), interno di impianto, reale, meccanico e le temperature medie di adduzione e sottrazione del calore.\\}{33}{}%
+\contentsline {chapter}{\numberline {4}Stadio di turbina a vapore}{36}{}%
+\contentsline {paragraph}{Determinare i triangoli di velocità, la potenza interna, il rendimento interno e il grado di reazione dello stadio.\\}{36}{}%
+\contentsline {chapter}{\numberline {5}Repowering di un impianto a vapore}{40}{}%
+\contentsline {section}{\numberline {5.1}Impianto ad un salto di pressione}{40}{}%
+\contentsline {paragraph}{Calcolare il rendimento globale dell'impianto combinato ottenuto facendo il Repowering (tecnica heat recovery repowering), dell'impianto a vapore da circa 18 MW con la turbina a gas General Electric MS6001.\\}{40}{}%
+\contentsline {section}{\numberline {5.2}Impianto a due salti di pressione}{44}{}%
+\contentsline {paragraph}{Calcolare il rendimento globale dell'impianto combinato a due salti di pressione ottenuto facendo il Repowering dell'impianto a vapore da circa 18 MW con la turbina a gas General Electric MS6001.\\}{44}{}%
+\contentsline {chapter}{\numberline {6}Motore alternativo a combustione interna}{47}{}%
