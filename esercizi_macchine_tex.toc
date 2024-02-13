@@ -33,3 +33,33 @@
 \contentsline {section}{\numberline {5.2}Impianto a due salti di pressione}{44}{}%
 \contentsline {paragraph}{Calcolare il rendimento globale dell'impianto combinato a due salti di pressione ottenuto facendo il Repowering dell'impianto a vapore da circa 18 MW con la turbina a gas General Electric MS6001.\\}{44}{}%
 \contentsline {chapter}{\numberline {6}Motore alternativo a combustione interna}{47}{}%
+\contentsline {section}{\numberline {6.1}Calcolo dei principali parametri di un motore ad accensione comandata con una cilindrata da 1242 cm\bbl@it@ap 3}{47}{}%
+\contentsline {paragraph}{Stimare il rendimento globale massimo $\eta _{g}$.\\}{47}{}%
+\contentsline {paragraph}{Calcolare la coppia a 5500 giri/min.\\}{48}{}%
+\contentsline {paragraph}{Calcolare la potenza a massima coppia.\\}{48}{}%
+\contentsline {paragraph}{Stimare la pmi e la pme a massima coppia e a massima potenza.\\}{48}{}%
+\contentsline {paragraph}{Stimare il coefficiente di riempimento a massima coppia e a massima potenza.\\}{49}{}%
+\contentsline {paragraph}{Stimare il rendimento globale a massima potenza.\\}{49}{}%
+\contentsline {paragraph}{Calcolare la velocità media del pistone a coppia massima e a potenza massima.\\}{50}{}%
+\contentsline {paragraph}{Valutare il rendimento globale lungo la verticale a n costanti, che passa per la coppia massima nel diagramma P-n.\\}{50}{}%
+\contentsline {section}{\numberline {6.2}Calcolo dei principali parametri di un motore ad accensione per compressione con una cilindrata da 9300 cm\bbl@it@ap 3}{51}{}%
+\contentsline {paragraph}{Stimare il rendimento globale massimo $\eta _{g}$.\\}{52}{}%
+\contentsline {paragraph}{Calcolare la coppia a 1800 giri/min.\\}{52}{}%
+\contentsline {paragraph}{Calcolare la potenza a massima coppia.\\}{52}{}%
+\contentsline {paragraph}{Stimare la pmi e la pme a massima coppia e a massima potenza.\\}{52}{}%
+\contentsline {paragraph}{Stimare il coefficiente di riempimento a massima coppia e a massima potenza.\\}{53}{}%
+\contentsline {paragraph}{Stimare il rendimento globale a massima potenza.\\}{53}{}%
+\contentsline {paragraph}{Calcolare la velocità media del pistone a coppia massima e a potenza massima.\\}{53}{}%
+\contentsline {chapter}{\numberline {7}Turbina Francis e diffusore}{54}{}%
+\contentsline {section}{\numberline {7.1}Analisi della turbina}{54}{}%
+\contentsline {paragraph}{Valutare la scelta del tipo di turbina.\\}{54}{}%
+\contentsline {paragraph}{Stimare i triangoli di velocità.\\}{56}{}%
+\contentsline {paragraph}{Valutare il rendimento ideale di palettatura.\\}{57}{}%
+\contentsline {paragraph}{Dimensionare un possibile diffusore.\\}{57}{}%
+\contentsline {chapter}{\numberline {8}Pompa inserita in un circuito}{59}{}%
+\contentsline {section}{\numberline {8.1}Valutazione del punto di funzionamento}{59}{}%
+\contentsline {section}{\numberline {8.2}Verifica cavitazione}{62}{}%
+\contentsline {paragraph}{Verificare l'assenza di cavitazione se faccio circolare H\bbl@it@ap {2}O a 50°C.\\}{63}{}%
+\contentsline {chapter}{\numberline {9}Regolazione della portata in un circuito di aria compressa}{64}{}%
+\contentsline {section}{\numberline {9.1}Valutazione della potenza fissata una certa portata}{64}{}%
+\contentsline {paragraph}{Si noti che il rendimento riportato nel diagramma è il rendimento adiabatico del compressore. Formulando le dovute ipotesi, valutare la potenza minima del motore elettrico da installare dopo aver scelto i metodi di regolazione della portata che garantiscano il più ampio intervallo di portate facendo in modo che la pressione nel serbatoio sia costante e sempre di 2.5 bar.\\ Si consideri che si possano utilizzare più metodi di regolazione contemporaneamente.\\}{65}{}%

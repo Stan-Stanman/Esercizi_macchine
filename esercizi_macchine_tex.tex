@@ -1294,5 +1294,505 @@ E il parametro sul rendimento:
 \end{equation}
 \newpage
 
-\chapter{Motore alternativo a combustione interna} 
+\chapter{Motore alternativo a combustione interna}
+\section{Calcolo dei principali parametri di un motore ad accensione comandata con una cilindrata da 1242 cm\ap 3}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{si_engine_data.png}
+	\caption{Caratteristiche principali di un motore a combustione interna ad accensione comandata.}
+\end{figure}
+\paragraph{Stimare il rendimento globale massimo $\eta_{g}$.\\}
+Questo parametro è implicito nella scheda tecnica in quanto è indicato il consumo specifico di  combustibile ($C_{sc(Mmax)}$) quando la coppia è massima, definito come:
+\begin{equation}
+	C_{sc}\;:=\;\dfrac{\dot{m_{c}}}{P_{Mmax}}\;=\;\dfrac{1}{\eta_{g_{max}}\;H_{i}}
+\end{equation}
+Ed è chiaro che il rendimento massimo del ciclo si ha alla velocità per cui la coppia è massima. Essendo un motore ad accensione comandata è molto probabile che sia a benzina, quindi $H_{i}\;=\;43600\;kJ/kg$.
+\begin{center}
+	$\eta_{g}\;=\;\dfrac{3600}{0,277\;43600}\;=\;\textbf{0,298}$
+\end{center}
+\paragraph{Calcolare la coppia a 5500 giri/min.\\}
+Viene richiesta la coppia al numero di giri corrispondente alla massima potenza erogata ($P_{max}\;=\;54\;kW$). Quindi:
+\begin{equation}
+	P_{max}\;=\;M_{Pmax}\;\omega_{Pmax}\;=\;M_{Pmax}\;\dfrac{2\pi\;n_{Pmax}}{60}\to\;M_{Pmax}\;=\;\dfrac{P_{max}\;60}{2\pi\;n_{Pmax}}\;=\;\textbf{93,8\;Nm}
+\end{equation}
+\paragraph{Calcolare la potenza a massima coppia.\\}
+Se la coppia massima ($M_{max}\;=\;109\;Nm$) si ha per un numero di giri $n^{Mmax}\;=\;4000\;giri/min$In maniera analoga a quanto fatto prima:
+\begin{center}
+	$P_{Mmax}\;=\;M_{max}\;\omega_{Mmax}\;=\;M_{max}\;\dfrac{2\pi\;n_{Mmax}}{60}\;=\;45,6\;kW$
+\end{center}
+\paragraph{Stimare la pmi e la pme a massima coppia e a massima potenza.\\}
+\begin{wrapfigure}{r}{0.4\textwidth}
+	\centering
+	\includegraphics[width=0.4\textwidth]{diagramma_indicato_4tempi.png}
+	\caption{Diagramma indicato di un motore a quattro tempi in coordinate pV}
+\end{wrapfigure}
+Ogni motore a combustione interne ha il suo ciclo indicato reale. Ciclo che chiaramente andrebbe modellato termodinamicamente come fatto con tutti gli altri cicli visti fino ad ora. Tuttavia in questa trattazione stiamo analizzando un motore a banco che è stato già progettato, quindi non andiamo ad investigare nei dettagli del ciclo termodinamico.\\
+Di certo so che questo ciclo ha un certo lavoro indicato a cui corrisponde su un periodo $\tau\;=\;\dfrac{60\;\epsilon}{n}$.\\
+$L_{i}\;=\;\oint pdV\;=\;p_{mi}\;V_{t}$\\
+Ricordando che la cilindrata totale $V_{t}\;=\;z\;V$, con $z$ che corrisponde al numero di pistoni:\\
+$P_{i}\;=\;\dfrac{L_{i}}{\tau}\;=\;p_{mi}\;z\;V\;\dfrac{n}{60\;\epsilon}$\\
+In un sistema volumetrico non c'è una corrente fluida che attraversa dei condotti , quindi gli effetti dovuti al gradiente di velocità e la conseguente perdita energetica sono notevolmente minori, al punto che il rendimento interno di compressione e di espansione di un sistema volumetrico è con buona approssimazione unitario. Quindi se $P_{i}\approx\;P_{r}$:
+\begin{equation}
+	P_{r}\;=\;p_{mi}\;z\;V\;\dfrac{n}{60\;\epsilon}
+\end{equation}
+E di conseguenza:
+\begin{equation}
+	P_{a}\;=\;P_{r}\;\eta_{m}\;=\;p_{mi}\;\eta_{m}\;V_{t}\;\dfrac{n}{60\;\epsilon}\;=\;p_{me}\;V_{t}\;\dfrac{n}{60\;\epsilon}
+\end{equation}
+Quindi, ricordando che per un motore 4 tempi $\epsilon\;=\;2$:
+\begin{center}
+	$p_{me(Mmax)}\;=\;\dfrac{P_{Mmax}}{V_{t}\;\frac{n_{Mmax}}{60\;\epsilon}}\;=\;\textbf{11,02\;bar}$
+\end{center}
+\begin{center}
+	$p_{me(Pmax)}\;=\;\dfrac{P_{max}}{V_{t}\;\frac{n_{Pmax}}{60\;\epsilon}}\;=\;\textbf{9,486\;bar}$
+\end{center}
+Siccome è plausibile pensare che questo motore alternativo sia il motore di un' automobile, ha senso pensare che ci siano diversi ausiliari collegati all'asse, quindi si assume che $\eta_{m(Mmax)}\;=\;0,9$ e $\eta_{m(Pmax)}\;=\;0,8$, in quanto il rendimento meccanico peggiora all'aumentare della velocità. Di conseguenza:
+\begin{center}
+	$p_{mi(Mmax)}\;=\;\dfrac{p_{me(Mmax)}}{\eta_{m(Mmax)}}\;=\;\textbf{12,24\;bar}$
+\end{center}
+\begin{center}
+	$p_{mi(Pmax)}\;=\;\dfrac{p_{me(Pmax)}}{\eta_{m(Pmax)}}\;=\;\textbf{11,86\;bar}$
+\end{center}
+\paragraph{Stimare il coefficiente di riempimento a massima coppia e a massima potenza.\\}
+Il coefficiente di riempimento indica quanta aria è effettivamente entrata nel cilindro durante la fase di aspirazione rispetto a quella che ne sarebbe entrata se all'interno della cilindrata regnassero le condizioni esterne. E infatti è definito come:
+\begin{equation}
+	\lambda_{v}\;:=\;\dfrac{\dot{m_{a}}}{\dot{m_{at}}}
+\end{equation}
+La portata di aria teorica vale:
+\begin{equation}
+	\dot{m_{at}}\;=\;\rho_{a}\;V_{t}\;\dfrac{n}{60\;\epsilon}
+\end{equation}
+Dove a condizioni ambiente (1 atm, 15°C) la densità dell'aria $\rho_{a}\;=\;1,225\;kg/m^{3}$.\\
+Quindi siccome $P_{a}\;=\;\dot{m_{c}}H_{i}\;\eta_{g}$:
+\begin{equation}
+	P_{a}\;=\;\lambda_{v}\;\dot{m_{at}}\;\dfrac{1}{\alpha}\;H_{i}\;\eta_{g}\;=\;\lambda_{v}\;\rho_{a}\;V_{t}\;\dfrac{n}{60\;\epsilon}\cdot\dfrac{1}{\alpha}\;H_{i}\;\eta_{g}
+\end{equation}
+Il motore a combustione interna che si sta analizzando è ad accensione comandata e si presume che non sia ad iniezione diretta, quindi la miscela aria combustibile viene preparata prima di entrare in camera di combustione. Avere una miscela uniforme in fase di aspirazione ci permette di lavorare con un' $\alpha \approx \alpha_{st}$. Generalmente con un piccolo eccesso d'aria per evitare che a causa dell'aria che resta intrappolata negli spazi morti tra il pistone e il cilindro si lavori addirittura con una miscela grassa, sprecando carburante e inquinando.\\
+Quindi se lavoro con $\dfrac{\alpha}{\alpha_{st}}\;=\;1,02$, visto che per la benzina $\alpha_{st}\;=\;14,7\to\;\alpha\;=\;14,99$.\\
+Pertanto invertendo la relazione 6.7:
+\begin{equation}
+	\lambda_{v(Mmax)}\;=\;\dfrac{P_{Mmax}}{\rho_{a}\;V_{t}\;\frac{n_{Mmax}}{60\;\epsilon}\cdot\frac{1}{\alpha}\;H_{i}\;\eta_{g_{Mmax}}}\;=\;\textbf{1,03 $\approx$ 1}
+\end{equation}
+E non è un caso che il punto in cui si ha la coppia massima sia anche il punto in cui riesco a riempire interamente il cilindro.
+\paragraph{Stimare il rendimento globale a massima potenza.\\}
+Infatti, aumentando il numero di giri fino a raggiungere la condizione di potenza massima, accade che il coefficiente di riempimento diminuisce, in quanto ha superato sicuramente il suo valore di massimo. Fisicamente accade perchè la valvola apre e chiude in meno tempo di quanto il disturbo di pressione riesce a risalire da valle a monte, richiamando a valle la miscela.\\
+Quindi si ipotizza che $\lambda_{v(Pmax)}\;=\;0,90$. Per cui invertendo la 6.8 ottengo che:
+\begin{center}
+	$\eta_{g(Pmax)}\;=\;\dfrac{P_{max}}{\rho_{a}\;V_{t}\;\frac{n_{Pmax}}{60\;\epsilon}\cdot\frac{1}{\alpha}\;H_{i}\;\lambda_{v_{Pmax}}}\;=\;\textbf{0,296}$
+\end{center} 
+\paragraph{Calcolare la velocità media del pistone a coppia massima e a potenza massima.\\}
+La velocità media del pistone dipende chiaramente dalla corsa e dal numero di giri:
+\begin{equation}
+	u_{m}\;=\;2C\;\omega\;=\;2C\;\dfrac{n}{60}
+\end{equation}
+Quindi:
+\begin{center}
+	$u_{m_{Mmax}}\;=\;\textbf{10,52\;m/s},\;\;\;u_{m_{Pmax}}\;=\;\textbf{14,46\;m/s}$
+\end{center}
+\paragraph{Valutare il rendimento globale lungo la verticale a n costanti, che passa per la coppia massima nel diagramma P-n.\\}
+\begin{wrapfigure}{r}{0.5\textwidth}
+	\centering
+	\includegraphics[width=0.5\textwidth]{curve_isoCSC.png}
+	\caption{Curve iso-C\ped{SC} sul piano pme-n}
+\end{wrapfigure}
+Nella 6.4 si è visto che:
+\begin{center}
+	$P_{a}\;=\;p_{me}\;V_{t}\;\dfrac{n}{60\;\epsilon}$
+\end{center}
+Quindi è evidente che se mi metto nella condizione in cui il numero di giri è costante, le variazioni di potenza dipendono soltanto dalla pme. Quindi muoversi su una verticale a n fissato sul diagramma P-n equivale a muoversi sulla stessa verticale nel piano pme.\\
+In questo piano i punti a $C_{SC}\;=\; cost$ descrivono delle coniche che convergono tutte nel punto in cui la coppia è massima.\\
+Quindi se muovendomi sopra o sotto di quella verticale il consumo specifico di carburante aumenta, per la 6.1, il rendimento globale dovrà necessariamente diminuire, giustamente.
+\newpage
+
+\section{Calcolo dei principali parametri di un motore ad accensione per compressione con una cilindrata da 9300 cm\ap 3}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{scania_data2.png}
+	\caption{Caratteristiche principali del motore DI09 070M. 257 kW (Scania) per la propulsione navale.}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{scania_data1.png}
+	\caption{Caratteristiche principali del motore DI09 070M. 257 kW (Scania) per la propulsione navale.}
+\end{figure}
+\paragraph{Stimare il rendimento globale massimo $\eta_{g}$.\\}
+Questo parametro è implicito nella scheda tecnica in quanto è indicato il consumo specifico di  combustibile ($C_{sc(Mmax)}\;=\;203\;g/kWh$) quando la coppia ($M_{max}\;=\;1615\;Nm$) è massima, ovvero a $n_{Mmax}\;=\;1200\;rpm$.\\
+Si tratta di un motore a gasolio, quindi $H_{i}\;=\;44400\;kJ/kg$.\\
+Quindi analagomente a quanto fatto prima:
+\begin{center}
+	$\eta_{g}\;=\;\dfrac{3600}{0,203\;44400}\;=\;\textbf{0,399}$
+\end{center}
+\paragraph{Calcolare la coppia a 1800 giri/min.\\}
+Viene richiesta la coppia al numero di giri corrispondente alla massima potenza erogata ($P_{max}\;=\;257\;kW$). Quindi:
+\begin{equation}
+	P_{max}\;=\;M_{Pmax}\;\omega_{Pmax}\;=\;M_{Pmax}\;\dfrac{2\pi\;n_{Pmax}}{60}\to\;M_{Pmax}\;=\;\dfrac{P_{max}\;60}{2\pi\;n_{Pmax}}\;=\;\textbf{1363\;Nm}
+\end{equation}
+\paragraph{Calcolare la potenza a massima coppia.\\}
+In maniera analoga a quanto fatto prima:
+\begin{center}
+	$P_{Mmax}\;=\;M_{max}\;\omega_{Mmax}\;=\;M_{max}\;\dfrac{2\pi\;n_{Mmax}}{60}\;=\;203\;kW$
+\end{center}
+Infatti questi ultimi 2 risultati erano riportati anche in tabella.
+\paragraph{Stimare la pmi e la pme a massima coppia e a massima potenza.\\}
+Essendo un motore 4 tempi $\epsilon\;=\;2$. Quindi per le relazioni viste nella sezione precedente:
+\begin{center}
+	$p_{me(Mmax)}\;=\;\dfrac{P_{Mmax}}{V_{t}\;\frac{n_{Mmax}}{60\;\epsilon}}\;=\;\textbf{21,83\;bar}$
+\end{center}
+\begin{center}
+	$p_{me(Pmax)}\;=\;\dfrac{P_{max}}{V_{t}\;\frac{n_{Pmax}}{60\;\epsilon}}\;=\;\textbf{18,42\;bar}$
+\end{center}
+Anche in questo caso ha senso pensare che ci siano diversi ausiliari collegati all'asse, quindi si assume che $\eta_{m(Mmax)}\;=\;0,9$ e $\eta_{m(Pmax)}\;=\;0,8$, in quanto il rendimento meccanico peggiora all'aumentare della velocità. Di conseguenza:
+\begin{center}
+	$p_{mi(Mmax)}\;=\;\dfrac{p_{me(Mmax)}}{\eta_{m(Mmax)}}\;=\;\textbf{24,26\;bar}$
+\end{center}
+\begin{center}
+	$p_{mi(Pmax)}\;=\;\dfrac{p_{me(Pmax)}}{\eta_{m(Pmax)}}\;=\;\textbf{23,03\;bar}$
+\end{center}
+\paragraph{Stimare il coefficiente di riempimento a massima coppia e a massima potenza.\\}
+Come analizzato precedentemente:
+\begin{center}
+	$P_{a}\;=\;\lambda_{v}\;\dot{m_{at}}\;\dfrac{1}{\alpha}\;H_{i}\;\eta_{g}\;=\;\lambda_{v}\;\rho_{a}\;V_{t}\;\dfrac{n}{60\;\epsilon}\cdot\dfrac{1}{\alpha}\;H_{i}\;\eta_{g}$
+\end{center}
+Il motore a combustione interna che si sta analizzando è ad accensione per compressione e si presume che sia ad iniezione diretta. Questo vuol dire che il combustibile non viene miscelato prima ma viene spruzzato direttamente in camera di combustione. In questo modo si ottiene una miscela stratificata con diversi rapporti aria combustibile. La regolazione di questo motore a differenza di quello ad accensione comandata non avviene mediante una valvola a farfalla nel canale di aspirazione, ma viene eseguita regolando la quantità di gasolio che viene iniettata. A pieno carico chiaramente $\alpha_{full load} \to \alpha_{st}$.\\
+Ricordando che per il gasolio $\alpha_{st}\;=\;14,6$, invertendo la relazione 6.8:
+\begin{equation}
+	\lambda_{v(Mmax)}\;=\;\dfrac{P_{Mmax}}{\rho_{a}\;V_{t}\;\frac{n_{Mmax}}{60\;\epsilon}\cdot\frac{1}{\alpha_{full load}}\;H_{i}\;\eta_{g_{Mmax}}}\;=\;\textbf{1,47}
+\end{equation}
+Addirittura in questo caso lavoro con un coefficiente di riempimento maggiore di 1, indice quindi della presenza di un sistema di sovralimentazione.
+\paragraph{Stimare il rendimento globale a massima potenza.\\}
+Infatti, aumentando il numero di giri fino a raggiungere la condizione di potenza massima, accade che il coefficiente di riempimento diminuisce, in quanto ha superato sicuramente il suo valore di massimo. Ma è probabile che se si tratta di un motore sovralimentato ad alti giri continui ad avere un $\lambda_{v}>1$.\\
+Quindi si ipotizza che $\lambda_{v(Pmax)}\;=\;1,30$. Per cui invertendo la 6.8 ottengo che:
+\begin{center}
+	$\eta_{g(Pmax)}\;=\;\dfrac{P_{max}}{\rho_{a}\;V_{t}\;\frac{n_{Pmax}}{60\;\epsilon}\cdot\frac{1}{\alpha}\;H_{i}\;\lambda_{v_{Pmax}}}\;=\;\textbf{0,380}$
+\end{center} 
+\paragraph{Calcolare la velocità media del pistone a coppia massima e a potenza massima.\\}
+La velocità media del pistone dipende chiaramente dalla corsa e dal numero di giri:
+\begin{equation}
+	u_{m}\;=\;2C\;\omega\;=\;2C\;\dfrac{n}{60}
+\end{equation}
+Quindi:
+\begin{center}
+	$u_{m_{Mmax}}\;=\;\textbf{5,6\;m/s},\;\;\;u_{m_{Pmax}}\;=\;\textbf{8,4\;m/s}$
+\end{center}
+
+\chapter{Turbina Francis e diffusore}
+\section{Analisi della turbina}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{turbina_francis.png}
+	\caption{Dati sulla turbina e sul salto geodetico che deve smaltire}
+\end{figure}
+\paragraph{Valutare la scelta del tipo di turbina.\\}
+Per capire il motivo della scelta di questo tipo di turbina, in virtù del carico da smaltire, bisogna introdurre il parametro numero di giri specifico ($n_{s}$), il quale è legato al concetto di similitudine tra macchine.\\
+Infatti si può dimostrare che se due turbine sono:
+\begin{itemize}
+	\item Geometricamente simili $\to \dfrac{l}{l^{*}}\;=\;\alpha$
+	\item Cinematicamente simili $\to \dfrac{c}{c^{*}}\;=\;\sigma$
+	\item Meccanicamente simili $R_{e}\;=\;R_{e}^{*}$
+\end{itemize}
+Tali turbine hanno lo stesso rendimento. Quindi macchine simili hanno lo stesso rendimento massimo (a pieno regime) indipendentemente dal salto geodetico, la portata e il numero di giri.\\
+Quindi è chiaro che da ogni terna (salto, portata, numero di giri) valida per una turbina è legata ad una terna valida per un'altra turbina, simile alla precedente.
+\begin{equation}
+	\dfrac{n\;\sqrt{\dot{V}}}{Y^{\frac{3}{4}}}\;=\;\dfrac{n^{*}\;\sqrt{\dot{V^{*}}}}{(Y^{*})^{\frac{3}{4}}}\;=:\;n_{s}
+\end{equation}
+Questo rapporto caratterizza quindi una certa categoria di turbine simili tra di loro, caratterizzate a loro volta da un certo rendimento massimo.\\
+Ogni categoria di turbina quindi avrà un suo rendimento massimo in un certo range del numero di giri specifico. Questa associazione viene raccolta nella tabella del Cramer.\\
+Ricordando che il carico (Y) in energia può essere scritto anche come salto in termini di lunghezza:
+\begin{equation}
+	n_{s}\;=\;3,65\;\dfrac{n\;\sqrt{\dot{V}}}{H^{\frac{3}{4}}}
+\end{equation}
+Questo parametro va calcolato nelle condizioni di funzionamento ideali, quindi con la portata a monte e il salto geodetico.\\
+Se il salto geodetico ($H\;=\;115\;m$) e la portata a monte è anche la portata massima, quella che include le perdite che si sono avute nel condotto. Per calcolarla è stato fornito la $P_{ua}\;=\;417,2\;MW$ e il rendimento globale ($\eta_{g}\;=\;\eta_{condotta}\cdot\eta_{volumetrico}\cdot\eta_{T}\cdot\eta_{m}\;=\;0,87$) e ricordando che per l'acqua $\rho\;=\;10^{3}\;kg/m^{3}$:
+\begin{equation}
+	\eta_{g}\;=\;\dfrac{P_{ua}}{\rho\;\dot{V}\;g\;H}\to\;\dot{V}\;=\;\dfrac{P_{ua}}{\rho\;\eta_{g}\;g\;H}\;=\;425,1\;m^{3}/s
+\end{equation}
+Quindi:
+\begin{center}
+	$n_{s}\;=\;3,65\;\dfrac{120\;\sqrt{425,1}}{115^{\frac{3}{4}}}\;=\;\textbf{257,2}$
+\end{center}
+E infatti come volevasi dimostrare, se entro nella tabella del Cramer con questo numero di giri specifico, leggo che la turbina più adatta è una turbina Francis.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.55\textwidth]{tabella_del_cramer.png}
+	\caption{Tabella del Cramer}
+\end{figure}
+\paragraph{Stimare i triangoli di velocità.\\}
+Dalla tabello ho scoperto che il grado di reazione ideale per queste condizioni di lavoro ($R\;=\;0,5$). Quindi vuol dire che non tutta l'energia geodetica è stata trasformata in energia cinetica nello statore. Infatti, tenendo conto di una piccola perdita di velocità ($\phi\;=\;0,98$) dovuto al fatto che il flusso entra radialmente ed esce assialmente:
+\begin{equation}
+	c_{1}\;=\;\phi\; \sqrt{2g\;H_{u}\;(1\;-\;R)}\;=\;\phi\;\;\sqrt{2g\;\eta_{condotta}\;H\;(1\;-\;R)}
+\end{equation}
+Ipotizzando che $\eta_{condotta}\;=\;0,95$, ottengo che:
+\begin{center}
+	$c_{1}\;=\;\textbf{32,08\;m/s}$
+\end{center} 
+Come visto nell'esercizio 4, so che la condizione ottimale che massimizza il rendimento di palettatura è quella per cui la velocità all'uscita del rotore è ortogonale alla velocità periferica.\\
+In quel caso però non potevamo avanzare l'ipotesi per il quale $c_{1x}\;=\;c_{2x}$, perchè la variazione del volume specifico tra ingresso e uscita non era trascurabile.\\
+Invece in una turbina idraulica questa condizione è sempre rispettata in quanto l'acqua allo stato liquido è di per se incomprimibile.\\
+Al netto di queste due ipotesi allora:
+\begin{equation}
+	\Biggr(\dfrac{u_{1}}{c_{1}}\Biggr)_{opt}\;=\;\dfrac{cos(\alpha_{1})}{2}\;+\;\dfrac{R}{2(1\;-\;R)\;cos(\alpha_{1})}
+\end{equation}
+Rapporto ottimale che generalmente per ottimizzare la potenza prodotta in una turbina Francis a grado di reazione $R\;=\;0,5$ è unitario.\\
+Chiaramente però va verificato che $\alpha_{1}$ sia sufficientemente piccolo.\\
+Per farlo sfrutto la conservazione della portata tra ingresso e uscita del rotore, assumendo che la portata in ingresso coincida con la portata massima ($\dot{V}\;=\;\dot{V_{utile}}$).
+Per cui, ricordando che $D_{2}\;=\;6,245\;m$:
+\begin{equation}
+	\dot{V}\;=\;c_{2}\;A_{2}\to\;c_{2}\;=\;\dfrac{4\;\dot{V}}{\pi\;D_{2}^{2}}\;=\;\textbf{13,89\;m/s}
+\end{equation}
+E quindi siccome per lo scarico ortogonale $c_{2}\;=\;c_{2x}$ e per la conservazione della portata ($c_{1x}\;=\;c_{2x}$), allora:
+\begin{equation}
+	c_{2}\;=\;c_{1}\;sin(\alpha_{1})\to\;\alpha_{1}\;=\;arcsin(\frac{c_{2}}{c_{1}})\;=\;\textbf{25,66$^{\circ}$}
+\end{equation}
+Ora che conosco l'angolo in ingresso posso calcolare quanto vale la velocità periferica:
+\begin{center}
+	$\Biggr(\dfrac{u_{1}}{c_{1}}\Biggr)_{opt}\;\approx\;1$
+\end{center}
+Come ci si aspettava, e quindi:
+\begin{center}
+	$u_{1}\;=\;\textbf{32,08\;m/s}$
+\end{center}
+Siccome vale la relazione cinematica per cui:
+\begin{equation}
+	\vec{c_{1}}\;=\;\vec{u}\;+\;\vec{w_{1}}
+\end{equation}
+Col teorema di Carnot, posso calcolare quanto vale $w_{1}$:
+\begin{center}
+	$w_{1}\;=\;\sqrt{u_{1}^{2}+{c_{1}^{2}}-2u_{1}c_{1}cos(\alpha_{1})}\;=\;\textbf{14,25\;m/s}$
+\end{center}
+Per la velocità periferica in uscita, diversamente da quella in ingresso, conosciamo quanto vale il diametro $D_{2}$. Quindi:
+\begin{equation}
+	u_{2}\;=\;n\;\dfrac{\pi\;D_{2}}{60}\;=\;\textbf{39,22\;m/s}
+\end{equation}
+Quindi col teorema di Pitagora:
+\begin{center}
+	$w_{2}\;=\;\sqrt{u_{2}^{2}-{c_{2}^{2}}}\;=\;\textbf{14,25\;m/s}\;=\;\textbf{36,68\;m/s}$
+\end{center}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{triangolo_velocità_francis.png}
+	\caption{Triangoli di velocità}
+\end{figure}
+\paragraph{Valutare il rendimento ideale di palettatura.\\}
+Il rendimento di palettatura chiaramente mette in evidenza la perdita di energia dovuta al fatto che $c_{2}$ in uscita dal rotore è diverso da 0:
+\begin{equation}
+	\eta_{p,id}\;=\;\dfrac{L_{id}}{gH_{u}}\;=\;1\;-\;\dfrac{c_{2}^{2/2}}{gH\;\eta_{condotta}}\;=\;\textbf{0,910}
+\end{equation}
+\paragraph{Dimensionare un possibile diffusore.\\}
+Per permettere alla turbina il suo movimento, essa sarà ad una certa altezza dal pelo libero dell'acqua. Questa quota ($h_{2}=5\;m$) comporta che un' aliquota di potenziale viene persa.\\
+\begin{wrapfigure}{r}{0.5\textwidth}
+	\centering
+	\includegraphics[width=0.5\textwidth]{diffusore.png}
+	\caption{Schema di un diffusore}
+\end{wrapfigure}
+Per recuperarla si può introdurre il diffusore che non è altro che un tubo divergente che collega lo scarico della turbina al bacino inferiore. Questa tecnica funziona in quanto se prima all'uscita della turbina avevo la pressione atmosferica, adesso posso verificare facilmente con il principio di Bernoulli che ho una pressione minore. Questo quindi permette alla turbina di elaborare un salto maggiore, tanto quanto è l'altezza pinziometrica dell'acqua sottoposta al $\Delta p$ che ho recuperato all'uscita della girante.
+Infatti col principio di Bernoulli (bilancio di energia sul diffusore):
+\begin{equation}
+	gh_{2}\;+\;\dfrac{p_{2}}{\rho}\;+\;\dfrac{c_{2}^{2}}{2}\;=\;\cancel{gh_{3}}\;+\;\dfrac{p_{atm}}{\rho}\;+\;\dfrac{c_{3}^{2}}{2}\;+\;gh_{p}
+\end{equation}
+Nella progettazione di questo elemento però vanno considerate 2 problematiche:
+\begin{itemize}
+	\item il distacco della vena fluida
+	\item la cavitazione
+\end{itemize}
+Per evitare il distacco della vena fluida devo fare in modo che la divergenza sia graduale, altrimenti la teoria che sto utilizzando per fare il dimensionamento sarebbe tutta sbagliata.\\
+Per stare tranquilli si ipotizza un $\gamma\;=\;5^{\circ}$.\\
+In questo modo considerata la geometria conica del diffusore:
+\begin{equation}
+	D_{3}\;=\;D_{2}\:+\;2\;h_{2}\;tan(\gamma)\;=\;\textbf{7,12\;m}
+\end{equation}
+Dall'equazione della continuità ricavo la velocità allo scarico:
+\begin{center}
+	$c_{3}\;=\;\dfrac{4\;\dot{V}}{\pi\;D_{3}^{2}}\;=\;\textbf{10,68\;m/s}$
+\end{center}
+Inoltre in prima battuta posso approssimare $h_{p}\approx1\%\;h_{2}\;\approx\;0,05\;m$.\\
+Adesso che conosco tutti i termini di Bernoulli, posso calcolare quanto varrebbe la pressione all'uscita della turbina con il diffusore e verificare quanto è vicina alla pressione di saturazione.
+\begin{equation}
+	p_{2}\;=\;p_{atm}\;-\;\rho\;gh_{2}\;-\;\rho\;\dfrac{c_{2}^{2}\;-\;c_{3}^{2}}{2}\;+\;\rho\;gh_{p}\;=\;0,12\;bar
+\end{equation}
+Quindi, se $p_{sat}(15^{\circ})\;=\;0,01714$:
+\begin{center}
+	$\dfrac{p_{2}}{p_{sat}(15^{\circ})}\;=\;\textbf{6,88}$
+\end{center}
+Che è un valore che mi fa stare tranquillo sulla cavitazione.
+
+\chapter{Pompa inserita in un circuito}
+\section{Valutazione del punto di funzionamento}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{esercizio_pompa.png}
+	\caption{Circuito idraulica in cui è stata inserita una pompa centrifuga}
+\end{figure}
+Da un bilancio di energia (in termini di altezze) sul circuito tra i punti 1 e 2, ottengo che la prevalenza della pompa che è l'unica cosa che fornisco dall'esterno:
+\begin{equation}
+	H_{t}\;=\;(z_{2}\;-\;z_{1})\;+\;\cancel{\dfrac{c_{2}^{2}\;-\;c_{1}}{2g}}\;+\;\dfrac{p_{2}\;-\;p_{1}}{\gamma}\;+\;H_{c}\;=\;H_{u}\;+\;H_{c}
+\end{equation}
+L'unico pezzo che non è fornito nella traccia riguarda proprio le perdite di carico nei condotti. Sappiamo solo che si possono trascurare le perdite concentrate nei gomiti.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{tubo_pvc.png}
+	\caption{Condotto scelto}
+\end{figure}
+\begin{wrapfigure}{r}{0.4\textwidth}
+	\centering
+	\includegraphics[width=0.4\textwidth]{data_tubo.png}
+	\caption{Perdita di carico del tubo in base alla portata a $60^{\circ}$. Q è riportata in [l/s] e la perdita J in [mbar/m]}
+\end{wrapfigure}
+Si sceglie di adoperare un tubo multistrato Pexal®  (Valsir).\\
+L’estrema levigatezza della superficie interna (rugosità di 0,007 mm), oltre che impedire la formazione di incrostazioni quali il calcare, assicura perdite di carico ridotte anche nel tempo. L’accoppiamento tra polietilene reticolato e alluminio garantisce una ottima flessibilità in fase di piegatura (anche manuale); il tubo Pexal® può essere piegato manualmente fino al diametro 32 mm e meccanicamente per i diametri più grandi, con raggi di curvatura fino a 2,5 volte il suo diametro.\\
+Il sistema ha una durabilità garantita dalle normative di prodotto di almeno 50 anni; periodo in cui ne è consentito l’impiego a pressioni di 10 bar e temperature fino a 95°C (temperatura massima di malfunzionamento). Per temperature inferiori a quelle d’esercizio le tubazioni possono resistere a pressioni superiori ai 10 bar mantenendo un altissimo grado di affidabilità nel tempo.\\
+Chiaramente dal momento che viene fornita la rugosità un modo per calcolare le perdite di carico sarebbe quella di entrare nell'abaco di Moody con la rugosità e calcolare quindi il coefficiente da inserire nella formula di Darcy.\\
+Tuttavia nella scheda tecnica di questo prodotto viene già fornita una valutazione delle perdite di carico, probabilmente anche più accurata, in quanto vengono riportate due tabelle diverse in base anche alla temperatura di esercizio dell'acqua.\\
+Considerando che il nostro impianto fa circolare acqua calda si è fatto riferimento alla tabella a $60^{\circ}$. E si è scelto un tubo dal diametro esterno di 90 mm e spessore di 7 mm.
+Quindi siccome:
+\begin{center}
+	$H_{u}\;=\;18,12\;m$
+\end{center}
+Convertendo le perdite fornite in tabella in metri e riportando tutto sul grafico della caratteristica della pompa, dall'intersezione della caratteristica con la curva del circuito, ricavo il punto di funzionamento e quindi la portata corrispondente.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{caratteristica_pompa_esterno.png}
+	\caption{Punto di funzionamento}
+\end{figure}
+Intersezione che si ha quando la portata:
+\begin{center}
+	$\dot{V}\;=\;20\;L/s\;=\;72\;m^{3}/h$
+\end{center}
+Mentre dal grafico della potenza assorbita, ricavo che:
+\begin{center}
+	P\;$\approx$\;6,2\;kW
+\end{center}
+\newpage
+\section{Verifica cavitazione}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{perdita_tronchetto.png}
+	\caption{Perdite all'interno della pompa}
+\end{figure}
+ \begin{wrapfigure}{r}{0.4\textwidth}
+	\centering
+	\includegraphics[width=0.4\textwidth]{effetto_slip.png}
+	\caption{Perdita per effetto slip}
+\end{wrapfigure}
+Verificare la cavitazione vuol dire verificare nel punto in cui si raggiunge la pressione minima all'interno del circuito, non si arrivi alla pressione di saturazione dell'acqua a quella temperatura di esercizio.
+\begin{center}
+	$\dfrac{p_{1'}}{\gamma}\;>\;\dfrac{p_{s}(T_{1'})}{\gamma}$
+\end{center}
+Macroscopicamente il punto più basso che raggiunge la pressione all'interno del circuito è prima dell'ingresso nella pompa, in quanto tutto ciò che viene dopo la pompa è stato energizzato, mentre quello che viene prima si presume che si trovi a pressione via via crescente, altrimenti a cosa servirebbe la pompa?\\
+Nello specifico noi sappiamo che una pompa centrifuga è composta da un tronchetto di aspirazione, che conduce alla girante. Quindi il punto più critico è proprio l'occhio della girante. In particolare, a causa dei controvortici dovuti alle forze di inerzia che spingono il fluido sull'estradosso, il punto più delicato cade proprio sull'intradosso della pala.\\
+\\Da un punto di vista operativo si definiscono:
+\begin{itemize}
+	\item[\textbf{NPSH,A}] un parametro caratteristico del circuito in quanto tiene conto delle condizioni con cui arriva il fluido nella sezione del tronchetto di aspirazione e di quanto può perdere al massimo per arrivare nelle sezione 1 con le condizioni di saturazione.
+	\begin{equation}
+		NPSH,A\;:=\;\Biggr(\dfrac{c_{A}^{2}}{2g}\;+\;\dfrac{p_{A}}{\gamma}\Biggr)\;-\;\dfrac{p_{s}}{\gamma}
+	\end{equation}
+	Nel nostro caso, da un bilancio tra il punto 1 e il punto A: 
+	\begin{equation}
+		\dfrac{c_{A}^{2}}{2g}\;+\;\dfrac{p_{A}}{\gamma}\;+\;z_{a}\;=\;\dfrac{p_{1}}{\gamma}\;-\;H_{c(1-A)}
+	\end{equation}
+	Dalla tabella in figura 8.3, ricavo he $H_{c(1-A)}\;=\;4,51\;m$,  quindi:
+	\begin{center}
+		$\dfrac{c_{A}^{2}}{2g}\;+\;\dfrac{p_{A}}{\gamma}\;=\;1,68\;m$
+	\end{center}
+	\item[\textbf{NPSH,R}] un parametro caratteristico invece della pompa in quanto tiene conto delle perdite che effettivamente ho all'interno del tronchetto fino alla girante, sia distribuite che concentrate.
+	\begin{equation}
+		NPSH,R\;:=\;\Biggr(\dfrac{c_{1'}^{2}}{2g}\;+\;\Delta p_{c}\;+\;\lambda\;\dfrac{w_{1'}^{2}}{2g}\Biggr)
+	\end{equation}
+\end{itemize}
+Nel nostro caso l' NPSH,R viene indicato tra le curve caratteristiche della pompa:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{npshr_pompa.png}
+	\caption{NPSH,R in funzione della portata}
+\end{figure}
+Per cui:
+\begin{center}
+	$NPSH,R\:=\;2,8\;m$
+\end{center}
+\paragraph{Verificare l'assenza di cavitazione se faccio circolare H\ap{2}O a 50°C.\\}
+A questa temperatura $p_{sat}(50^{\circ}C)\;=\;0,124$. Quindi:
+\begin{center}
+	$NPSH,A\;=\;0,416\;<\;NPSH,R$
+\end{center}
+C'è cavitazione. Se ce l'abbiamo già a questa temperatura, aumentandola non facciamo altro che favorire la cavitazione, quindi peggioreremmo la situazione.
+
+\chapter{Regolazione della portata in un circuito di aria compressa}
+\section{Valutazione della potenza fissata una certa portata}
+\textbf{In un circuito di aria compressa, di cui viene riportato nella seguente figura uno schema semplificato, si vuole avere una portata nominale di regime di 0,756 kg/s con una pressione nel serbatoio di 2,5 bar. Si considerano soltanto le perdite di carico distribuite nel condotto (lunghezza ipotizzata 10 m) che congiunge il compressore al serbatoio.\\}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{circuito_aria_compressa.png}
+	\caption{Schema semplificato di un circuito ad aria compressa}
+\end{figure}
+\textbf{Si è scelto di installare il compressore Garrett le cui curve caratteristiche (p\ped{rif}=1 bar, T\ped{rif}=288 K) sono riportate nel diagramma riportato di seguito.\\}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{diagramma_garrett.png}
+	\caption{Curve di potenza e iso-rendimento per il compressore adoperato nel circuito}
+\end{figure}
+\paragraph{Si noti che il rendimento riportato nel diagramma è il rendimento adiabatico del compressore. Formulando le dovute ipotesi, valutare la potenza minima del motore elettrico da installare dopo aver scelto i metodi di regolazione della portata che garantiscano il più ampio intervallo di portate facendo in modo che la pressione nel serbatoio sia costante e sempre di 2.5 bar.\\ Si consideri che si possano utilizzare più metodi di regolazione contemporaneamente.\\}
+Il compressore scelto in questo circuito ad aria compressa è un compressore Garrett munito di "Inducer" da 85 mm, indizi che ci fanno pensare di avere a che fare con una macchina operatrice di tipo centrifugo e non assiale.\\
+Dalla traccia ci viene detto che il compressore deve elaborare una portata nominale (quindi massima) di $\dot{m}=0,756\;kg/s=100\;lbs/min$.\\
+Tuttavia questo dato non ci basta per entrare all'interno del digramma delle curve caratteristiche in quanto queste ultime vengono riportate in funzione dei parametri corretti, ovvero i parametri che tengono conto delle condizioni di temperatura e pressione all'ingresso, adimensionalizzate rispetto a 2 valori di riferimento (p\ped{rif}=1 bar, T\ped{rif}=288 K). Infatti:
+\begin{equation}
+	\dot{m}^{*}\;=\;\dfrac{\dot{m}\;\sqrt{T/T_{ref}}}{p/p_{ref}}
+\end{equation}
+Se suppongo che le condizioni di ingresso al compressore sono quelle di riferimento (p\ped{rif}=p\ped{1}, T\ped{rif}=T\ped{1}) posso consultare questo diagramma serenamente.\\
+Ovviamente se la mia portata massima è di 100 lbs/s, è chiaro che nella regolazione potrò muovermi sul grafico soltanto verso sinistra. Inoltre il mio obiettivo è quello di avere all'interno del serbatoio una pressione costante di $p_{0}\;=\;2,5\;bar$, che ottengo soltanto se il rapporto di compressione $\beta$ è abbastanza più grande da compensare le perdite di carico distribuite che ho all'interno del condotto.\\
+Quindi se riporto questi paletti sul mio diagramma:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.625\textwidth]{diagramma_garrett_regolazione.png}
+	\caption{In verde la curva dell'impianto in condizioni nominali, in giallo in fase di regolazione. Si sta supponendo di muoversi su un certo numero di giri}
+\end{figure}
+Per regolare una macchina operatrice esistono diverse tecniche:
+\begin{itemize}
+	\item Strozzamento
+	\item Regolazione con palette orientabili
+	\item By-pass
+	\item Variazione del numero dei giri
+\end{itemize}
+A parte la regolazione con palette orientabili che è una tecnica che si adopera principalmente per le macchine assiali con caratteristiche molto ripide, le altre tre tecniche sono tutte regolazioni possibili per questo tipo di impianto.\\
+L'obiettivo è quello di scegliere il sistema che mi permette di avere l'intervallo di portata più ampio possibile.\\
+Fissato un numero di giri, si può regolare la portata con lo strozzamento agendo sulla caratteristica esterna, inserendo una valvola alla mandata (mai all'aspirazione altrimenti cambia anche la caratteristica del compressore che può indurre al pompaggio), che rappresenta una perdita di carico ulteriore che rende la curva esterna più pendente incrociando punti di funzionamento a portata via via ridotta a mano a mano che si chiude la valvola.\\
+Oppure l'alternativa sarebbe inserire un circuito parallelo all'impianto con un ingresso e uscita a monte e a valle della macchina operatrice, regolato da una valvola di laminazione.
+Mano a mano che si apre la valvola, l'aria inizia a circolare nel secondo circuito, facendo diminuire quella che globalmente scorre nell'impianto, ma aumentando quella che attraversa il tratto di ingresso e uscita del compressore. Chiaramente una criticità di questo sistema è legata al fatto che il circuito parallelo ha in ingresso dei gas caldi che vengono laminati perdendo energia di pressione, ma non temperatura. Per risolvere questo problema o si adopera un refrigeratore che riporta i gas alla temperatura di ingresso del compressore o addirittura una turbina che mi permetterebbe di recuperare parte dell'energia persa a causa del bypass.\\
+Se lo strozzamento mi permette di stare lontano dalla zona di flusso bloccato ma mi avvicina alla zona di pompaggio, il metodo by-pass fa l'inverso.\\
+Nella nostra zona di funzionamento (circa tra 2,5 e 3,0 bar) è evidente che a partire dalla curva nominale (in verde) beccherei prima la condizione di flusso bloccato regolando per by-pass che quella di pompaggio regolando per strozzamento. Quindi lo strozzamento è la tecnica che a parità di numero di giri mi permette di avere la portata minima.\\
+Invece se ragiono facendo variare il numero di giri ottengo che la curva esterna resta la stessa, mentre la caratterista del compressore si abbassa, come vedo dal seguente diagramma.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.625\textwidth]{diagramma_garrett_regolazione_giri.png}
+	\caption{In verde la curva dell'impianto in condizioni nominali, in giallo la caratteristica del compressore in fase di regolazione}
+\end{figure}
+\uline{Quindi in definitiva si decide di regolare il compressore facendone variare il numero di giri.} Cosa che si fa facilmente controllando il motore elettrico che lo alimenta con un inverter.\\
+Ora che è stato stabilito il sistema di regolazione, per procedere al calcolo della potenza minima si deve valutare quanto vale la curva esterna. Per farlo bisogna investigare sulla natura della perdita nel condotto.\\
+Si suppone che le tubature siano delle in acciaio per garantire una certa resistenza termica la cui rugosità superficiale interna è ipotizzabile essere $\epsilon\;=\;0,025$, dal diametro di $90\;mm$. Inoltre si approssimano i cambiamenti di volume specifico che si hanno all'interno dei 10 metri di tubatura, assumendo come valore di riferimento quello alla pressione di 2,5 bar e la temperatura di 40° C (supponendo che gran parte del tratto sia percorso a temperatura ambiente). Con queste doverose ipotesi:
+\begin{equation}
+	Re\;=\;\dfrac{\rho\;V\;D}{\mu}\;=\;\dfrac{\dot{m}}{\pi\;\frac{D}{4}\;\mu}
+\end{equation}
+Nel caso in cui la portata è massima il numero di Reynold $Re\;=\;575303$. Anche si dimezzassi la portata guardando l'abaco di Moody mi troverei comunque in una zona in cui il coefficiente di frizione è costante $f\;=\;0,016$.\\
+Quindi dalla legge di Darcy;
+\begin{equation}
+	\Delta p_{perso}\;=\;f\;\dfrac{L}{D}\;\dfrac{1}{\rho}\;\dfrac{(\dfrac{4\;\dot{m}}{\pi \;D^{2}})^{2}}{2}\;=\;7890\;\dot{m}^{2}\;Pa
+\end{equation}
+Agendo un po' per tentativi osservo che il punto di funzionamento a potenza minima si ha per una portata $\dot{m_{min}}\;=\;0,378\;kg/s$, un $\beta\;=\;2,53\;bar$ e un rendimento adiabatico $\eta_{ad}\;=\;0,60$.\\
+Quindi siccome il lavoro nel caso ideale è pari a:
+\begin{equation}
+	|l_{id}|\;=\;\dfrac{k}{k-1}\;R\;T_{1}\;\Biggl(1-\beta^\frac{k-1}{k}\Biggr)\;=\;87,9\;kJ
+\end{equation}
+E quindi:
+\begin{equation}
+	P_{r,min}\;=\;\dfrac{P_{id}}{\eta_{ad}}\;=\;\dfrac{\dot{m_{min}}\;|l_{id}|}{\eta_{ad}}\;=\;\textbf{55,4\;kW}
+\end{equation}
+
 \end{document}
+Innanzitutto per quanto riguarda le perdite di carico all'interno della tubazione si sceglie un approccio abbastanza teorico.\\
+Si suppone che le tubature siano delle classiche tubature in acciaio per garantire una certa resistenza termica la cui rugosità superficiale interna è ipotizzabile essere $\epsilon\;=\;0,06$, dal diametro di $90\;mm$.\\
+Si conoscono le condizione all'ingresso del compressore ($p_{1}\;=\;1\;bar$, $T_{1}\;=\;288\;K$), quindi:
+\begin{center}
+	$\rho_{1}\;=\;\dfrac{p_{1}}{RT_{1}}\;=\;1,23\;m^{3}/kg$
+\end{center}
+Quindi la portata volumetrica in ingresso è pari a:
+\begin{center}
+	$s$
+\end{center}
