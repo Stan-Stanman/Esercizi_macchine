@@ -311,6 +311,56 @@ Allora il rendimento politropico sarà:
 	$\eta_{pol}\;=\;\dfrac{1,4-1}{1,4}\cdot\dfrac{1,46}{1,46-1}\;=\;\textbf{0,91}$
 \end{center}
 
+\paragraph{Confrontare questo rendimento con il rendimento di un qualsiasi compressore commerciale, le cui caratteristiche tecniche sono da ricercare autonomamente.\\}
+\begin{wrapfigure}{r}{0.4\textwidth}
+	\centering
+	\includegraphics[width=0.3\textwidth]{xinlei_compressor.png}
+	\caption{Compressore a vite per uso industriale da 75 kW}
+\end{wrapfigure}
+Si decide di confrontare il compressore assiale proposto nell'esesempio con una macchina operatrice non di tipo dinamico ma volumetrico. In particolare si è scelto un compressore a vite per uso industriale equipaggiato di un motore a magneti permanenti da 75 kW (50 Hz).\\
+In questo esempio si decide di far operare il compressore alla pressione di 10 bar.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{xinlei_data.png}
+	\caption{Scheda tecnica}
+\end{figure}
+Per il calcolo dei rendimenti devo innanzitutto capire quale è l'effettiva potenza che viene fornita al compressore.\\
+Io conosco la potenza elettrica, ovvero la potenza che sto assorbendo dalla rete. Il nostro compressore è alimentato da un motore a magneti permanenti che ha questa scheda tecnica.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{motore_magneti_permanenti.png}
+	\caption{Scheda tecnica}
+\end{figure}
+Quindi:
+\begin{equation}
+	\eta_{e}\;=\;\dfrac{P_{ua}}{P_{e}}\;\to\;P_{ua}\;=\;P_{e}\;\eta_{e}\;=\;71,8\;kW
+\end{equation}
+Visto che si tratta di un compressore a trasmissione diretta (la vite e il motore si trovano sullo stesso asse), il rendimento meccanico è molto alto. Si ipotizza un $\eta_{m}\;=\;0,98$. Quindi:
+\begin{equation}
+	\eta_{m}\;=\;\dfrac{P_{r}}{P_{ua}}\;\to\;P_{r}\;=\;P_{ua}\;\eta_{m}\;=\;70,4\;kW
+\end{equation}
+Quindi poichè so che viene elaborata una portata $\dot{m}\;=\;0,192\;kg/s$:
+\begin{center}
+	$l_{r}\;=\;\dfrac{P_{r}}{\dot{m}}\;=\;367\;kJ$
+\end{center}
+Siccome il lavoro ideale è definito dalle condizioni in ingresso standard (p\ped{1}=1 bar, T\ped{1}=288 K):
+\begin{equation}
+	|l_{id}|\;=\;\dfrac{k}{k-1}\;R\;T_{1}\;\Biggl(1-\beta^\frac{k-1}{k}\Biggr)\;=\;269\;kJ
+\end{equation}
+Quindi il rendimento adiabatico di compressione è pari a:
+\begin{equation}
+	\eta_{ad}\;=\;\dfrac{l_{id}}{l_{r}}\;=\;0,73
+\end{equation}
+Adesso in maniera analoga a quanto fatto nel paragrafo precedente posso calcolare quanto vale il coefficiente m della politropica dall'equazione (1.19). Quindi:
+\begin{center}
+	$1\;-\;\beta^{\dfrac{m-1}{m}}\;=\;\dfrac{1\;-\;10^{\dfrac{1,4-1}{1,4}}}{0,73}\;=\;-1,28\implies\;\dfrac{m-1}{m}\;=\;\log_{10}(1+1,28)\;=\;0,358\implies\;m\;=\;\dfrac{1}{1-0,358}\;=\;1,56$
+\end{center}
+Allora il rendimento politropico sarà:
+\begin{center}
+	$\eta_{pol}\;=\;\dfrac{1,4-1}{1,4}\cdot\dfrac{1,56}{1,56-1}\;=\;\textbf{0,80}$
+\end{center}
+Se confronto i rendimenti politropici, togliendo quindi qualsiasi effetto legato al controrecupero (che favorisce la macchina ad unico stadio sfavorendo quella multistadica), mi accorgo che la tecnologia di un compressore volumetrico in questo caso a vite è una tecnologia che non mi permette di ottenere i risultati di una macchina assiale, in termini di trasferimento di energia al fluido. Se avessimo considerato un compressore a pistoni sarebbe stato addirittura peggio.
 \chapter{Impianto a Vapore da circa 18 MW}
 
 \section{1° Schema d'impianto a vapore}
@@ -514,7 +564,7 @@ Di cui possiamo compilare la tabella dei parametri termodinamici:
 		\hline
 		\textbf{R} & 504 & 5,5 & 2917 & n.v. & //\\
 		\hline
-		\textbf{R''} & 758 & 2,7 & 2640 & 6,83 & 0,963\\
+		\textbf{R''} & 403 & 2,7 & 2640 & 6,83 & 0,963\\
 		\hline
 		\textbf{4} & 303 & 0,043 & 2313 & n.v. & n.v\\
 		\hline
@@ -528,11 +578,11 @@ Di cui possiamo compilare la tabella dei parametri termodinamici:
 	\item[\textbf{Stato 2''}] Pressione dallo schema. L'entropia è la stessa dello stato 1, in quanto la trasformazione è reversibile. Per il resto bisogna utilizzare il modello di liquido incomprimibile, per cui:\\
 	$T_{2''}\;=\;T_{1},$\\
 	$\;h_{2''}\;=\;h_{l}(T)\;+\;v\;(P\;-\;P_{sat}(T))\;=\;126\;+\;10^{-3}\;(270\;-\;4,3)\;\approx\;126\;kJ/kg$
-	\item[\textbf{Stato C  }] Temperatura, pressione ed entalpia dallo schema. L'entropia è un dato che ricavo guardando la tabella di saturazione alla temperatura corrispondente.
+	\item[\textbf{Stato C  }] Temperatura, pressione ed entalpia dallo schema. L'entropia è un dato che ricavo guardando la tabella di saturazione alla temperatura corrispondente (applicazione del modello di liquido incomprimibile).
 	\item[\textbf{Stato 2R}] Temperatura, pressione ed entalpia dallo schema.
-	\item[\textbf{Stato 2R''}] Pressione dallo schema. L'entropia è la stessa dello stato 1, in quanto la trasformazione è reversibile. Per il resto bisogna utilizzare il modello di liquido incomprimibile, per cui:\\
+	\item[\textbf{Stato 2R''}] Pressione dallo schema. L'entropia è la stessa dello stato C, in quanto la trasformazione è reversibile. Per il resto bisogna utilizzare il modello di liquido incomprimibile, per cui:\\
 	$T_{2R''}\;=\;T_{C},$\\
-	$\;h_{2R''}\;=\;h_{C}(T)\;+\;v\;(P\;-\;P_{sat}(T))\;=\;230\;+\;10^{-3}\;(6100\;-\;0,158)\;\approx\;126\;kJ/kg$
+	$\;h_{2R''}\;=\;h_{l}(T)\;+\;v\;(P\;-\;P_{sat}(T))\;=\;230\;+\;10^{-3}\;(6100\;-\;15,8)\;\approx\;236\;kJ/kg$
 	\item[\textbf{Stato 3  }] Come nel primo esempio.
 	\item[\textbf{Stato R  }] Ricavo i dati dello spillamento dallo schema.
 	\item[\textbf{Stato R''}] Pressione dallo schema. La temperatura è quella di saturazione, essendo un vapore saturo. L'entropia è la stessa dello stato 3, in quanto l'espansione è reversibile. Quindi:\\
@@ -548,7 +598,7 @@ Il rendimento limite:
 \end{center}
 Ogni ciclo limite si può rendere equivalente a un ciclo di Carnot introducendo i concetti di temperatura media di adduzione del calore ($T_{ma}$) e temperatura media di sottrazione del calore ($T_{ms}$).
 \begin{center}
-	$T_{ma}\;=\;\dfrac{\int_{2R''}^{3}Tds}{\Delta s}\;=\;\dfrac{q_{a}}{s_{3}\;-\;s_{2''}}\;=\;\dfrac{3380\;-\;236}{6,83\;-\;0,76}\;\approx\;\textbf{518\;K}$
+	$T_{ma}\;=\;\dfrac{\int_{2R''}^{3}Tds}{\Delta s}\;=\;\dfrac{q_{a}}{s_{3}\;-\;s_{2R''}}\;=\;\dfrac{3380\;-\;236}{6,83\;-\;0,76}\;\approx\;\textbf{518\;K}$
 \end{center}
 Sulla sottrazione non si è intervenuto, quindi è rimasta invariata.
 \begin{center}
@@ -581,6 +631,168 @@ E infine il rendimento meccanico:
 	$\eta_{m}\;=\;\dfrac{P_{a}}{P_{r}}\;=\;\dfrac{20,20}{20,26}\;\approx\;\textbf{0,997}$
 \end{center}
 \newpage
+
+\section{3° Schema d'impianto a vapore}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{impiantoTV3.png}
+	\caption{Schema di un impianto a vapore che segue ciclo a vapore surriscaldato con più di uno spillamento}
+\end{figure}
+\paragraph{Calcolo dei rendimenti.\\}
+Analogamente a quanto fatto nel primo e nel secondo schema d'impianto:
+\begin{center}
+	$\eta_{ge}\;=\;\dfrac{P_{e}}{\dot{m_{c}}H_{i}}\;=\;\dfrac{18,00\;\cancel{MW}}{59,60\;\cancel{MW}}\;\approx\;\textbf{0,302}$
+\end{center}
+Per le stesse considerazioni fatte nel primo e nel secondo esempio, si ipotizza un rendimento elettrico $\eta_{e}\;\approx\;0,975$. Quindi:
+\begin{center}
+	$\eta_{e}\;=\;\dfrac{P_{e}}{P_{a}}\;\implies\;{P_{a}}\;=\;\dfrac{P_{e}}{\eta_{e}}\;=\;\dfrac{18,00\;MW}{0,975}\;=\;18,46\;MW$
+\end{center}
+Calcolata la potenza utile all'asse è possibile procedere col calcolo del rendimento globale, come indicato nella (2.2):
+\begin{center}
+	$\eta_{g}\;=\;\dfrac{18,46\;\cancel{MW}}{59,60\;\cancel{MW}}\;\approx\;\textbf{0,310}$
+\end{center}
+Per quanto riguarda il rendimento di combustione invece, va tenuto conto che essendo presente più di uno spillamento l'entalpia dell'acqua in ingresso all'economizzatore è maggiore rispetto al caso precedente.\\
+Quindi il calore che effettivamente adduco sarà pari a:
+\begin{center}
+	$\dot{Q_{a}}\;=\;\dot{m_{gv}}\;(h_{3'}\;-\;h_{2R})\;=\;71,6\;\cdot10^{3}\;\cancel{kg}/h\;\cdot\;(815,6\;kcal/\cancel{kg}\;-\;168\;kcal/\cancel{kg})\;=\;19,89\;\cancel{kg}/s\;\cdot\;(3412\;kJ/\cancel{kg}\;-\;702,9\;kJ/\cancel{kg})\;\approx\;53,88\;MW$
+\end{center}
+E quindi:
+\begin{center}
+	$\eta_{b}\;=\;\dfrac{53,88\;\cancel{MW}}{59,60\;\cancel{MW}}\;\approx\;\textbf{0,904}$
+\end{center}
+Anche in questo esempio, per tracciare il ciclo limite viene scelta come pressione massima quella in ingresso alla turbina, quindi i punti 1 e 3 del ciclo reale verranno a coincidere con quelli dello schema reversibile.\\
+\begin{figure}[H]
+	
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[width=0.9\linewidth]{ciclo_limite_spillamenti.png} 
+		\caption{Ciclo limite}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[width=0.9\linewidth]{ciclo_reale_spillamenti.png}
+		\caption{Ciclo reale}
+	\end{subfigure}
+	
+	\caption{Ciclo limite e reale, con rappresentazione dello spillamento}
+\end{figure}
+Di cui possiamo compilare la tabella dei parametri termodinamici:
+\begin{center}
+	\begin{tabular}{| l || l | l | l | l | l |}
+		\hline
+		\textbf{Stato} & \textbf{T [K]} & \textbf{P [atm]} & \textbf{h [kJ/kg]} & \textbf{s [kJ/kgK]} & \textbf{Titolo}\\ 
+		\hline
+		\textbf{1} & 303 & 0,043 & 126 & 0,437 & //\\ 
+		\hline
+		\textbf{2} & 313 & 5,5 & 168 & n.v. & //\\
+		\hline
+		\textbf{2''} & 303 & 2,7 & 126 & 0,437 & //\\
+		\hline
+		\textbf{C} & 403 & 2,7 & 546 & 0,76 & //\\
+		\hline
+		\textbf{3R} & 405 & 86,0 & 561 & n.v. & //\\
+		\hline
+		\textbf{3R''} & 403 & 61,0 & 552 & 0,76 & //\\
+		\hline
+		\textbf{2R} & 438,5 & 86,0 & 703 & 1,99 & //\\
+		\hline
+		\textbf{3} & 758 & 61,0 & 3380 & 6,83 & //\\
+		\hline
+		\textbf{S1} & 549 & 8,7 & 3000 & n.v. & //\\
+		\hline
+		\textbf{S1''} & 481 & 8,4 & 2856 & 6,83 & //\\
+		\hline
+		\textbf{S2} & 504 & 5,5 & 2917 & n.v. & //\\
+		\hline
+		\textbf{S2''} & 403 & 2,7 & 2640 & 6,83 & 0,963\\
+		\hline
+		\textbf{S3} & 393 & 1,56 & 2711 & n.v. & //\\
+		\hline
+		\textbf{S3''} & 384 & 1,46 & 2538 & 6,83 & 0,931\\
+		\hline
+		\textbf{S4} & 357 & 0,57 & 2581 & n.v. & n.v.\\
+		\hline
+		\textbf{S4''} & 357 & 0,57 & 2394 & 6,83 & 0,888\\
+		\hline
+		\textbf{4} & 303 & 0,043 & 2313 & n.v. & n.v\\
+		\hline
+		\textbf{4''} & 303 & 0,043 & 2065 & 6,83 & 0,798\\
+		\hline
+	\end{tabular}
+\end{center}
+\begin{itemize}
+	\item[\textbf{Stato 1  }] Come nel primo esempio.
+	\item[\textbf{Stato 2  }] Temperatura, pressione ed entalpia dallo schema.
+	\item[\textbf{Stato 2''}] Pressione dallo schema. L'entropia è la stessa dello stato 1, in quanto la trasformazione è reversibile. Per il resto bisogna utilizzare il modello di liquido incomprimibile, per cui:\\
+	$T_{2''}\;=\;T_{1},$\\
+	$\;h_{2''}\;=\;h_{l}(T)\;+\;v\;(P\;-\;P_{sat}(T))\;=\;126\;+\;10^{-3}\;(270\;-\;4,3)\;\approx\;126\;kJ/kg$
+	\item[\textbf{Stato C  }] Temperatura, pressione ed entalpia dallo schema. L'entropia è un dato che ricavo guardando la tabella di saturazione alla temperatura corrispondente.
+	\item[\textbf{Stato 3R}] Temperatura, pressione ed entalpia dallo schema.
+	\item[\textbf{Stato 3R''}] Pressione dallo schema. L'entropia è la stessa dello stato C, in quanto la trasformazione è reversibile. Per il resto bisogna utilizzare il modello di liquido incomprimibile, per cui:\\
+	$T_{3R''}\;=\;T_{C},$\\
+	$\;h_{2R''}\;=\;h_{l}(T)\;+\;v\;(P\;-\;P_{sat}(T))\;=\;546\;+\;10^{-3}\;(6100\;-\;270)\;\approx\;552\;kJ/kg$
+	\item[\textbf{Stato 2R}] Temperatura, pressione ed entalpia dallo schema. Per quanto riguarda l'entropia invece, basta ricordarsi che equivale al valore di entropia in condizioni di liquido saturo alla corrispondente temperatura:\\
+	$s_{2R}\;=\;1,99\;kJ/kgK$
+	\item[\textbf{Stato 3  }] Come nel primo esempio.
+	\item[\textbf{S1, S2, S3, S4  }] Ricavo i dati dello spillamento dallo schema.
+	\item[\textbf{Stato S1''}] Pressione dallo schema. L'entropia è la stessa dello stato 3, in quanto l'espansione è reversibile. Si tratta di un vapore surriscaldato, quindi:\\
+	$T_{S1''}\;=\;481\;K$\\
+	$h_{S1''}\;=\;2856\;kJ/kg$
+	\item[\textbf{Stato S2''}] Pressione dallo schema. La temperatura è quella di saturazione, essendo un vapore saturo. L'entropia è la stessa dello stato 3, in quanto l'espansione è reversibile. Quindi:\\
+	$x_{S2''}\;=\dfrac{(s_{S2''}-s_{ls})}{(s_{vs}-s_{ls})}\;=\;\dfrac{6,83-1,64}{7,03-1,64}\;=\;0,963$\\
+	$\implies h_{S2''}=h_{ls}\;+\;x_{S2''}\;(h_{vs}-h_{ls})\;=\;545\;+\;0,963(2720-545)\;=\;2640\;kJ/kg$
+	\item[\textbf{Stato S3''}] Pressione dallo schema. La temperatura è quella di saturazione, essendo un vapore saturo. L'entropia è la stessa dello stato 3, in quanto l'espansione è reversibile. Quindi:\\
+	$x_{S3''}\;=\dfrac{(s_{S3''}-s_{ls})}{(s_{vs}-s_{ls})}\;=\;\dfrac{6,83-1,42}{7,23-1,42}\;=\;0,931$\\
+	$\implies h_{S3''}=h_{ls}\;+\;x_{S3''}\;(h_{vs}-h_{ls})\;=\;462\;+\;0,931(2692-462)\;=\;2538\;kJ/kg$
+	\item[\textbf{Stato S4''}] Pressione dallo schema. La temperatura è quella di saturazione, essendo un vapore saturo. L'entropia è la stessa dello stato 3, in quanto l'espansione è reversibile. Quindi:\\
+	$x_{S4''}\;=\dfrac{(s_{S4''}-s_{ls})}{(s_{vs}-s_{ls})}\;=\;\dfrac{6,83-1,13}{7,55-1,13}\;=\;0,888$\\
+	$\implies h_{S4''}=h_{ls}\;+\;x_{S4''}\;(h_{vs}-h_{ls})\;=\;353\;+\;0,888(2651-353)\;=\;2394\;kJ/kg$
+	\item[\textbf{Stato 4  }] Come nel primo esempio.
+	\item[\textbf{Stato 4''}] Come nel primo esempio.
+\end{itemize}
+Ora che sono stati raccolti i parametri termodinamici caratteristici del ciclo reale e del ciclo limite si può procedere con il calcolo dei rendimenti.
+\begin{center}
+	$P_{lt}\;=\;\dot{m_{3}}(h_{3}-h_{S1''})+\dot{m_{3'}}(h_{S1''}-h_{S2''})+\dot{m_{3''}}(h_{S2''}-h_{S3''})+\dot{m_{3'''}}(h_{S3''}-h_{S4''})+\dot{m_{co}}(h_{S4''}-h_{4''})\;=\;23639\;kW$
+\end{center}
+\begin{center}
+	$P_{lp}\;=\;\dot{m_{co}}(h_{2''}-h_{1})+\dot{m_{3}}(h_{3R''}-h_{C})\;=\;118\;kW$
+\end{center}
+E quindi il rendimento limite:
+\begin{center}
+	$\eta_{l}\;=\;\dfrac{P_{lt}\;-\;P_{lp}}{\dot{m_{3}}(h_{3}-h_{2R})}\;\approx\;\textbf{0,447}$
+\end{center}
+Ogni ciclo limite si può rendere equivalente a un ciclo di Carnot introducendo i concetti di temperatura media di adduzione del calore ($T_{ma}$) e temperatura media di sottrazione del calore ($T_{ms}$).
+\begin{center}
+	$T_{ma}\;=\;\dfrac{\int_{2R}^{3}Tds}{\Delta s}\;=\;\dfrac{q_{a}}{s_{3}\;-\;s_{2R}}\;=\;\dfrac{3380\;-\;703}{6,83\;-\;1,99}\;\approx\;\textbf{553\;K}$
+\end{center}
+Sulla sottrazione non si è intervenuto, quindi è rimasta invariata.
+\begin{center}
+	$T_{ms}\;=\;\textbf{303\;K}$
+\end{center}
+Da notare che il rendimento limite è aumentato come ci si aspettava e infatti anche la temperatura media di adduzione è cresciuta.\\
+\\Per il rendimento reale invece:
+\begin{center}
+	$P_{t}\;=\;\dot{m_{3}}(h_{3}-h_{S1})+\dot{m_{3'}}(h_{S1}-h_{S2})+\dot{m_{3''}}(h_{S2}-h_{S3})+\dot{m_{3'''}}(h_{S3}-h_{S4})+\dot{m_{co}}(h_{S4}-h_{4})\;=\;19,01\;MW$
+\end{center}
+\begin{center}
+	$P_{p}\;=\;\dot{m_{gv}}\;(h_{3R}-h_{C})\;+\;\dot{m_{co}}(h_{2}-h_{1})\;=\;957\;kW$
+\end{center}
+E quindi:
+\begin{center}
+	$\eta_{r}\;=\;\dfrac{19,01\;-\;0,957}{53,88}\;\approx\;\textbf{0,335}$
+\end{center}
+Anche il rendimento reale è aumentato.\\
+Il rendimento interno di impianto invece:
+\begin{center}
+	$\eta_{int,impianto}\;=\;\dfrac{\eta_{r}}{\eta_{l}}\;=\;\dfrac{0,335}{0,447}\;\approx\;\textbf{0,749}$
+\end{center}
+Volendo si potrebbe anche indagare sulla bontà della sola espansione, valutando il rendimento adiabatico di espansione, di cui si è già parlato nell' Esercizio 1:
+\begin{center}
+	$\eta_{ad}\;=\;\dfrac{P_{t}}{P_{lt}}\;=\;\dfrac{19,01}{23.64}\;\approx\;\textbf{0,804}$
+\end{center}
+E infine il rendimento meccanico:
+\begin{center}
+	$\eta_{m}\;=\;\dfrac{P_{a}}{P_{r}}\;=\;\dfrac{18,46}{19,01}\;\approx\;\textbf{0,971}$
+\end{center}
+\paragraph{Valutare, inoltre, per lo schema 3 le massime portata spillabili per ogni rigeneratore e confrontarle con quelle realmente spillate}
 
 \chapter{Impianto con Turbina a Gas}
 \section{Analisi termodinamica della turbina a gas LM6000 (General Electric)}
@@ -1786,13 +1998,3 @@ E quindi:
 \end{equation}
 
 \end{document}
-Innanzitutto per quanto riguarda le perdite di carico all'interno della tubazione si sceglie un approccio abbastanza teorico.\\
-Si suppone che le tubature siano delle classiche tubature in acciaio per garantire una certa resistenza termica la cui rugosità superficiale interna è ipotizzabile essere $\epsilon\;=\;0,06$, dal diametro di $90\;mm$.\\
-Si conoscono le condizione all'ingresso del compressore ($p_{1}\;=\;1\;bar$, $T_{1}\;=\;288\;K$), quindi:
-\begin{center}
-	$\rho_{1}\;=\;\dfrac{p_{1}}{RT_{1}}\;=\;1,23\;m^{3}/kg$
-\end{center}
-Quindi la portata volumetrica in ingresso è pari a:
-\begin{center}
-	$s$
-\end{center}
