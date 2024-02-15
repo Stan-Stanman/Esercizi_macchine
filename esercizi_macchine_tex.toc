@@ -21,49 +21,49 @@
 \contentsline {paragraph}{Calcolo dei rendimenti.\\}{20}{}%
 \contentsline {section}{\numberline {2.3}3° Schema d'impianto a vapore}{24}{}%
 \contentsline {paragraph}{Calcolo dei rendimenti.\\}{24}{}%
-\contentsline {paragraph}{Valutare, inoltre, per lo schema 3 le massime portata spillabili per ogni rigeneratore e confrontarle con quelle realmente spillate}{27}{}%
-\contentsline {chapter}{\numberline {3}Impianto con Turbina a Gas}{28}{}%
-\contentsline {section}{\numberline {3.1}Analisi termodinamica della turbina a gas LM6000 (General Electric)}{28}{}%
-\contentsline {paragraph}{Calcolare e disegnare i cicli ideale e reale, stimando i rendimenti politropici di compressione ed espansione, i rendimenti di combustione, limite (ideale), interno di impianto, reale, meccanico e le temperature medie di adduzione e sottrazione del calore.\\}{29}{}%
-\contentsline {paragraph}{Valutare il rapporto di compressione scelto (29,5) rispetto a quello di lavoro massimo e di rendimento massimo teorici.\\}{32}{}%
-\contentsline {paragraph}{Valutare un ipotetico impianto con un' interrefrigerazione ($\beta _{1}\tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em}2,42,\tmspace +\thickmuskip {.2777em}\beta _{2}\tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em}12$) ed un riscaldamento ripetuto ($\beta _{3}\tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em}2,42,\tmspace +\thickmuskip {.2777em}\beta _{4}\tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em}12$) conservando gli stessi rendimenti politropici di compressione ed espansione, di combustione e meccanico valutati con il ciclo semplice di Joule. Calcolare e disegnare i cicli ideale e reale per questo impianto, il rendimento limite (ideale), reale e interno di impianto e le temperature medie di adduzione e sottrazione del calore.\\}{33}{}%
-\contentsline {section}{\numberline {3.2}Analisi termodinamica della turbina a gas SGT-800 (Siemens Energy)}{37}{}%
-\contentsline {paragraph}{Calcolare e disegnare i cicli ideale e reale, stimando i rendimenti politropici di compressione ed espansione, i rendimenti di combustione, limite (ideale), interno di impianto, reale, meccanico e le temperature medie di adduzione e sottrazione del calore.\\}{38}{}%
-\contentsline {chapter}{\numberline {4}Stadio di turbina a vapore}{41}{}%
-\contentsline {paragraph}{Determinare i triangoli di velocità, la potenza interna, il rendimento interno e il grado di reazione dello stadio.\\}{41}{}%
-\contentsline {chapter}{\numberline {5}Repowering di un impianto a vapore}{45}{}%
-\contentsline {section}{\numberline {5.1}Impianto ad un salto di pressione}{45}{}%
-\contentsline {paragraph}{Calcolare il rendimento globale dell'impianto combinato ottenuto facendo il Repowering (tecnica heat recovery repowering), dell'impianto a vapore da circa 18 MW con la turbina a gas General Electric MS6001.\\}{45}{}%
-\contentsline {section}{\numberline {5.2}Impianto a due salti di pressione}{49}{}%
-\contentsline {paragraph}{Calcolare il rendimento globale dell'impianto combinato a due salti di pressione ottenuto facendo il Repowering dell'impianto a vapore da circa 18 MW con la turbina a gas General Electric MS6001.\\}{49}{}%
-\contentsline {chapter}{\numberline {6}Motore alternativo a combustione interna}{52}{}%
-\contentsline {section}{\numberline {6.1}Calcolo dei principali parametri di un motore ad accensione comandata con una cilindrata da 1242 cm\bbl@it@ap 3}{52}{}%
-\contentsline {paragraph}{Stimare il rendimento globale massimo $\eta _{g}$.\\}{52}{}%
-\contentsline {paragraph}{Calcolare la coppia a 5500 giri/min.\\}{53}{}%
-\contentsline {paragraph}{Calcolare la potenza a massima coppia.\\}{53}{}%
-\contentsline {paragraph}{Stimare la pmi e la pme a massima coppia e a massima potenza.\\}{53}{}%
-\contentsline {paragraph}{Stimare il coefficiente di riempimento a massima coppia e a massima potenza.\\}{54}{}%
-\contentsline {paragraph}{Stimare il rendimento globale a massima potenza.\\}{54}{}%
-\contentsline {paragraph}{Calcolare la velocità media del pistone a coppia massima e a potenza massima.\\}{55}{}%
-\contentsline {paragraph}{Valutare il rendimento globale lungo la verticale a n costanti, che passa per la coppia massima nel diagramma P-n.\\}{55}{}%
-\contentsline {section}{\numberline {6.2}Calcolo dei principali parametri di un motore ad accensione per compressione con una cilindrata da 9300 cm\bbl@it@ap 3}{56}{}%
-\contentsline {paragraph}{Stimare il rendimento globale massimo $\eta _{g}$.\\}{57}{}%
-\contentsline {paragraph}{Calcolare la coppia a 1800 giri/min.\\}{57}{}%
-\contentsline {paragraph}{Calcolare la potenza a massima coppia.\\}{57}{}%
-\contentsline {paragraph}{Stimare la pmi e la pme a massima coppia e a massima potenza.\\}{57}{}%
-\contentsline {paragraph}{Stimare il coefficiente di riempimento a massima coppia e a massima potenza.\\}{58}{}%
-\contentsline {paragraph}{Stimare il rendimento globale a massima potenza.\\}{58}{}%
-\contentsline {paragraph}{Calcolare la velocità media del pistone a coppia massima e a potenza massima.\\}{58}{}%
-\contentsline {chapter}{\numberline {7}Turbina Francis e diffusore}{59}{}%
-\contentsline {section}{\numberline {7.1}Analisi della turbina}{59}{}%
-\contentsline {paragraph}{Valutare la scelta del tipo di turbina.\\}{59}{}%
-\contentsline {paragraph}{Stimare i triangoli di velocità.\\}{61}{}%
-\contentsline {paragraph}{Valutare il rendimento ideale di palettatura.\\}{62}{}%
-\contentsline {paragraph}{Dimensionare un possibile diffusore.\\}{62}{}%
-\contentsline {chapter}{\numberline {8}Pompa inserita in un circuito}{64}{}%
-\contentsline {section}{\numberline {8.1}Valutazione del punto di funzionamento}{64}{}%
-\contentsline {section}{\numberline {8.2}Verifica cavitazione}{67}{}%
-\contentsline {paragraph}{Verificare l'assenza di cavitazione se faccio circolare H\bbl@it@ap {2}O a 50°C.\\}{68}{}%
-\contentsline {chapter}{\numberline {9}Regolazione della portata in un circuito di aria compressa}{69}{}%
-\contentsline {section}{\numberline {9.1}Valutazione della potenza fissata una certa portata}{69}{}%
-\contentsline {paragraph}{Si noti che il rendimento riportato nel diagramma è il rendimento adiabatico del compressore. Formulando le dovute ipotesi, valutare la potenza minima del motore elettrico da installare dopo aver scelto i metodi di regolazione della portata che garantiscano il più ampio intervallo di portate facendo in modo che la pressione nel serbatoio sia costante e sempre di 2.5 bar.\\ Si consideri che si possano utilizzare più metodi di regolazione contemporaneamente.\\}{70}{}%
+\contentsline {paragraph}{Valutare, inoltre, per lo schema 3 le massime portata spillabili per ogni rigeneratore e confrontarle con quelle realmente spillate}{28}{}%
+\contentsline {chapter}{\numberline {3}Impianto con Turbina a Gas}{30}{}%
+\contentsline {section}{\numberline {3.1}Analisi termodinamica della turbina a gas LM6000 (General Electric)}{30}{}%
+\contentsline {paragraph}{Calcolare e disegnare i cicli ideale e reale, stimando i rendimenti politropici di compressione ed espansione, i rendimenti di combustione, limite (ideale), interno di impianto, reale, meccanico e le temperature medie di adduzione e sottrazione del calore.\\}{31}{}%
+\contentsline {paragraph}{Valutare il rapporto di compressione scelto (29,5) rispetto a quello di lavoro massimo e di rendimento massimo teorici.\\}{34}{}%
+\contentsline {paragraph}{Valutare un ipotetico impianto con un' interrefrigerazione ($\beta _{1}\tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em}2,42,\tmspace +\thickmuskip {.2777em}\beta _{2}\tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em}12$) ed un riscaldamento ripetuto ($\beta _{3}\tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em}2,42,\tmspace +\thickmuskip {.2777em}\beta _{4}\tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em}12$) conservando gli stessi rendimenti politropici di compressione ed espansione, di combustione e meccanico valutati con il ciclo semplice di Joule. Calcolare e disegnare i cicli ideale e reale per questo impianto, il rendimento limite (ideale), reale e interno di impianto e le temperature medie di adduzione e sottrazione del calore.\\}{35}{}%
+\contentsline {section}{\numberline {3.2}Analisi termodinamica della turbina a gas SGT-800 (Siemens Energy)}{39}{}%
+\contentsline {paragraph}{Calcolare e disegnare i cicli ideale e reale, stimando i rendimenti politropici di compressione ed espansione, i rendimenti di combustione, limite (ideale), interno di impianto, reale, meccanico e le temperature medie di adduzione e sottrazione del calore.\\}{40}{}%
+\contentsline {chapter}{\numberline {4}Stadio di turbina a vapore}{43}{}%
+\contentsline {paragraph}{Determinare i triangoli di velocità, la potenza interna, il rendimento interno e il grado di reazione dello stadio.\\}{43}{}%
+\contentsline {chapter}{\numberline {5}Repowering di un impianto a vapore}{47}{}%
+\contentsline {section}{\numberline {5.1}Impianto ad un salto di pressione}{47}{}%
+\contentsline {paragraph}{Calcolare il rendimento globale dell'impianto combinato ottenuto facendo il Repowering (tecnica heat recovery repowering), dell'impianto a vapore da circa 18 MW con la turbina a gas General Electric MS6001.\\}{47}{}%
+\contentsline {section}{\numberline {5.2}Impianto a due salti di pressione}{51}{}%
+\contentsline {paragraph}{Calcolare il rendimento globale dell'impianto combinato a due salti di pressione ottenuto facendo il Repowering dell'impianto a vapore da circa 18 MW con la turbina a gas General Electric MS6001.\\}{51}{}%
+\contentsline {chapter}{\numberline {6}Motore alternativo a combustione interna}{54}{}%
+\contentsline {section}{\numberline {6.1}Calcolo dei principali parametri di un motore ad accensione comandata con una cilindrata da 1242 cm\bbl@it@ap 3}{54}{}%
+\contentsline {paragraph}{Stimare il rendimento globale massimo $\eta _{g}$.\\}{54}{}%
+\contentsline {paragraph}{Calcolare la coppia a 5500 giri/min.\\}{55}{}%
+\contentsline {paragraph}{Calcolare la potenza a massima coppia.\\}{55}{}%
+\contentsline {paragraph}{Stimare la pmi e la pme a massima coppia e a massima potenza.\\}{55}{}%
+\contentsline {paragraph}{Stimare il coefficiente di riempimento a massima coppia e a massima potenza.\\}{56}{}%
+\contentsline {paragraph}{Stimare il rendimento globale a massima potenza.\\}{56}{}%
+\contentsline {paragraph}{Calcolare la velocità media del pistone a coppia massima e a potenza massima.\\}{57}{}%
+\contentsline {paragraph}{Valutare il rendimento globale lungo la verticale a n costanti, che passa per la coppia massima nel diagramma P-n.\\}{57}{}%
+\contentsline {section}{\numberline {6.2}Calcolo dei principali parametri di un motore ad accensione per compressione con una cilindrata da 9300 cm\bbl@it@ap 3}{58}{}%
+\contentsline {paragraph}{Stimare il rendimento globale massimo $\eta _{g}$.\\}{59}{}%
+\contentsline {paragraph}{Calcolare la coppia a 1800 giri/min.\\}{59}{}%
+\contentsline {paragraph}{Calcolare la potenza a massima coppia.\\}{59}{}%
+\contentsline {paragraph}{Stimare la pmi e la pme a massima coppia e a massima potenza.\\}{59}{}%
+\contentsline {paragraph}{Stimare il coefficiente di riempimento a massima coppia e a massima potenza.\\}{60}{}%
+\contentsline {paragraph}{Stimare il rendimento globale a massima potenza.\\}{60}{}%
+\contentsline {paragraph}{Calcolare la velocità media del pistone a coppia massima e a potenza massima.\\}{60}{}%
+\contentsline {chapter}{\numberline {7}Turbina Francis e diffusore}{61}{}%
+\contentsline {section}{\numberline {7.1}Analisi della turbina}{61}{}%
+\contentsline {paragraph}{Valutare la scelta del tipo di turbina.\\}{61}{}%
+\contentsline {paragraph}{Stimare i triangoli di velocità.\\}{63}{}%
+\contentsline {paragraph}{Valutare il rendimento ideale di palettatura.\\}{64}{}%
+\contentsline {paragraph}{Dimensionare un possibile diffusore.\\}{64}{}%
+\contentsline {chapter}{\numberline {8}Pompa inserita in un circuito}{66}{}%
+\contentsline {section}{\numberline {8.1}Valutazione del punto di funzionamento}{66}{}%
+\contentsline {section}{\numberline {8.2}Verifica cavitazione}{69}{}%
+\contentsline {paragraph}{Verificare l'assenza di cavitazione se faccio circolare H\bbl@it@ap {2}O a 50°C.\\}{70}{}%
+\contentsline {chapter}{\numberline {9}Regolazione della portata in un circuito di aria compressa}{71}{}%
+\contentsline {section}{\numberline {9.1}Valutazione della potenza fissata una certa portata}{71}{}%
+\contentsline {paragraph}{Si noti che il rendimento riportato nel diagramma è il rendimento adiabatico del compressore. Formulando le dovute ipotesi, valutare la potenza minima del motore elettrico da installare dopo aver scelto i metodi di regolazione della portata che garantiscano il più ampio intervallo di portate facendo in modo che la pressione nel serbatoio sia costante e sempre di 2.5 bar.\\ Si consideri che si possano utilizzare più metodi di regolazione contemporaneamente.\\}{72}{}%

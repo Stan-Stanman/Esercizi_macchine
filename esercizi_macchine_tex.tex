@@ -704,7 +704,7 @@ Di cui possiamo compilare la tabella dei parametri termodinamici:
 		\hline
 		\textbf{S2''} & 403 & 2,7 & 2640 & 6,83 & 0,963\\
 		\hline
-		\textbf{S3} & 393 & 1,56 & 2711 & n.v. & //\\
+		\textbf{S3} & 393 & 1,52 & 2711 & n.v. & //\\
 		\hline
 		\textbf{S3''} & 384 & 1,46 & 2538 & 6,83 & 0,931\\
 		\hline
@@ -793,6 +793,128 @@ E infine il rendimento meccanico:
 	$\eta_{m}\;=\;\dfrac{P_{a}}{P_{r}}\;=\;\dfrac{18,46}{19,01}\;\approx\;\textbf{0,971}$
 \end{center}
 \paragraph{Valutare, inoltre, per lo schema 3 le massime portata spillabili per ogni rigeneratore e confrontarle con quelle realmente spillate}
+\begin{itemize}
+	\item[\textbf{1° Spillamento}] Analizzando il profilo di temperatura dal lato del liquido freddo che viene riscaldato:
+	\begin{center}
+		\begin{tabular}{| l || l | l | l | l | l |}
+			\hline
+			\textbf{Stato} & \textbf{T [K]} & \textbf{P [atm]} & \textbf{h [kJ/kg]} & \textbf{s [kJ/kgK]} & \textbf{Titolo}\\ 
+			\hline
+			\textbf{3R} & 405 & 86,0 & 561 & n.v. & //\\
+			\hline
+			\textbf{2R} & ? & ? & ? & ? & //\\
+			\hline
+		\end{tabular}
+	\end{center}
+	Mentre dal lato del fluido caldo:
+	\begin{center}
+		\begin{tabular}{| l || l | l | l | l | l |}
+			\hline
+			\textbf{Stato} & \textbf{T [K]} & \textbf{P [atm]} & \textbf{h [kJ/kg]} & \textbf{s [kJ/kgK]} & \textbf{Titolo}\\ 
+			\hline
+			\textbf{S1} & 549 & 8,7 & 3000 & n.v. & //\\
+			\hline
+			\textbf{LS} & 446 & 8,5 & 732 & n.v. & //\\
+			\hline
+			\textbf{B} & 444,5 & 8,4 & 725 & n.v. & //\\
+			\hline
+		\end{tabular}
+	\end{center}
+	La criticità si ha nel punto in cui il fluido che riscalda raggiunge la condizione di vapore saturo secco. Teoricamente quindi la portata massima spillabile è quella che mi consente di avere un dT infinitesimo tra la temperatura di saturazione alla pressione del vapore saturo secco e la temperatura del fluido che viene riscaldato, attraverso quindi una superficie di scambio infinita.\\ 
+	Visto che non posso raggiungere questa condizione decido di sottostimare il livello di temperatura 2R, imponendo la condizione per cui il fluido freddo raggiunge la temperatura di saturazione alla pressione di saturazione del vapore saturo secco. Chiaramente poichè sono in condizioni di liquido incomprimibile in termini di entalpia equivale a dire che il punto 2R si trovi ad un livello di entalpia pari a quella di saturazione alla pressione del vapore saturo secco.\\
+	Quindi:
+	\begin{equation}
+		\dot{m_{SP1,max}}\;=\;	\dot{m_{GV}}\;\dfrac{(h_{ls}(8,5\;bar)-h_{3R})}{h_{S1}-h_{B}}\;=\;\textbf{1,50 kg/s $>$ $\dot{m_{SP1}}\;=$ 1,26 kg/s}
+	\end{equation}
+	\item[\textbf{2° Spillamento}] In questo caso ho a che fare con uno scambiatore a miscela in cui ho due spillamenti che riscaldano l'acqua fredda, uno che proviene dallo scambiatore del primo spillamento e l'altro che è il secondo spillamento vero e proprio.\\
+	In questa situazione non riesco proprio ad inviduare quale è la condizione critica che mi consente di calcolare la portata massima spillabile.
+	\item[\textbf{3° Spillamento}] Analizzando il profilo di temperatura dal lato del liquido freddo che viene riscaldato:
+	\begin{center}
+		\begin{tabular}{| l || l | l | l | l | l |}
+			\hline
+			\textbf{Stato} & \textbf{T [K]} & \textbf{P [atm]} & \textbf{h [kJ/kg]} & \textbf{s [kJ/kgK]} & \textbf{Titolo}\\ 
+			\hline
+			\textbf{IN} & 351,5 & 2,7 & 328 & n.v. & //\\
+			\hline
+			\textbf{OUT} & ? & ? & ? & ? & //\\
+			\hline
+		\end{tabular}
+	\end{center}
+	Mentre dal lato del fluido caldo:
+	\begin{center}
+		\begin{tabular}{| l || l | l | l | l | l |}
+			\hline
+			\textbf{Stato} & \textbf{T [K]} & \textbf{P [atm]} & \textbf{h [kJ/kg]} & \textbf{s [kJ/kgK]} & \textbf{Titolo}\\ 
+			\hline
+			\textbf{S3} & 393 & 1,52 & 2711 & n.v. & //\\
+			\hline
+			\textbf{LS} & 385 & 1,50 & 467 & n.v. & //\\
+			\hline
+			\textbf{B} & 383 & 1,46 & 461 & n.v. & //\\
+			\hline
+		\end{tabular}
+	\end{center}
+	Per le stesse ragioni di prima:
+	\begin{equation}
+		\dot{m_{SP3,max}}\;=\;	(\dot{m_{GV}}-\dot{m_{SP1}}-\dot{m_{SP2}})\;\dfrac{(h_{ls}(1,5\;bar)-h_{IN})}{h_{S3}-h_{B}}\;=\;\textbf{1,11 kg/s $>$ $\dot{m_{SP3}}\;=$ 0,892 kg/s}
+	\end{equation}
+	\item[\textbf{4° Spillamento}] In questo caso invece abbiamo sempre uno scambiatore a superficie ma questa volta dopo la rigenerazione, l'acqua calda si mescola con il liquido caldo uscente dal 3° spillamento. Quindi innanzitutto dobbiamo capire quanto calda è l'acqua che è stata rigenerata. Per farlo dobbiamo analizzare il mescolamento che può essere assimilato ad uno scambio a superficie equicorrente.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth]{equicorrente.png}
+		\caption{Profilo equivalente di uno scambiatore a miscela}
+	\end{figure}
+	Analizzando questo profilo:
+	\begin{center}
+		\begin{tabular}{| l || l | l | l | l | l |}
+			\hline
+			\textbf{Stato} & \textbf{T [K]} & \textbf{P [atm]} & \textbf{h [kJ/kg]} & \textbf{s [kJ/kgK]} & \textbf{Titolo}\\ 
+			\hline
+			\textbf{IN,C} & 383 & 1,46 & 461 & n.v. & //\\
+			\hline
+			\textbf{IN,F} & ? & 0,57 & ? & n.v. & //\\
+			\hline
+			\textbf{OUT} & ? & 356 & 347 & n.v & //\\
+			\hline
+		\end{tabular}
+	\end{center}
+	Quindi impostando un semplice bilancio:
+	\begin{equation}
+		\dot{m_{SP4}}h_{IN,F}\;+\;\dot{m_{SP3}}h_{IN,C}\;=\;(\dot{m_{SP4}}+\dot{m_{SP3}})h_{OUT}\to\;h_{IN,F}\;=\;254\;kJ/kg
+	\end{equation}
+	Adesso si può passare ad analizzare i profili di temperatura nella parte a superficie dello scambiatore e calcolare quanto vale la portata massima spillabile.\\
+	Analizzando il profilo di temperatura dal lato del liquido freddo che viene riscaldato:
+	\begin{center}
+		\begin{tabular}{| l || l | l | l | l | l |}
+			\hline
+			\textbf{Stato} & \textbf{T [K]} & \textbf{P [atm]} & \textbf{h [kJ/kg]} & \textbf{s [kJ/kgK]} & \textbf{Titolo}\\ 
+			\hline
+			\textbf{IN} & 313 & 2,7 & 168 & n.v. & //\\
+			\hline
+			\textbf{OUT} & ? & ? & ? & ? & //\\
+			\hline
+		\end{tabular}
+	\end{center}
+	Mentre dal lato del fluido caldo:
+	\begin{center}
+		\begin{tabular}{| l || l | l | l | l | l |}
+			\hline
+			\textbf{Stato} & \textbf{T [K]} & \textbf{P [atm]} & \textbf{h [kJ/kg]} & \textbf{s [kJ/kgK]} & \textbf{Titolo}\\ 
+			\hline
+			\textbf{S4} & 357 & 0,57 & 2581 & n.v. & //\\
+			\hline
+			\textbf{LS} & 357 & 0,57 & 353 & n.v. & //\\
+			\hline
+			\textbf{B} & ? & 0,57 & 254 & n.v. & //\\
+			\hline
+		\end{tabular}
+	\end{center}
+	Per le stesse ragioni di prima:
+	\begin{center}
+		$\dot{m_{SP4,max}}=	(\dot{m_{GV}}-\dot{m_{SP1}}-\dot{m_{SP2}}-\dot{m_{SP3}}-\dot{m_{SP4,max}})\;\dfrac{(h_{ls}(0,57\;bar)-h_{IN})}{h_{S4}-h_{B}}$\\
+		$\to\dot{m_{SP4,max}}=\;\textbf{1,25 kg/s $>$ $\dot{m_{SP4}}\;=$ 1,09 kg/s}$
+	\end{center}
+\end{itemize}
 
 \chapter{Impianto con Turbina a Gas}
 \section{Analisi termodinamica della turbina a gas LM6000 (General Electric)}
